@@ -18,7 +18,12 @@ Run the scraper daily, commit updated state and the digest back to the repo.
    - `data/digests/*.md`
    - `data/scraper_health.csv`
    - Commit message: `scrape: {date} ({N} new jobs)` where N is read from a `NEW_JOBS_COUNT` file main.py writes to DATA_DIR (simplest handoff).
-   - Use `|| true` guard so "nothing changed" does not fail the job.
+   - Detect "nothing changed" explicitly with `git diff --cached --quiet` and
+     `exit 0`. Do **not** guard `git commit` or `git push` with `|| true`: once the
+     no-op case is handled explicitly, the only thing those guards can still hide
+     is a genuine failure. See "Failure visibility" below.
+   - Stage `data/digests/` as a directory, not a `*.md` glob. An unmatched glob
+     aborts the step under Actions' default `bash -e` on days with no new digest.
 
 ## Permissions
 - `permissions: contents: write` in the workflow (required for the bot commit).
@@ -27,6 +32,11 @@ Run the scraper daily, commit updated state and the digest back to the repo.
 ## Failure visibility
 - Exit code 2 from main.py (systemic breakage, >50 percent companies failing) makes the run red. GitHub emails on workflow failure by default: that is the alerting.
 - Exit code 0 with a few failed companies stays green; failures are visible in scraper_health.csv.
+- A failure in the commit-and-push step makes the run red. This is deliberate. The
+  alerting model here is "GitHub emails on red", so any step that silently succeeds
+  while doing nothing defeats it: the repo would look healthy while producing no
+  digest, and nobody finds out until they notice the absence. Prefer a false red
+  over a false green.
 
 ## Concurrency
 `concurrency: group: scrape, cancel-in-progress: false` to prevent overlapping manual + scheduled runs corrupting the commit step.

@@ -14,7 +14,7 @@ Orchestrator. Loads config, dispatches each company to the right scraper, dedupe
 5. Flatten results from successful companies, run `dedup.find_new(jobs, seen)`.
 6. Run `filters.apply(new_jobs, companies_by_name)` (now a real filter/sort per `SPEC_filters.md`, not an identity function).
 7. `notify.write_digest(filtered_jobs, companies_by_name)` and `notify.print_summary(...)`.
-8. Unless `--dry-run`: `dedup.update_seen(all_scraped_jobs, seen)` and `health.update_health(results, health_state)`, where `all_scraped_jobs` is every job from every successful company this run (not just the new ones), matching `dedup.py`'s contract. Also writes `NEW_JOBS_COUNT_FILE` with the count of new jobs this run, as a simple handoff to the GitHub Actions commit step (`SPEC_github_workflow.md`) for its commit message -- skipped on `--dry-run` along with the rest of state writing.
+8. Unless `--dry-run`: `dedup.update_seen(all_scraped_jobs, seen)` and `health.update_health(results, health_state)`, where `all_scraped_jobs` is every job from every successful company this run (not just the new ones), matching `dedup.py`'s contract. Also writes `NEW_JOBS_COUNT_FILE` with the count of filtered new jobs this run (`len(filtered_jobs)`, the same count that appears in the digest header), as a simple handoff to the GitHub Actions commit step (`SPEC_github_workflow.md`) for its commit message -- skipped on `--dry-run` along with the rest of state writing. Use the filtered count, not the pre-filter `new_jobs` count: the commit message and summary should describe what a person would actually see in the digest, not how many postings existed across every role before the data/quant filter ran.
 
 ## CLI
 - `python main.py` : full run
@@ -25,7 +25,8 @@ Orchestrator. Loads config, dispatches each company to the right scraper, dedupe
 ## Logging
 - `logging` to stderr and to `LOGS_DIR / f"run_{date}.log"`.
 - Per-company one line: name, adapter, job count or error.
-- Final summary: companies scraped, failed, total jobs, new jobs.
+- Final summary: companies scraped, failed, total jobs scraped, filtered new jobs (post-filter,
+  matching what lands in the digest -- not the raw pre-filter new-job count).
 
 ## Exit codes
 - 0: success (even with some company failures)

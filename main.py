@@ -202,14 +202,14 @@ def main(argv: list[str] | None = None) -> int:
         scraped=sum(1 for ok in results.values() if ok),
         failed=failed_names,
         total=len(all_jobs),
-        new=len(new_jobs),
+        new=len(filtered_jobs),
     )
 
     if not args.dry_run:
         try:
             dedup.update_seen(all_jobs, seen)
             health.update_health(results, health_state)
-            paths.NEW_JOBS_COUNT_FILE.write_text(str(len(new_jobs)), encoding="utf-8")
+            paths.NEW_JOBS_COUNT_FILE.write_text(str(len(filtered_jobs)), encoding="utf-8")
         except OSError as exc:
             logger.error("failed to write state: %s", exc)
             return 1

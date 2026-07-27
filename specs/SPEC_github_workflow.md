@@ -8,8 +8,11 @@ Run the scraper daily, commit updated state and the digest back to the repo.
 - `workflow_dispatch` (manual runs while developing)
 
 ## Steps
-1. Checkout (with `fetch-depth: 1`).
-2. Setup Python 3.11 with pip cache.
+1. Checkout (`actions/checkout@v7`, with `fetch-depth: 1`).
+2. Setup Python 3.11 with pip cache (`actions/setup-python@v7`). Both actions are pinned to
+   their latest major tag; bump when a new major ships, rather than staying on an old major
+   after it starts printing deprecation warnings (e.g. the Node 20 runtime warning seen on
+   `checkout@v4` / `setup-python@v5`).
 3. `pip install -r requirements.txt`
 4. `python main.py --validate` (fail fast on broken config)
 5. `python main.py`
@@ -17,11 +20,17 @@ Run the scraper daily, commit updated state and the digest back to the repo.
    - `data/jobs_seen.csv`
    - `data/digests/*.md`
    - `data/scraper_health.csv`
-   - Commit message: `scrape: {date} ({N} new jobs)` where N is read from a `NEW_JOBS_COUNT` file main.py writes to DATA_DIR (simplest handoff).
+   - Commit message: `scrape: {date} ({N} new jobs)` where N is read from a `NEW_JOBS_COUNT` file main.py writes to DATA_DIR (simplest handoff, count is the filtered/digest-eligible count per `SPEC_main.md`, not the raw pre-filter count).
    - Detect "nothing changed" explicitly with `git diff --cached --quiet` and
-     `exit 0`. Do **not** guard `git commit` or `git push` with `|| true`: once the
-     no-op case is handled explicitly, the only thing those guards can still hide
+     `exit 0`. Do **not** guard `git commit` with `|| true`: once the
+     no-op case is handled explicitly, the only thing that guard can still hide
      is a genuine failure. See "Failure visibility" below.
+   - `git push` is retried up to 3 times: on rejection, `git fetch origin main` then
+     `git rebase origin/main` before retrying. The full run takes 30+ minutes, so a
+     manual push to `main` mid-run is a real race (it happened on the first run),
+     not a hypothetical worth ignoring. A genuine rebase conflict still aborts the
+     script under Actions' default `bash -e`, which is correct: that failure is real
+     and must stay red.
    - Stage `data/digests/` as a directory, not a `*.md` glob. An unmatched glob
      aborts the step under Actions' default `bash -e` on days with no new digest.
 

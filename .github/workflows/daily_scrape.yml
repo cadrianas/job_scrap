@@ -17,12 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
           cache: "pip"
@@ -54,10 +54,28 @@ jobs:
           NEW_COUNT=$(cat data/NEW_JOBS_COUNT 2>/dev/null || echo "0")
           TODAY=$(date -u +%Y-%m-%d)
 
-          # No `|| true` on either command. The "nothing changed" case is
-          # already handled by the diff check above, so a failure here is a
-          # real one (bad token scope, rejected push) and must turn the run
-          # red. Swallowing it produces a green run with no digest, which is
-          # the one failure mode this project cannot detect from the outside.
+          # No `|| true` on the commit. The "nothing changed" case is already
+          # handled by the diff check above, so a commit failure here is a
+          # real one and must turn the run red. Swallowing it produces a
+          # green run with no digest, which is the one failure mode this
+          # project cannot detect from the outside.
           git commit -m "scrape: ${TODAY} (${NEW_COUNT} new jobs)"
-          git push
+
+          # The run takes 30+ minutes, so a manual push to main during that
+          # window is a real race, not a hypothetical: it happened on the
+          # first run. Retry by rebasing onto the new tip rather than giving
+          # up on the first rejection. A genuine conflict (something else
+          # touched the exact same state files) still aborts the script,
+          # since this runs under Actions' default `bash -e` -- that failure
+          # is real and must stay red.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push rejected (attempt ${attempt}/3), rebasing onto latest origin/main"
+            git fetch origin main
+            git rebase origin/main
+          done
+
+          echo "git push failed after 3 attempts" >&2
+          exit 1

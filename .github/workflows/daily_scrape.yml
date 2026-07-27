@@ -54,5 +54,10 @@ jobs:
           NEW_COUNT=$(cat data/NEW_JOBS_COUNT 2>/dev/null || echo "0")
           TODAY=$(date -u +%Y-%m-%d)
 
-          git commit -m "scrape: ${TODAY} (${NEW_COUNT} new jobs)" || true
-          git push || true
+          # No `|| true` on either command. The "nothing changed" case is
+          # already handled by the diff check above, so a failure here is a
+          # real one (bad token scope, rejected push) and must turn the run
+          # red. Swallowing it produces a green run with no digest, which is
+          # the one failure mode this project cannot detect from the outside.
+          git commit -m "scrape: ${TODAY} (${NEW_COUNT} new jobs)"
+          git push

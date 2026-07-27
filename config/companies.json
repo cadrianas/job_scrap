@@ -1,0 +1,3122 @@
+[
+  {
+    "name": "1Password",
+    "ats": "lever",
+    "identifier": "1password",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Aalborg University",
+    "ats": "unknown",
+    "identifier": "https://www.vacancies.aau.dk/scientific-positions",
+    "regions": [
+      "aalborg",
+      "denmark"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "ABB",
+    "ats": "generic",
+    "identifier": "https://careers.abb/global/en/search-results",
+    "regions": [
+      "zurich",
+      "switzerland"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "AbCellera",
+    "ats": "greenhouse",
+    "identifier": "abcellera",
+    "regions": [
+      "vancouver",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Acast",
+    "ats": "generic",
+    "identifier": "https://careers.acast.com/jobs",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Accenture",
+    "ats": "workday",
+    "identifier": "accenture/AccentureCareers",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Accenture New Zealand",
+    "ats": "workday",
+    "identifier": "accenture/AccentureCareers",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Ada",
+    "ats": "lever",
+    "identifier": "ada",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Adyen",
+    "ats": "greenhouse",
+    "identifier": "adyen",
+    "regions": [
+      "amsterdam",
+      "netherlands"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Affirm",
+    "ats": "greenhouse",
+    "identifier": "affirm",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "AgResearch",
+    "ats": "unknown",
+    "identifier": "https://career10.successfactors.com/career?career_company=agresearch",
+    "regions": [
+      "christchurch",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "AIA New Zealand",
+    "ats": "workday",
+    "identifier": "aia/external",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Airbnb",
+    "ats": "greenhouse",
+    "identifier": "airbnb",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Airbus",
+    "ats": "workday",
+    "identifier": "ag/Airbus",
+    "regions": [
+      "toulouse",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Airwallex",
+    "ats": "lever",
+    "identifier": "airwallex",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Allianz",
+    "ats": "generic",
+    "identifier": "https://careers.allianz.com/global/en/search-results",
+    "regions": [
+      "munich",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Amazon (NZ offices)",
+    "ats": "unknown",
+    "identifier": "https://www.amazon.jobs/en/location/new-zealand",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Amgen",
+    "ats": "workday",
+    "identifier": "amgen/Careers",
+    "regions": [
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Anthropic",
+    "ats": "greenhouse",
+    "identifier": "anthropic",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "ANZ",
+    "ats": "generic",
+    "identifier": "https://careers.anz.com/go/ANZ-Jobs-List/4739210/",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "ANZ New Zealand",
+    "ats": "generic",
+    "identifier": "https://careers.anz.com/go/ANZ-Jobs-List/4739210/",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "ApplyBoard",
+    "ats": "workday",
+    "identifier": "applyboard/ApplyBoardNH",
+    "regions": [
+      "kitchener",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Arianespace",
+    "ats": "generic",
+    "identifier": "https://talent.arianespace.com/jobs",
+    "regions": [
+      "evry-courcouronnes",
+      "france"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "ASB Bank",
+    "ats": "unknown",
+    "identifier": "https://careers.asbgroup.co.nz/search",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "ASML",
+    "ats": "workday",
+    "identifier": "asml/ASMLEXT1",
+    "regions": [
+      "eindhoven",
+      "netherlands"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "ASOS",
+    "ats": "unknown",
+    "identifier": "https://www.asoscareers.com/job-search",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "Atlas Copco",
+    "ats": "generic",
+    "identifier": "https://www.atlascopcogroup.com/en/careers/jobs/job-overview",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Atlassian",
+    "ats": "unknown",
+    "identifier": "https://www.atlassian.com/company/careers/all-jobs",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Audi",
+    "ats": "generic",
+    "identifier": "https://jobs.volkswagen-group.com/Audi/",
+    "regions": [
+      "ingolstadt",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Back Market",
+    "ats": "lever",
+    "identifier": "backmarket",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Bain & Company",
+    "ats": "generic",
+    "identifier": "https://careers.bain.com/jobs",
+    "regions": [
+      "boston",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Bain & Company Australia",
+    "ats": "unknown",
+    "identifier": "https://www.bain.com/careers/find-a-role/",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Bankinter",
+    "ats": "unknown",
+    "identifier": "https://www.bankinter.com/webcorporativa/en/corporate-information/about-bankinter/work-with-us",
+    "regions": [
+      "madrid",
+      "spain"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Bausch Health",
+    "ats": "unknown",
+    "identifier": "https://careers.bauschhealth.com/search",
+    "regions": [
+      "laval",
+      "canada"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "Bayer",
+    "ats": "unknown",
+    "identifier": "https://www.bayer.com/en/career",
+    "regions": [
+      "leverkusen",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "BBVA",
+    "ats": "workday",
+    "identifier": "bbva/BBVA",
+    "regions": [
+      "madrid",
+      "spain"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "BCG Australia",
+    "ats": "unknown",
+    "identifier": "https://careers.bcg.com/global/en/",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Benevity",
+    "ats": "greenhouse",
+    "identifier": "benevity",
+    "regions": [
+      "calgary",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Blablacar",
+    "ats": "lever",
+    "identifier": "blablacar",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Block (Afterpay)",
+    "ats": "greenhouse",
+    "identifier": "block",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "BMO",
+    "ats": "workday",
+    "identifier": "bmo/External",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "BMW Group",
+    "ats": "generic",
+    "identifier": "https://jobs.bmwgroup.com/",
+    "regions": [
+      "munich",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "BNP Paribas",
+    "ats": "generic",
+    "identifier": "https://bnpparibas.tal.net/candidate",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "BNZ (Bank of New Zealand)",
+    "ats": "workday",
+    "identifier": "nab/bnz_careers",
+    "regions": [
+      "wellington",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Booking.com",
+    "ats": "unknown",
+    "identifier": "https://jobs.booking.com/booking/jobs",
+    "regions": [
+      "amsterdam",
+      "netherlands"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Boston Consulting Group",
+    "ats": "generic",
+    "identifier": "https://careers.bcg.com/global/en/search-results",
+    "regions": [
+      "boston",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "BP",
+    "ats": "workday",
+    "identifier": "bpinternational/bpCareers",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Brex",
+    "ats": "greenhouse",
+    "identifier": "brex",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "BT Group",
+    "ats": "generic",
+    "identifier": "https://jobs.bt.com/search/",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Cabify",
+    "ats": "greenhouse",
+    "identifier": "cabify",
+    "regions": [
+      "madrid",
+      "spain"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Canal+",
+    "ats": "generic",
+    "identifier": "https://joinus.canalplus.com/go/Nos-offres/8554202/",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Canva",
+    "ats": "lever",
+    "identifier": "canva",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Capital One",
+    "ats": "workday",
+    "identifier": "capitalone/Capital_One",
+    "regions": [
+      "mclean",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Carrefour",
+    "ats": "generic",
+    "identifier": "https://www.carrefour.com/en/employment",
+    "regions": [
+      "massy",
+      "france"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Carsales",
+    "ats": "unknown",
+    "identifier": "https://careers.carsales.com.au/carsales-careers/opportunities/",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "CGI",
+    "ats": "unknown",
+    "identifier": "https://www.cgi.com/canada/en-ca/careers",
+    "regions": [
+      "montreal",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Check24",
+    "ats": "generic",
+    "identifier": "https://jobs.check24.de/en/",
+    "regions": [
+      "munich",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Chime",
+    "ats": "greenhouse",
+    "identifier": "chime",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "CIBC",
+    "ats": "workday",
+    "identifier": "cibc/search",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Citadel",
+    "ats": "unknown",
+    "identifier": "https://www.citadel.com/careers/open-opportunities/",
+    "regions": [
+      "miami",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Clio",
+    "ats": "greenhouse",
+    "identifier": "goclio",
+    "regions": [
+      "vancouver",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Cochlear",
+    "ats": "workday",
+    "identifier": "cochlear/Cochlear_Careers",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Cohere",
+    "ats": "lever",
+    "identifier": "cohere",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Coinbase",
+    "ats": "greenhouse",
+    "identifier": "coinbase",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Coloplast",
+    "ats": "generic",
+    "identifier": "https://careers.coloplast.com/search/?q=",
+    "regions": [
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Commonwealth Bank",
+    "ats": "workday",
+    "identifier": "cba/CommBank_Careers",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Coveo",
+    "ats": "greenhouse",
+    "identifier": "coveoen",
+    "regions": [
+      "quebec city",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Credit Suisse",
+    "ats": "unknown",
+    "identifier": "https://www.ubs.com/global/en/careers.html",
+    "regions": [
+      "zurich",
+      "switzerland"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "CSL",
+    "ats": "workday",
+    "identifier": "csl/CSL_External",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Culture Amp",
+    "ats": "greenhouse",
+    "identifier": "cultureamp",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "D. E. Shaw Group",
+    "ats": "generic",
+    "identifier": "https://www.deshaw.com/careers",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "D2L",
+    "ats": "greenhouse",
+    "identifier": "d2l",
+    "regions": [
+      "kitchener",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Danske Bank",
+    "ats": "generic",
+    "identifier": "https://danskebank.com/careers/apply",
+    "regions": [
+      "copenhagen",
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Darktrace",
+    "ats": "workday",
+    "identifier": "darktrace/DarktaceExternal",
+    "regions": [
+      "cambridge",
+      "uk"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Databricks",
+    "ats": "greenhouse",
+    "identifier": "databricks",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Datacom",
+    "ats": "unknown",
+    "identifier": "https://datacom.com/nz/en/careers",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Datadog",
+    "ats": "greenhouse",
+    "identifier": "datadog",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "DB Schenker (merged into DSV)",
+    "ats": "generic",
+    "identifier": "https://www.dsv.com/en/careers",
+    "regions": [
+      "essen",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Decibel Therapeutics",
+    "ats": "unknown",
+    "identifier": "https://www.regeneron.com/careers",
+    "regions": [
+      "cambridge",
+      "usa"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "Delivery Hero",
+    "ats": "generic",
+    "identifier": "https://careers.deliveryhero.com/",
+    "regions": [
+      "berlin",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Deloitte",
+    "ats": "unknown",
+    "identifier": "https://deloitte.com/global/en/careers/job-search.html",
+    "regions": [
+      "europe"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "Deloitte Australia",
+    "ats": "unknown",
+    "identifier": "https://jobs.deloitte.com.au/",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Deloitte Canada",
+    "ats": "generic",
+    "identifier": "https://apply.deloitte.com/",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Deloitte New Zealand",
+    "ats": "unknown",
+    "identifier": "https://careers.smartrecruiters.com/DeloitteNZ",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Depop",
+    "ats": "workday",
+    "identifier": "etsy/Depop_Careers",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Deputy",
+    "ats": "lever",
+    "identifier": "deputy",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Deutsche Bank",
+    "ats": "workday",
+    "identifier": "db/DBWebsite",
+    "regions": [
+      "frankfurt",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Deutsche Telekom",
+    "ats": "generic",
+    "identifier": "https://careers.telekom.com/en/jobs",
+    "regions": [
+      "bonn",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "DHL",
+    "ats": "generic",
+    "identifier": "https://careers.dhl.com/global/en/home",
+    "regions": [
+      "bonn",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "DoorDash",
+    "ats": "greenhouse",
+    "identifier": "doordashusa",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "EDF",
+    "ats": "generic",
+    "identifier": "https://www.edf.fr/en/edf-join-us",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Embark Studios",
+    "ats": "generic",
+    "identifier": "https://careers.embark-studios.com/jobs",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Employment Hero",
+    "ats": "generic",
+    "identifier": "https://employmenthero.com/jobs/organisations/employmenthero/",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Envato",
+    "ats": "lever",
+    "identifier": "envato-2",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "EQ Bank (Equitable Bank)",
+    "ats": "lever",
+    "identifier": "eqbank",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "EROAD",
+    "ats": "workday",
+    "identifier": "eroadgroup/EROAD",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "ESA",
+    "ats": "generic",
+    "identifier": "https://jobs.esa.int/",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "EURAXESS - Data Science",
+    "ats": "euraxess",
+    "identifier": "f%5B0%5D=keywords%3Adata+scientist",
+    "regions": [
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Exact",
+    "ats": "generic",
+    "identifier": "https://www.exact.com/careers/vacancies",
+    "regions": [
+      "delft",
+      "netherlands"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "EY Australia",
+    "ats": "unknown",
+    "identifier": "https://www.ey.com/en_au/careers/job-search",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "EY New Zealand",
+    "ats": "unknown",
+    "identifier": "https://www.ey.com/en_nz/careers/job-search",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Farfetch",
+    "ats": "lever",
+    "identifier": "farfetch",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Figma",
+    "ats": "greenhouse",
+    "identifier": "figma",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Fisher & Paykel Healthcare",
+    "ats": "workday",
+    "identifier": "haier/FPA_External_Career_Site",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Fonterra",
+    "ats": "unknown",
+    "identifier": "https://careers.fonterra.com/careers",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "FreshBooks",
+    "ats": "greenhouse",
+    "identifier": "freshbooks",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Genentech",
+    "ats": "workday",
+    "identifier": "roche/ROG-A2O-GENE",
+    "regions": [
+      "south san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Genmab",
+    "ats": "workday",
+    "identifier": "genmab/Genmab_Careers_Site",
+    "regions": [
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Gentrack",
+    "ats": "unknown",
+    "identifier": "https://gentrack.com/careers/",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Getaround",
+    "ats": "lever",
+    "identifier": "getaround",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Getir",
+    "ats": "generic",
+    "identifier": "https://www.careers-page.com/getir-2",
+    "regions": [
+      "istanbul",
+      "turkey"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Gilead Sciences",
+    "ats": "workday",
+    "identifier": "gilead/gileadcareers",
+    "regions": [
+      "foster city",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Glovo",
+    "ats": "greenhouse",
+    "identifier": "glovo",
+    "regions": [
+      "barcelona",
+      "spain"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "H&M",
+    "ats": "unknown",
+    "identifier": "https://career.hm.com/",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Halter",
+    "ats": "lever",
+    "identifier": "halter",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Hnry",
+    "ats": "unknown",
+    "identifier": "https://hnry.co.nz/careers/",
+    "regions": [
+      "wellington",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Hologic",
+    "ats": "unknown",
+    "identifier": "https://careers.hologic.com/en",
+    "regions": [
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Hootsuite",
+    "ats": "greenhouse",
+    "identifier": "hootsuite",
+    "regions": [
+      "vancouver",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Hudson River Trading",
+    "ats": "greenhouse",
+    "identifier": "wehrtyou",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "IAG New Zealand",
+    "ats": "unknown",
+    "identifier": "https://www.iag.co.nz/careers",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Iberdrola",
+    "ats": "workday",
+    "identifier": "iberdrola/Iberdrola",
+    "regions": [
+      "bilbao",
+      "spain"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Illumina",
+    "ats": "workday",
+    "identifier": "illumina/illumina-careers",
+    "regions": [
+      "san diego",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "ING",
+    "ats": "workday",
+    "identifier": "ing/ICSNLDGEN",
+    "regions": [
+      "amsterdam",
+      "netherlands"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Intercom",
+    "ats": "greenhouse",
+    "identifier": "intercom",
+    "regions": [
+      "dublin",
+      "ireland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "IQVIA",
+    "ats": "workday",
+    "identifier": "iqvia/IQVIA",
+    "regions": [
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Jane Street",
+    "ats": "greenhouse",
+    "identifier": "janestreet",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Jobindex - Data Science",
+    "ats": "jobindex",
+    "identifier": "q=data+scientist",
+    "regions": [
+      "denmark"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Jobnet.dk",
+    "ats": "unknown",
+    "identifier": "https://jobnet.dk/find-job",
+    "regions": [
+      "denmark"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Judo Bank",
+    "ats": "unknown",
+    "identifier": "https://www.judo.bank/careers/",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Just Eat Takeaway",
+    "ats": "unknown",
+    "identifier": "https://careers.justeattakeaway.com/global/en",
+    "regions": [
+      "amsterdam",
+      "netherlands"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "KBC Bank",
+    "ats": "unknown",
+    "identifier": "https://www.kbc.be/jobs/en/vacancies.html",
+    "regions": [
+      "brussels",
+      "belgium"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Kinaxis",
+    "ats": "greenhouse",
+    "identifier": "kinaxis",
+    "regions": [
+      "ottawa",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "King",
+    "ats": "workday",
+    "identifier": "activision/King_External_Careers",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Kiwibank",
+    "ats": "unknown",
+    "identifier": "https://www.kiwibank.co.nz/about-us/careers/",
+    "regions": [
+      "wellington",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Klarna",
+    "ats": "unknown",
+    "identifier": "https://jobs.deel.com/klarna",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Koala",
+    "ats": "unknown",
+    "identifier": "https://careers.koala.com/",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "KOHO",
+    "ats": "lever",
+    "identifier": "koho",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "KPMG",
+    "ats": "unknown",
+    "identifier": "https://kpmg.com/xx/en/careers.html",
+    "regions": [
+      "europe"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "KPMG Australia",
+    "ats": "unknown",
+    "identifier": "https://kpmg.com/au/en/careers.html",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "KPMG New Zealand",
+    "ats": "lever",
+    "identifier": "kpmgnz",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "League",
+    "ats": "greenhouse",
+    "identifier": "leagueinc",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Lego",
+    "ats": "workday",
+    "identifier": "lego/LEGO_External",
+    "regions": [
+      "billund",
+      "denmark"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "LIC (Livestock Improvement Corporation)",
+    "ats": "generic",
+    "identifier": "https://careers.lic.co.nz/jobs",
+    "regions": [
+      "hamilton",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Lightspeed Commerce",
+    "ats": "greenhouse",
+    "identifier": "lightspeedhq",
+    "regions": [
+      "montreal",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Linktree",
+    "ats": "lever",
+    "identifier": "linktree",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Lovable",
+    "ats": "unknown",
+    "identifier": "https://lovable.dev/careers",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Lundbeck",
+    "ats": "unknown",
+    "identifier": "https://career5.successfactors.eu/career?company=Lundbeck",
+    "regions": [
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Macquarie Group",
+    "ats": "generic",
+    "identifier": "https://recruitment.macquarie.com/en_US/careers/SearchJobs",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Maersk",
+    "ats": "workday",
+    "identifier": "maersk/Maersk_Careers",
+    "regions": [
+      "copenhagen",
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Magna International",
+    "ats": "workday",
+    "identifier": "magna/Magna",
+    "regions": [
+      "aurora",
+      "canada"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Manulife",
+    "ats": "workday",
+    "identifier": "manulife/MFCJH_Jobs",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "McKinsey & Company",
+    "ats": "generic",
+    "identifier": "https://www.mckinsey.com/careers/search-jobs",
+    "regions": [
+      "new york",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "McKinsey & Company Australia",
+    "ats": "unknown",
+    "identifier": "https://www.mckinsey.com/au/careers",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "MediaMarkt",
+    "ats": "generic",
+    "identifier": "https://careers.mediamarktsaturn.com/search/",
+    "regions": [
+      "ingolstadt",
+      "germany"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Mercedes-Benz Group",
+    "ats": "generic",
+    "identifier": "https://jobs.mercedes-benz.com/",
+    "regions": [
+      "stuttgart",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Moderna",
+    "ats": "workday",
+    "identifier": "modernatx/M_tx",
+    "regions": [
+      "cambridge",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Munich Re",
+    "ats": "generic",
+    "identifier": "https://careers.munichre.com/en/search-jobs",
+    "regions": [
+      "munich",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "MYOB (NZ)",
+    "ats": "lever",
+    "identifier": "myob-2",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "n26",
+    "ats": "greenhouse",
+    "identifier": "n26",
+    "regions": [
+      "berlin",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "NAB",
+    "ats": "workday",
+    "identifier": "nab/nab_careers",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Nature Careers - Data Science",
+    "ats": "generic",
+    "identifier": "https://www.nature.com/naturecareers/jobs/?keywords=data+scientist",
+    "regions": [
+      "global"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Net-A-Porter",
+    "ats": "workday",
+    "identifier": "ynap/YNAP_Careers",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Netflix",
+    "ats": "eightfold",
+    "identifier": "explore.jobs.netflix.net|netflix.com",
+    "regions": [
+      "amsterdam",
+      "netherlands"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Nine Entertainment",
+    "ats": "workday",
+    "identifier": "nine/Nine_External_Career_Site",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Nordea",
+    "ats": "unknown",
+    "identifier": "https://www.nordea.com/en/careers/open-jobs",
+    "regions": [
+      "sweden",
+      "finland",
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Novartis",
+    "ats": "workday",
+    "identifier": "novartis/Novartis_Careers",
+    "regions": [
+      "basel",
+      "switzerland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Novartis Ireland",
+    "ats": "workday",
+    "identifier": "novartis/Novartis_Careers",
+    "regions": [
+      "cork",
+      "ireland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Novo Nordisk",
+    "ats": "unknown",
+    "identifier": "https://careers.novonordisk.com/",
+    "regions": [
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Nuvei",
+    "ats": "unknown",
+    "identifier": "https://apply.workable.com/nuvei/",
+    "regions": [
+      "montreal",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "One NZ (Vodafone NZ)",
+    "ats": "unknown",
+    "identifier": "https://careers.one.nz/viewalljobs/",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "OpenText",
+    "ats": "generic",
+    "identifier": "https://careers.opentext.com/us/en",
+    "regions": [
+      "waterloo",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Orange",
+    "ats": "generic",
+    "identifier": "https://orange.jobs/fr/fr/europe/france",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Orsted",
+    "ats": "generic",
+    "identifier": "https://orsted.com/en/careers/vacancies-list",
+    "regions": [
+      "fredericia",
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Oura",
+    "ats": "greenhouse",
+    "identifier": "oura",
+    "regions": [
+      "helsinki",
+      "finland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Palantir Technologies",
+    "ats": "lever",
+    "identifier": "palantir",
+    "regions": [
+      "denver",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Parexel",
+    "ats": "workday",
+    "identifier": "parexel/Parexel_External_Careers",
+    "regions": [
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Partly",
+    "ats": "unknown",
+    "identifier": "https://jobs.ashbyhq.com/partly.com",
+    "regions": [
+      "christchurch",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "PayPal",
+    "ats": "workday",
+    "identifier": "paypal/jobs",
+    "regions": [
+      "san jose",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Philips",
+    "ats": "workday",
+    "identifier": "philips/jobs-and-careers",
+    "regions": [
+      "eindhoven",
+      "netherlands"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Pinterest",
+    "ats": "greenhouse",
+    "identifier": "pinterest",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Plaid",
+    "ats": "lever",
+    "identifier": "plaid",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Plexure",
+    "ats": "unknown",
+    "identifier": "https://tasksoftware.com/about-us/careers",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "Polestar",
+    "ats": "generic",
+    "identifier": "https://polestar.teamtailor.com/jobs",
+    "regions": [
+      "gothenburg",
+      "sweden"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Porsche",
+    "ats": "generic",
+    "identifier": "https://jobs.porsche.com/",
+    "regions": [
+      "stuttgart",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "PostNord",
+    "ats": "generic",
+    "identifier": "https://group.postnord.com/careers/",
+    "regions": [
+      "sweden",
+      "denmark"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Prospa",
+    "ats": "greenhouse",
+    "identifier": "prospa",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Pushpay",
+    "ats": "greenhouse",
+    "identifier": "pushpay",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "PwC Australia",
+    "ats": "unknown",
+    "identifier": "https://jobs-au.pwc.com/au/en/home",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "PwC New Zealand",
+    "ats": "workday",
+    "identifier": "pwc/Global_Experienced_Careers",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "QBE Insurance",
+    "ats": "workday",
+    "identifier": "qbe/QBE-Careers",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Qt Company",
+    "ats": "greenhouse",
+    "identifier": "theqtcompany",
+    "regions": [
+      "espoo",
+      "finland"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Ramp",
+    "ats": "unknown",
+    "identifier": "https://jobs.ashbyhq.com/ramp",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Ramsay Health Care",
+    "ats": "workday",
+    "identifier": "ramsayhealthcare/Ramsay_Careers",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "RBC",
+    "ats": "workday",
+    "identifier": "rbc/RBCGLOBAL1",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "REA Group",
+    "ats": "workday",
+    "identifier": "reagroup/reacareers",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Regeneron Pharmaceuticals",
+    "ats": "workday",
+    "identifier": "regeneron/Careers",
+    "regions": [
+      "tarrytown",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "ResearchGate",
+    "ats": "unknown",
+    "identifier": "https://www.researchgate.net/jobs",
+    "regions": [
+      "global"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "ResMed",
+    "ats": "workday",
+    "identifier": "resmed/ResMed_External_Careers",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Revolut",
+    "ats": "unknown",
+    "identifier": "https://www.revolut.com/en-US/careers/",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Robinhood",
+    "ats": "greenhouse",
+    "identifier": "robinhood",
+    "regions": [
+      "menlo park",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Roche",
+    "ats": "workday",
+    "identifier": "roche/roche-ext",
+    "regions": [
+      "basel",
+      "switzerland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Rocket Internet",
+    "ats": "generic",
+    "identifier": "https://careers.smartrecruiters.com/RocketInternet",
+    "regions": [
+      "berlin",
+      "germany"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Rocket Lab",
+    "ats": "greenhouse",
+    "identifier": "rocketlab7",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "RWE",
+    "ats": "generic",
+    "identifier": "https://jobs.rwe.com/go/All-Jobs-(EN)/8736601/",
+    "regions": [
+      "essen",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "SafetyCulture",
+    "ats": "lever",
+    "identifier": "safetyculture-2",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Sainsbury's",
+    "ats": "generic",
+    "identifier": "https://www.sainsburys.jobs/",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Sandvik",
+    "ats": "workday",
+    "identifier": "sandvik/sandvik-jobs",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Santander",
+    "ats": "workday",
+    "identifier": "santander/SantanderCareers",
+    "regions": [
+      "madrid",
+      "spain"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "SAP",
+    "ats": "unknown",
+    "identifier": "https://career5.successfactors.eu/careers?company=SAP",
+    "regions": [
+      "walldorf",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Saxo Bank",
+    "ats": "workday",
+    "identifier": "saxobank/CareeratSaxoBank",
+    "regions": [
+      "copenhagen",
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Scale AI",
+    "ats": "unknown",
+    "identifier": "https://scale.com/careers",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Schneider Electric",
+    "ats": "generic",
+    "identifier": "https://careers.se.com/jobs",
+    "regions": [
+      "rueil-malmaison",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Scotiabank",
+    "ats": "generic",
+    "identifier": "https://jobs.scotiabank.com/search/",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "SEB",
+    "ats": "lever",
+    "identifier": "seb",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Seek",
+    "ats": "unknown",
+    "identifier": "https://au.seek.com/careers",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Serato",
+    "ats": "unknown",
+    "identifier": "https://serato-limited.breezy.hr/",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "Sharesies",
+    "ats": "unknown",
+    "identifier": "https://www.sharesies.nz/careers",
+    "regions": [
+      "wellington",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Shell",
+    "ats": "workday",
+    "identifier": "shell/ShellCareers",
+    "regions": [
+      "the hague",
+      "netherlands",
+      "london",
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Shopify",
+    "ats": "generic",
+    "identifier": "https://www.shopify.com/careers",
+    "regions": [
+      "ottawa",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Siemens",
+    "ats": "generic",
+    "identifier": "https://jobs.siemens.com/",
+    "regions": [
+      "munich",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "SIX",
+    "ats": "generic",
+    "identifier": "https://jobs.six-group.com/viewalljobs/",
+    "regions": [
+      "zurich",
+      "switzerland"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "SKF",
+    "ats": "generic",
+    "identifier": "https://career.skf.com/viewalljobs/",
+    "regions": [
+      "gothenburg",
+      "sweden"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Sky",
+    "ats": "generic",
+    "identifier": "https://careers.sky.com/jobs",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "SNCF",
+    "ats": "generic",
+    "identifier": "https://emploi.sncf.com/",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "SoFi",
+    "ats": "greenhouse",
+    "identifier": "sofi",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Sonic Healthcare",
+    "ats": "unknown",
+    "identifier": "https://www.sonichealthcare.com/careers/",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "SoundCloud",
+    "ats": "greenhouse",
+    "identifier": "soundcloud71",
+    "regions": [
+      "berlin",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Spark New Zealand",
+    "ats": "generic",
+    "identifier": "https://careers.sparknz.co.nz/",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Spotify",
+    "ats": "lever",
+    "identifier": "spotify",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Stripe",
+    "ats": "greenhouse",
+    "identifier": "stripe",
+    "regions": [
+      "dublin",
+      "ireland",
+      "london",
+      "uk",
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Sun Life",
+    "ats": "workday",
+    "identifier": "sunlife/Experienced-Jobs",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Swiss Re",
+    "ats": "generic",
+    "identifier": "https://career2.successfactors.eu/career?company=SwissRe",
+    "regions": [
+      "zurich",
+      "switzerland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Swisscom",
+    "ats": "workday",
+    "identifier": "swisscom/SwisscomExternalCareers",
+    "regions": [
+      "bern",
+      "switzerland"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Symend",
+    "ats": "greenhouse",
+    "identifier": "symend",
+    "regions": [
+      "calgary",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Syneos Health",
+    "ats": "workday",
+    "identifier": "syneoshealth/Syneos_Health_External_Site",
+    "regions": [
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "TD Bank",
+    "ats": "workday",
+    "identifier": "td/TD_Bank_Careers",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Telenor",
+    "ats": "workday",
+    "identifier": "telenorgroup/TelenorGroup_careers",
+    "regions": [
+      "oslo",
+      "norway"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Telia",
+    "ats": "workday",
+    "identifier": "teliacompany/Telia_careers",
+    "regions": [
+      "stockholm",
+      "sweden",
+      "helsinki",
+      "finland"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Telstra",
+    "ats": "workday",
+    "identifier": "telstra/Telstra_Careers",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Temenos",
+    "ats": "workday",
+    "identifier": "temenos/Temenoscareers",
+    "regions": [
+      "geneva",
+      "switzerland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Tempus",
+    "ats": "workday",
+    "identifier": "tempus/Tempus_Careers",
+    "regions": [
+      "london",
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Tesco",
+    "ats": "generic",
+    "identifier": "https://www.tesco-careers.com/",
+    "regions": [
+      "welwyn garden city",
+      "uk"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Tesla",
+    "ats": "generic",
+    "identifier": "https://www.tesla.com/careers/search/?region=3&site=DE",
+    "regions": [
+      "berlin",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Thales",
+    "ats": "workday",
+    "identifier": "thales/Careers",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Thinkific",
+    "ats": "greenhouse",
+    "identifier": "thinkific",
+    "regions": [
+      "vancouver",
+      "canada"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Timely",
+    "ats": "unknown",
+    "identifier": "https://apply.workable.com/timely/",
+    "regions": [
+      "dunedin",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "TomTom",
+    "ats": "unknown",
+    "identifier": "https://www.tomtom.com/careers/",
+    "regions": [
+      "amsterdam",
+      "netherlands"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Too Good To Go",
+    "ats": "greenhouse",
+    "identifier": "toogoodtogo",
+    "regions": [
+      "copenhagen",
+      "denmark"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Top Hat",
+    "ats": "lever",
+    "identifier": "tophat",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "TotalEnergies",
+    "ats": "generic",
+    "identifier": "https://jobs.totalenergies.com/en_US/careers/Home",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Tower Insurance",
+    "ats": "unknown",
+    "identifier": "https://careers.tower.co.nz/search",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Trade Me",
+    "ats": "unknown",
+    "identifier": "https://trademe.csod.com/ux/ats/careersite/1/home?c=trademe",
+    "regions": [
+      "wellington",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Two Sigma",
+    "ats": "generic",
+    "identifier": "https://careers.twosigma.com/careers",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Tyro Payments",
+    "ats": "lever",
+    "identifier": "tyro",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Uber",
+    "ats": "generic",
+    "identifier": "https://www.uber.com/global/en/careers/list/",
+    "regions": [
+      "amsterdam",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "UBS",
+    "ats": "generic",
+    "identifier": "https://jobs.ubs.com/TGnewUI/Search/Home/Home?partnerid=25008&siteid=5012",
+    "regions": [
+      "zurich",
+      "switzerland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Unity Technologies",
+    "ats": "unknown",
+    "identifier": "https://unity.com/careers",
+    "regions": [
+      "nordics"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "University of Gothenburg",
+    "ats": "unknown",
+    "identifier": "https://www.gu.se/en/work-at-the-university-of-gothenburg/vacancies",
+    "regions": [
+      "gothenburg",
+      "sweden"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Up (Ferocia)",
+    "ats": "greenhouse",
+    "identifier": "up",
+    "regions": [
+      "melbourne",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Vattenfall",
+    "ats": "generic",
+    "identifier": "https://careers.smartrecruiters.com/vattenfall",
+    "regions": [
+      "stockholm",
+      "sweden"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Vend (Lightspeed NZ)",
+    "ats": "generic",
+    "identifier": "https://www.lightspeedhq.com/careers/openings/",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Vertex Pharmaceuticals",
+    "ats": "workday",
+    "identifier": "vrtx/Vertex_Careers",
+    "regions": [
+      "boston",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Vidyard",
+    "ats": "greenhouse",
+    "identifier": "vidyard",
+    "regions": [
+      "kitchener",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Vinted",
+    "ats": "generic",
+    "identifier": "https://careers.vinted.com/jobs",
+    "regions": [
+      "lithuania"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Visa",
+    "ats": "workday",
+    "identifier": "visa/Visa",
+    "regions": [
+      "foster city",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Vodafone",
+    "ats": "generic",
+    "identifier": "https://careers.vodafone.com/",
+    "regions": [
+      "uk",
+      "europe"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Volkswagen Group",
+    "ats": "generic",
+    "identifier": "https://jobs.volkswagen-group.com/",
+    "regions": [
+      "wolfsburg",
+      "germany"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Volvo Cars",
+    "ats": "generic",
+    "identifier": "https://jobs.volvocars.com/",
+    "regions": [
+      "gothenburg",
+      "sweden"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Volvo Group (incl. Volvo Trucks)",
+    "ats": "generic",
+    "identifier": "https://jobs.volvogroup.com/",
+    "regions": [
+      "gothenburg",
+      "sweden"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Wattpad (WEBTOON Entertainment)",
+    "ats": "lever",
+    "identifier": "wattpad",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "Wave (Wave HQ)",
+    "ats": "lever",
+    "identifier": "waveapps",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Waymo",
+    "ats": "greenhouse",
+    "identifier": "waymo",
+    "regions": [
+      "mountain view",
+      "usa"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Wealthsimple",
+    "ats": "lever",
+    "identifier": "wealthsimple",
+    "regions": [
+      "toronto",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Westpac",
+    "ats": "workday",
+    "identifier": "westpacnz/Westpac_Careers",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Westpac NZ",
+    "ats": "workday",
+    "identifier": "westpacnz/Westpac_Careers",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Wise",
+    "ats": "generic",
+    "identifier": "https://wise.jobs/jobs",
+    "regions": [
+      "estonia",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "WiseTech Global",
+    "ats": "unknown",
+    "identifier": "https://www.wisetechglobal.com/careers/current-openings/",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": false
+  },
+  {
+    "name": "Woolworths Group",
+    "ats": "unknown",
+    "identifier": "https://careers.woolworthsgroup.com.au/en_GB/apply/search-jobs",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 3,
+    "enabled": false
+  },
+  {
+    "name": "Xero",
+    "ats": "lever",
+    "identifier": "xero",
+    "regions": [
+      "melbourne",
+      "australia",
+      "wellington",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Zalando",
+    "ats": "workday",
+    "identifier": "zalando/ZalandoSiteWD",
+    "regions": [
+      "berlin",
+      "germany"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Zespri",
+    "ats": "unknown",
+    "identifier": "https://careers.zespri.com/",
+    "regions": [
+      "tauranga",
+      "new zealand"
+    ],
+    "tier": 2,
+    "enabled": false
+  },
+  {
+    "name": "Zip Co",
+    "ats": "greenhouse",
+    "identifier": "zipcolimited",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Zurich Insurance",
+    "ats": "generic",
+    "identifier": "https://careers.zurich.com/search/",
+    "regions": [
+      "zurich",
+      "switzerland"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Zymeworks",
+    "ats": "generic",
+    "identifier": "https://ats.rippling.com/zymeworks-careers/jobs",
+    "regions": [
+      "vancouver",
+      "canada"
+    ],
+    "tier": 2,
+    "enabled": true
+  }
+]

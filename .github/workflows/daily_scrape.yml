@@ -1,0 +1,58 @@
+name: Daily job scrape
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate company registry
+        run: python main.py --validate
+
+      - name: Run scraper
+        run: python main.py
+
+      - name: Commit and push updated state
+        run: |
+          git config user.name "job-scraper-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          # data/digests/ (not a *.md glob) so this doesn't fail on days
+          # with no new digest file -- an unmatched glob would abort the
+          # step under GitHub Actions' default `bash -e`.
+          git add data/jobs_seen.csv data/scraper_health.csv data/digests/
+
+          if git diff --cached --quiet; then
+            echo "Nothing changed, skipping commit."
+            exit 0
+          fi
+
+          NEW_COUNT=$(cat data/NEW_JOBS_COUNT 2>/dev/null || echo "0")
+          TODAY=$(date -u +%Y-%m-%d)
+
+          git commit -m "scrape: ${TODAY} (${NEW_COUNT} new jobs)" || true
+          git push || true

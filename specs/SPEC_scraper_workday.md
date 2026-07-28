@@ -17,7 +17,31 @@ with JSON body:
 ```
 
 ## Identifier convention
-companies.json stores `identifier` as `"{tenant}/{site}"`. The `wd{N}` instance number is NOT stored; the adapter discovers it by trying wd1, wd3, wd5, wd2, wd4 (in that order of prevalence) and caching the working one in memory for the run. A 404 or ~30x on the POST means wrong instance; try next.
+companies.json stores `identifier` as `"{tenant}/{site}"`. By default the `wd{N}` instance number
+is NOT stored; the adapter discovers it by trying wd1, wd3, wd5, wd2, wd4 (in that order of
+prevalence) and caching the working one in memory for the run. A 404 or non-200 on the POST means
+wrong instance; try next.
+
+**Explicit instance override.** For a tenant where the fast 5-candidate guess doesn't hit,
+`identifier` may instead be written as `"{tenant}/{site}|wd{N}"` (pipe-separated, matching the
+`eightfold.py` convention for its explicit-domain override -- see `SPEC_scraper_eightfold.md`).
+This skips probing entirely for that tenant, both the successful instance in the fast list and
+any wider guessing. Only add this after confirming the instance actually responds with a live
+request (curl or browser devtools), never speculatively: some tenants sit well outside the fast
+5-candidate range (Vertex Pharmaceuticals is `wd501`), so a wider blind guess-and-check loop
+baked into the adapter would multiply requests on every run for no benefit once the real value is
+known. Do the discovery once, write the confirmed value into companies.json, and the adapter
+never has to guess for that tenant again.
+
+If a tenant migrates its careers site to a different tenant/site entirely, rather than just
+changing its `wd{N}` number, update `identifier`'s `{tenant}/{site}` portion too (with a fresh
+explicit instance). Example: Net-A-Porter's original tenant `ynap/YNAP_Careers` was retired after
+a 2025 acquisition; the group's postings, including Net-A-Porter's, now live under
+`luxexperience/LuxExperience_Careers|wd103`.
+
+If the explicit instance ever stops working (Workday re-platforms the tenant again), the adapter
+raises `ScraperError` naming the stale instance rather than silently falling back to guessing --
+see "Errors" below. That failure is the signal to re-run discovery and update the identifier.
 
 ## Request details
 - Method: POST, `Content-Type: application/json`, `Accept: application/json`, standard USER_AGENT.

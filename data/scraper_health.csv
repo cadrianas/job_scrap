@@ -1,219 +1,219 @@
 company,consecutive_failures,last_status,last_run
-1Password,1,failed,2026-07-27
-ABB,0,ok,2026-07-27
-AIA New Zealand,0,ok,2026-07-27
-ANZ,0,ok,2026-07-27
-ANZ New Zealand,0,ok,2026-07-27
-ASML,0,ok,2026-07-27
-AbCellera,0,ok,2026-07-27
-Acast,0,ok,2026-07-27
-Accenture,1,failed,2026-07-27
-Accenture New Zealand,1,failed,2026-07-27
-Ada,1,failed,2026-07-27
-Adyen,0,ok,2026-07-27
-Affirm,0,ok,2026-07-27
-Airbnb,0,ok,2026-07-27
-Airbus,0,ok,2026-07-27
-Airwallex,1,failed,2026-07-27
-Allianz,0,ok,2026-07-27
-Amgen,0,ok,2026-07-27
-Anthropic,0,ok,2026-07-27
-ApplyBoard,0,ok,2026-07-27
-Arianespace,0,ok,2026-07-27
-Atlas Copco,0,ok,2026-07-27
-Audi,0,ok,2026-07-27
-BBVA,0,ok,2026-07-27
-BMO,0,ok,2026-07-27
-BMW Group,0,ok,2026-07-27
-BNP Paribas,0,ok,2026-07-27
-BNZ (Bank of New Zealand),0,ok,2026-07-27
-BP,0,ok,2026-07-27
-BT Group,0,ok,2026-07-27
-Back Market,1,failed,2026-07-27
-Bain & Company,0,ok,2026-07-27
-Benevity,1,failed,2026-07-27
-Blablacar,0,ok,2026-07-27
-Block (Afterpay),0,ok,2026-07-27
-Boston Consulting Group,0,ok,2026-07-27
-Brex,0,ok,2026-07-27
-CIBC,0,ok,2026-07-27
-CSL,0,ok,2026-07-27
-Cabify,0,ok,2026-07-27
-Canal+,0,ok,2026-07-27
-Canva,1,failed,2026-07-27
-Capital One,1,failed,2026-07-27
-Carrefour,1,failed,2026-07-27
-Check24,0,ok,2026-07-27
-Chime,0,ok,2026-07-27
-Clio,1,failed,2026-07-27
-Cochlear,0,ok,2026-07-27
-Cohere,1,failed,2026-07-27
-Coinbase,0,ok,2026-07-27
-Coloplast,0,ok,2026-07-27
-Commonwealth Bank,0,ok,2026-07-27
-Coveo,0,ok,2026-07-27
-Culture Amp,0,ok,2026-07-27
-D. E. Shaw Group,0,ok,2026-07-27
-D2L,0,ok,2026-07-27
-DB Schenker (merged into DSV),0,ok,2026-07-27
-DHL,0,ok,2026-07-27
-Danske Bank,0,ok,2026-07-27
-Darktrace,0,ok,2026-07-27
-Databricks,0,ok,2026-07-27
-Datadog,0,ok,2026-07-27
-Delivery Hero,0,ok,2026-07-27
-Deloitte Canada,0,ok,2026-07-27
-Depop,0,ok,2026-07-27
-Deputy,0,ok,2026-07-27
-Deutsche Bank,0,ok,2026-07-27
-Deutsche Telekom,0,ok,2026-07-27
-DoorDash,0,ok,2026-07-27
-EDF,1,failed,2026-07-27
-EQ Bank (Equitable Bank),0,ok,2026-07-27
-EROAD,0,ok,2026-07-27
-ESA,0,ok,2026-07-27
-EURAXESS - Data Science,0,ok,2026-07-27
-Embark Studios,0,ok,2026-07-27
-Employment Hero,0,ok,2026-07-27
-Envato,0,ok,2026-07-27
-Exact,0,ok,2026-07-27
-Farfetch,0,ok,2026-07-27
-Figma,0,ok,2026-07-27
-Fisher & Paykel Healthcare,0,ok,2026-07-27
-FreshBooks,1,failed,2026-07-27
-Genentech,0,ok,2026-07-27
-Genmab,0,ok,2026-07-27
-Getaround,1,failed,2026-07-27
-Getir,1,failed,2026-07-27
-Gilead Sciences,0,ok,2026-07-27
-Glovo,1,failed,2026-07-27
-Halter,1,failed,2026-07-27
-Hootsuite,0,ok,2026-07-27
-Hudson River Trading,0,ok,2026-07-27
-ING,0,ok,2026-07-27
-IQVIA,0,ok,2026-07-27
-Iberdrola,0,ok,2026-07-27
-Illumina,0,ok,2026-07-27
-Intercom,0,ok,2026-07-27
-Jane Street,0,ok,2026-07-27
-Jobindex - Data Science,0,ok,2026-07-27
-KOHO,1,failed,2026-07-27
-KPMG New Zealand,0,ok,2026-07-27
-Kinaxis,1,failed,2026-07-27
-King,1,failed,2026-07-27
-LIC (Livestock Improvement Corporation),0,ok,2026-07-27
-League,0,ok,2026-07-27
-Lego,1,failed,2026-07-27
-Lightspeed Commerce,1,failed,2026-07-27
-Linktree,1,failed,2026-07-27
-MYOB (NZ),0,ok,2026-07-27
-Macquarie Group,0,ok,2026-07-27
-Maersk,0,ok,2026-07-27
-Magna International,0,ok,2026-07-27
-Manulife,0,ok,2026-07-27
-McKinsey & Company,1,failed,2026-07-27
-MediaMarkt,0,ok,2026-07-27
-Mercedes-Benz Group,0,ok,2026-07-27
-Moderna,0,ok,2026-07-27
-Munich Re,0,ok,2026-07-27
-NAB,0,ok,2026-07-27
-Nature Careers - Data Science,0,ok,2026-07-27
-Net-A-Porter,1,failed,2026-07-27
-Netflix,0,ok,2026-07-27
-Nine Entertainment,1,failed,2026-07-27
-Novartis,0,ok,2026-07-27
-Novartis Ireland,0,ok,2026-07-27
-OpenText,0,ok,2026-07-27
-Orange,0,ok,2026-07-27
-Orsted,1,failed,2026-07-27
-Oura,0,ok,2026-07-27
-Palantir Technologies,0,ok,2026-07-27
-Parexel,0,ok,2026-07-27
-PayPal,0,ok,2026-07-27
-Philips,0,ok,2026-07-27
-Pinterest,0,ok,2026-07-27
-Plaid,0,ok,2026-07-27
-Polestar,0,ok,2026-07-27
-Porsche,0,ok,2026-07-27
-PostNord,0,ok,2026-07-27
-Prospa,0,ok,2026-07-27
-Pushpay,0,ok,2026-07-27
-PwC New Zealand,0,ok,2026-07-27
-QBE Insurance,0,ok,2026-07-27
-Qt Company,0,ok,2026-07-27
-RBC,0,ok,2026-07-27
-REA Group,0,ok,2026-07-27
-RWE,0,ok,2026-07-27
-Ramsay Health Care,0,ok,2026-07-27
-Regeneron Pharmaceuticals,0,ok,2026-07-27
-ResMed,0,ok,2026-07-27
-Robinhood,0,ok,2026-07-27
-Roche,0,ok,2026-07-27
-Rocket Internet,0,ok,2026-07-27
-Rocket Lab,0,ok,2026-07-27
-SEB,0,ok,2026-07-27
-SIX,0,ok,2026-07-27
-SKF,0,ok,2026-07-27
-SNCF,0,ok,2026-07-27
-SafetyCulture,0,ok,2026-07-27
-Sainsbury's,0,ok,2026-07-27
-Sandvik,0,ok,2026-07-27
-Santander,0,ok,2026-07-27
-Saxo Bank,0,ok,2026-07-27
-Schneider Electric,1,failed,2026-07-27
-Scotiabank,0,ok,2026-07-27
-Shell,0,ok,2026-07-27
-Shopify,0,ok,2026-07-27
-Siemens,0,ok,2026-07-27
-Sky,0,ok,2026-07-27
-SoFi,0,ok,2026-07-27
-SoundCloud,0,ok,2026-07-27
-Spark New Zealand,0,ok,2026-07-27
-Spotify,0,ok,2026-07-27
-Stripe,0,ok,2026-07-27
-Sun Life,0,ok,2026-07-27
-Swiss Re,0,ok,2026-07-27
-Swisscom,1,failed,2026-07-27
-Symend,1,failed,2026-07-27
-Syneos Health,1,failed,2026-07-27
-TD Bank,0,ok,2026-07-27
-Telenor,1,failed,2026-07-27
-Telia,0,ok,2026-07-27
-Telstra,0,ok,2026-07-27
-Temenos,1,failed,2026-07-27
-Tempus,0,ok,2026-07-27
-Tesco,1,failed,2026-07-27
-Tesla,1,failed,2026-07-27
-Thales,0,ok,2026-07-27
-Thinkific,0,ok,2026-07-27
-Too Good To Go,0,ok,2026-07-27
-Top Hat,1,failed,2026-07-27
-TotalEnergies,0,ok,2026-07-27
-Two Sigma,0,ok,2026-07-27
-Tyro Payments,1,failed,2026-07-27
-UBS,0,ok,2026-07-27
-Uber,1,failed,2026-07-27
-Up (Ferocia),0,ok,2026-07-27
-Vattenfall,0,ok,2026-07-27
-Vend (Lightspeed NZ),0,ok,2026-07-27
-Vertex Pharmaceuticals,1,failed,2026-07-27
-Vidyard,1,failed,2026-07-27
-Vinted,0,ok,2026-07-27
-Visa,0,ok,2026-07-27
-Vodafone,0,ok,2026-07-27
-Volkswagen Group,0,ok,2026-07-27
-Volvo Cars,0,ok,2026-07-27
-Volvo Group (incl. Volvo Trucks),0,ok,2026-07-27
-Wattpad (WEBTOON Entertainment),0,ok,2026-07-27
-Wave (Wave HQ),0,ok,2026-07-27
-Waymo,0,ok,2026-07-27
-Wealthsimple,0,ok,2026-07-27
-Westpac,1,failed,2026-07-27
-Westpac NZ,1,failed,2026-07-27
-Wise,0,ok,2026-07-27
-Xero,1,failed,2026-07-27
-Zalando,0,ok,2026-07-27
-Zip Co,0,ok,2026-07-27
-Zurich Insurance,0,ok,2026-07-27
-Zymeworks,0,ok,2026-07-27
-n26,0,ok,2026-07-27
+1Password,2,failed,2026-07-28
+ABB,0,ok,2026-07-28
+AIA New Zealand,0,ok,2026-07-28
+ANZ,0,ok,2026-07-28
+ANZ New Zealand,0,ok,2026-07-28
+ASML,0,ok,2026-07-28
+AbCellera,0,ok,2026-07-28
+Acast,0,ok,2026-07-28
+Accenture,2,failed,2026-07-28
+Accenture New Zealand,2,failed,2026-07-28
+Ada,2,failed,2026-07-28
+Adyen,0,ok,2026-07-28
+Affirm,0,ok,2026-07-28
+Airbnb,0,ok,2026-07-28
+Airbus,0,ok,2026-07-28
+Airwallex,2,failed,2026-07-28
+Allianz,0,ok,2026-07-28
+Amgen,0,ok,2026-07-28
+Anthropic,0,ok,2026-07-28
+ApplyBoard,0,ok,2026-07-28
+Arianespace,0,ok,2026-07-28
+Atlas Copco,0,ok,2026-07-28
+Audi,0,ok,2026-07-28
+BBVA,0,ok,2026-07-28
+BMO,0,ok,2026-07-28
+BMW Group,0,ok,2026-07-28
+BNP Paribas,0,ok,2026-07-28
+BNZ (Bank of New Zealand),0,ok,2026-07-28
+BP,0,ok,2026-07-28
+BT Group,0,ok,2026-07-28
+Back Market,2,failed,2026-07-28
+Bain & Company,0,ok,2026-07-28
+Benevity,2,failed,2026-07-28
+Blablacar,0,ok,2026-07-28
+Block (Afterpay),0,ok,2026-07-28
+Boston Consulting Group,0,ok,2026-07-28
+Brex,0,ok,2026-07-28
+CIBC,0,ok,2026-07-28
+CSL,0,ok,2026-07-28
+Cabify,0,ok,2026-07-28
+Canal+,0,ok,2026-07-28
+Canva,2,failed,2026-07-28
+Capital One,2,failed,2026-07-28
+Carrefour,2,failed,2026-07-28
+Check24,0,ok,2026-07-28
+Chime,0,ok,2026-07-28
+Clio,2,failed,2026-07-28
+Cochlear,0,ok,2026-07-28
+Cohere,2,failed,2026-07-28
+Coinbase,0,ok,2026-07-28
+Coloplast,0,ok,2026-07-28
+Commonwealth Bank,0,ok,2026-07-28
+Coveo,0,ok,2026-07-28
+Culture Amp,0,ok,2026-07-28
+D. E. Shaw Group,0,ok,2026-07-28
+D2L,0,ok,2026-07-28
+DB Schenker (merged into DSV),0,ok,2026-07-28
+DHL,0,ok,2026-07-28
+Danske Bank,0,ok,2026-07-28
+Darktrace,0,ok,2026-07-28
+Databricks,0,ok,2026-07-28
+Datadog,0,ok,2026-07-28
+Delivery Hero,0,ok,2026-07-28
+Deloitte Canada,0,ok,2026-07-28
+Depop,0,ok,2026-07-28
+Deputy,0,ok,2026-07-28
+Deutsche Bank,0,ok,2026-07-28
+Deutsche Telekom,0,ok,2026-07-28
+DoorDash,0,ok,2026-07-28
+EDF,2,failed,2026-07-28
+EQ Bank (Equitable Bank),0,ok,2026-07-28
+EROAD,0,ok,2026-07-28
+ESA,0,ok,2026-07-28
+EURAXESS - Data Science,0,ok,2026-07-28
+Embark Studios,0,ok,2026-07-28
+Employment Hero,0,ok,2026-07-28
+Envato,0,ok,2026-07-28
+Exact,0,ok,2026-07-28
+Farfetch,0,ok,2026-07-28
+Figma,0,ok,2026-07-28
+Fisher & Paykel Healthcare,0,ok,2026-07-28
+FreshBooks,2,failed,2026-07-28
+Genentech,0,ok,2026-07-28
+Genmab,0,ok,2026-07-28
+Getaround,2,failed,2026-07-28
+Getir,2,failed,2026-07-28
+Gilead Sciences,0,ok,2026-07-28
+Glovo,2,failed,2026-07-28
+Halter,2,failed,2026-07-28
+Hootsuite,0,ok,2026-07-28
+Hudson River Trading,0,ok,2026-07-28
+ING,0,ok,2026-07-28
+IQVIA,0,ok,2026-07-28
+Iberdrola,0,ok,2026-07-28
+Illumina,0,ok,2026-07-28
+Intercom,0,ok,2026-07-28
+Jane Street,0,ok,2026-07-28
+Jobindex - Data Science,0,ok,2026-07-28
+KOHO,2,failed,2026-07-28
+KPMG New Zealand,0,ok,2026-07-28
+Kinaxis,2,failed,2026-07-28
+King,2,failed,2026-07-28
+LIC (Livestock Improvement Corporation),0,ok,2026-07-28
+League,0,ok,2026-07-28
+Lego,2,failed,2026-07-28
+Lightspeed Commerce,2,failed,2026-07-28
+Linktree,2,failed,2026-07-28
+MYOB (NZ),0,ok,2026-07-28
+Macquarie Group,0,ok,2026-07-28
+Maersk,0,ok,2026-07-28
+Magna International,0,ok,2026-07-28
+Manulife,0,ok,2026-07-28
+McKinsey & Company,2,failed,2026-07-28
+MediaMarkt,0,ok,2026-07-28
+Mercedes-Benz Group,0,ok,2026-07-28
+Moderna,0,ok,2026-07-28
+Munich Re,0,ok,2026-07-28
+NAB,0,ok,2026-07-28
+Nature Careers - Data Science,0,ok,2026-07-28
+Net-A-Porter,2,failed,2026-07-28
+Netflix,0,ok,2026-07-28
+Nine Entertainment,2,failed,2026-07-28
+Novartis,0,ok,2026-07-28
+Novartis Ireland,0,ok,2026-07-28
+OpenText,0,ok,2026-07-28
+Orange,0,ok,2026-07-28
+Orsted,2,failed,2026-07-28
+Oura,0,ok,2026-07-28
+Palantir Technologies,0,ok,2026-07-28
+Parexel,0,ok,2026-07-28
+PayPal,0,ok,2026-07-28
+Philips,0,ok,2026-07-28
+Pinterest,0,ok,2026-07-28
+Plaid,0,ok,2026-07-28
+Polestar,0,ok,2026-07-28
+Porsche,0,ok,2026-07-28
+PostNord,0,ok,2026-07-28
+Prospa,0,ok,2026-07-28
+Pushpay,0,ok,2026-07-28
+PwC New Zealand,0,ok,2026-07-28
+QBE Insurance,0,ok,2026-07-28
+Qt Company,0,ok,2026-07-28
+RBC,0,ok,2026-07-28
+REA Group,0,ok,2026-07-28
+RWE,0,ok,2026-07-28
+Ramsay Health Care,0,ok,2026-07-28
+Regeneron Pharmaceuticals,0,ok,2026-07-28
+ResMed,0,ok,2026-07-28
+Robinhood,0,ok,2026-07-28
+Roche,0,ok,2026-07-28
+Rocket Internet,0,ok,2026-07-28
+Rocket Lab,0,ok,2026-07-28
+SEB,0,ok,2026-07-28
+SIX,0,ok,2026-07-28
+SKF,0,ok,2026-07-28
+SNCF,0,ok,2026-07-28
+SafetyCulture,0,ok,2026-07-28
+Sainsbury's,0,ok,2026-07-28
+Sandvik,0,ok,2026-07-28
+Santander,0,ok,2026-07-28
+Saxo Bank,0,ok,2026-07-28
+Schneider Electric,2,failed,2026-07-28
+Scotiabank,0,ok,2026-07-28
+Shell,0,ok,2026-07-28
+Shopify,0,ok,2026-07-28
+Siemens,0,ok,2026-07-28
+Sky,0,ok,2026-07-28
+SoFi,0,ok,2026-07-28
+SoundCloud,0,ok,2026-07-28
+Spark New Zealand,0,ok,2026-07-28
+Spotify,0,ok,2026-07-28
+Stripe,0,ok,2026-07-28
+Sun Life,0,ok,2026-07-28
+Swiss Re,0,ok,2026-07-28
+Swisscom,2,failed,2026-07-28
+Symend,2,failed,2026-07-28
+Syneos Health,2,failed,2026-07-28
+TD Bank,0,ok,2026-07-28
+Telenor,2,failed,2026-07-28
+Telia,0,ok,2026-07-28
+Telstra,0,ok,2026-07-28
+Temenos,2,failed,2026-07-28
+Tempus,0,ok,2026-07-28
+Tesco,2,failed,2026-07-28
+Tesla,2,failed,2026-07-28
+Thales,0,ok,2026-07-28
+Thinkific,0,ok,2026-07-28
+Too Good To Go,0,ok,2026-07-28
+Top Hat,2,failed,2026-07-28
+TotalEnergies,0,ok,2026-07-28
+Two Sigma,0,ok,2026-07-28
+Tyro Payments,2,failed,2026-07-28
+UBS,0,ok,2026-07-28
+Uber,2,failed,2026-07-28
+Up (Ferocia),0,ok,2026-07-28
+Vattenfall,0,ok,2026-07-28
+Vend (Lightspeed NZ),0,ok,2026-07-28
+Vertex Pharmaceuticals,2,failed,2026-07-28
+Vidyard,2,failed,2026-07-28
+Vinted,0,ok,2026-07-28
+Visa,0,ok,2026-07-28
+Vodafone,0,ok,2026-07-28
+Volkswagen Group,0,ok,2026-07-28
+Volvo Cars,0,ok,2026-07-28
+Volvo Group (incl. Volvo Trucks),0,ok,2026-07-28
+Wattpad (WEBTOON Entertainment),0,ok,2026-07-28
+Wave (Wave HQ),0,ok,2026-07-28
+Waymo,0,ok,2026-07-28
+Wealthsimple,0,ok,2026-07-28
+Westpac,2,failed,2026-07-28
+Westpac NZ,2,failed,2026-07-28
+Wise,0,ok,2026-07-28
+Xero,2,failed,2026-07-28
+Zalando,0,ok,2026-07-28
+Zip Co,0,ok,2026-07-28
+Zurich Insurance,0,ok,2026-07-28
+Zymeworks,0,ok,2026-07-28
+n26,0,ok,2026-07-28

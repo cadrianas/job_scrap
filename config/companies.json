@@ -78,8 +78,8 @@
   },
   {
     "name": "Ada",
-    "ats": "lever",
-    "identifier": "ada",
+    "ats": "greenhouse",
+    "identifier": "ada18",
     "regions": [
       "toronto",
       "canada"
@@ -662,8 +662,8 @@
   },
   {
     "name": "Clio",
-    "ats": "greenhouse",
-    "identifier": "goclio",
+    "ats": "workday",
+    "identifier": "clio/ClioCareerSite|wd3",
     "regions": [
       "vancouver",
       "canada"
@@ -1209,7 +1209,7 @@
   {
     "name": "Getir",
     "ats": "generic",
-    "identifier": "https://www.careers-page.com/getir-2",
+    "identifier": "https://getir.careers-page.com/",
     "regions": [
       "istanbul",
       "turkey"
@@ -2780,8 +2780,8 @@
   },
   {
     "name": "Tyro Payments",
-    "ats": "lever",
-    "identifier": "tyro",
+    "ats": "workday",
+    "identifier": "tyro/Tyro|wd3",
     "regions": [
       "sydney",
       "australia"

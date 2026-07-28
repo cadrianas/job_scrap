@@ -245,3 +245,87 @@ ASOS (ThirtyThree), Decibel Therapeutics (merged into Regeneron, see above)
 
 Academic / job boards (2026-07-26 batch, see above): Aalborg University (client-rendered,
 no API found), Jobnet.dk (real API exists but WAF-blocked), ResearchGate (hard 403 bot-wall)
+
+## 2026-07-28: triage of the 44 companies that failed in the first real CI run
+
+Run `30279701099` (2026-07-27) surfaced 44 failing `enabled: true` companies -- the first time
+this project had real production failure data instead of pre-launch research. 12 were the
+Workday `wdN` cluster (see the Phase 1 PR, `scrapers/workday.py`). This section covers the
+other 32, checked live against the actual production request shape, not guessed.
+
+### Fixed in place (existing adapters, no new code)
+
+- **Ada**: `lever/ada` 404s. Real board is Greenhouse, `ada18` (`job-boards.greenhouse.io/ada18`,
+  8 jobs). Lever token was stale, likely a pre-migration leftover.
+- **Clio**: `greenhouse/goclio` 404s. Clio moved to Workday: `clio/ClioCareerSite|wd3`, 158 jobs
+  (Vancouver posting confirms it's the right Clio -- there's an unrelated Greek startup also
+  named "Clio" that a same-name Workable guess turned up, rejected for that reason).
+- **Tyro Payments**: `lever/tyro` 404s. Real board is Workday, `tyro/Tyro|wd3`. Currently 0 open
+  roles -- confirmed genuine (valid schema, empty `jobPostings`), not a wrong identifier.
+- **Getir**: URL `careers-page.com/getir-2` now 404s; the company moved to a per-company
+  subdomain, `getir.careers-page.com/`. Same `careers-page.com` platform, still `generic`,
+  10 job links visible in raw HTML.
+
+### Confirmed live on a vendor this project has no adapter for yet
+
+All of the following were verified against the vendor's real API with the exact request shape
+`SPEC_scraper_json_boards.md` (not yet written) would need -- not a guess, not a name match on
+its own unless noted. This is the Tier 1 vendor list from `ROADMAP.md` turning out to matter a
+lot more than the original ~10-company estimate: 17 companies land here, all currently `lever`
+or `greenhouse` in the registry with a stale token.
+
+**Ashby** (`api.ashbyhq.com/posting-api/job-board/{slug}`) -- 10 companies:
+Cohere `cohere` (139), Airwallex `airwallex` (609), Xero `xero` (101), 1Password `1password`
+(63), KOHO `koho` (13), Back Market `backmarket` (13), Top Hat `top-hat` (8, note the hyphen),
+Benevity `benevity` (job content confirms Calgary HQ), Lightspeed Commerce `lightspeedhq`
+(job content confirms Ottawa -- the bare slug `lightspeed` is a *different* company, an
+Illinois robotics firm, rejected), and Halter `halter` (276, already known from the previous
+session, repeated here because it's the same fix).
+
+**SmartRecruiters** (`api.smartrecruiters.com/v1/companies/{id}/postings`) -- 2 companies:
+Canva `canva` (230, confirmed with real content -- SmartRecruiters returns HTTP 200 with an
+empty `content: []` for *any* slug, valid or not, so a bare 200 proves nothing by itself; Canva
+was confirmed via non-empty postings), Getaround `Getaround` (0 jobs, confirmed genuine via the
+separate public page `careers.smartrecruiters.com/Getaround`, which says "No job" -- same
+false-positive-shaped API, verified through the side door instead).
+
+**Workable** (`apply.workable.com/api/v1/widget/accounts/{slug}?details=true`) -- 5 companies,
+all confirmed via the `name` field in the response matching the real company (Workable's widget
+API also returns 200 for a nonexistent slug, with `jobs: []` -- the name match is what makes
+these real, not the status code): Kinaxis `kinaxis`, Symend `symend`, FreshBooks `freshbooks`,
+Glovo `glovo`, Linktree `linktree`. All currently show 0 open jobs.
+
+None of these are coded yet -- `scrapers/json_boards.py` (or five separate modules, see the open
+architecture decision in `ROADMAP.md`) still needs to be built before any of the 17 actually
+recover. Confirming this many real companies on three vendors in one pass is a strong argument
+for building Ashby first, since it alone accounts for 10 of the 17.
+
+### Bot-walled (matches the existing do-not-pursue pattern)
+
+Orsted, Tesla, Schneider Electric, EDF, and Tesco return 403 consistently. Uber returns 406,
+same effective signature. Carrefour is inconsistent -- 403 from the GitHub Actions runner in the
+real CI run, 200 from this machine's IP during research -- which reads as Cloudflare scoring
+datacenter/cloud IP ranges (where Actions runs) more aggressively than others, not as the block
+being lifted. Treating it as still bot-walled since production is what matters. Same policy as
+the existing list in `HANDOFF.md`: getting through means defeating bot detection, which this
+project deliberately does not do.
+
+### Unresolved (need more work, left enabled so they stay visible in `scraper_health.csv`)
+
+- **Vidyard**: not on Greenhouse (stale token, confirmed dead via 302 error-redirect), Lever,
+  Ashby, SmartRecruiters, Workable, Breezy, or BambooHR. Their own `/careers/` page 403s.
+  Needs a real browser session to find the current platform.
+- **King** (Workday tenant `activision`): careers.king.com shows Eightfold markers in raw HTML,
+  but the `domain` param `scrapers/eightfold.py` needs could not be guessed (`king.com` and
+  `careers.king.com` both return `"Tenant not identified"`). Needs a live devtools capture of
+  the real XHR call; attempted via the in-app browser tool this session, which became
+  unresponsive before it completed.
+- **Telenor** (Workday tenant `telenorgroup`): live search results point at
+  `telenorgroup.wd3.myworkdayjobs.com/TelenorGroup_careers`, but that instance now returns
+  HTTP 422 on the real CXS POST (not 404 -- the tenant resolves, the request is rejected for an
+  unknown reason). Instances above wd150 don't even resolve in DNS for this tenant, ruling out
+  "just needs a higher wdN". Current platform not identified.
+- **McKinsey & Company**: connection fails outright (no response, not even a TLS handshake) from
+  this machine, matching the same signature `HANDOFF.md` already recorded for the separate
+  "McKinsey Australia" entry. Likely geo/network-level, not a scraper bug. Worth one retry from
+  a different vantage point (e.g. the GitHub Actions runner itself) before concluding anything.

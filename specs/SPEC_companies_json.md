@@ -40,7 +40,7 @@ Valid `ats` values: `greenhouse`, `lever`, `workday`, `eightfold`, `generic`, pl
 
 - `greenhouse`: the board token, i.e. the `X` in `boards.greenhouse.io/X` or `job-boards.greenhouse.io/X`
 - `lever`: the site tag, i.e. the `X` in `jobs.lever.co/X`
-- `workday`: `tenant/site` as found in the careers URL `X.wdY.myworkdayjobs.com/SITE` -> `"X/SITE"` (the wd instance number is discovered by the adapter, see SPEC_scraper_workday.md)
+- `workday`: `tenant/site` as found in the careers URL `X.wdY.myworkdayjobs.com/SITE` -> `"X/SITE"` (the wd instance number is normally discovered by the adapter; for a tenant confirmed to need a specific instance, `"X/SITE|wdY"` skips discovery, see SPEC_scraper_workday.md)
 - `eightfold`: the careers domain, e.g. `careers.company.com`
 - `generic`: the full careers page URL
 

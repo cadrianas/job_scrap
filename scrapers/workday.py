@@ -1,12 +1,15 @@
 """Adapter for Workday-hosted careers sites.
 
 The careers page itself is a JS app, but it calls an internal JSON POST
-endpoint, so no browser automation is needed. The wdN instance number
-isn't stored in companies.json (identifier is just "tenant/site"); this
-module discovers it by trying candidates in order of prevalence and
-caches the working one in memory for the run. All Workday-specific
-quirks live in this one file, since this is the adapter most likely to
-break when Workday changes something.
+endpoint, so no browser automation is needed. companies.json normally
+stores identifier as "tenant/site"; this module discovers the wdN
+instance number by trying candidates in order of prevalence and caches
+the working one in memory for the run. For tenants where that fast
+guess-list doesn't hit (confirmed live, not a speculative widen -- see
+SPEC_scraper_workday.md), identifier may instead carry the confirmed
+instance as "tenant/site|wdN" to skip probing entirely. All
+Workday-specific quirks live in this one file, since this is the
+adapter most likely to break when Workday changes something.
 """
 
 import hashlib
@@ -29,8 +32,8 @@ _instance_cache: dict[str, str] = {}
 
 
 def fetch_jobs(company: Company) -> list[Job]:
-    tenant, site = company.identifier.split("/", 1)
-    instance, first_payload = _discover_instance(company, tenant, site)
+    tenant, site, explicit_instance = _split_identifier(company.identifier)
+    instance, first_payload = _discover_instance(company, tenant, site, explicit_instance)
 
     if "jobPostings" not in first_payload:
         raise ScraperError(company.name, "response missing 'jobPostings'")
@@ -77,7 +80,28 @@ def fetch_jobs(company: Company) -> list[Job]:
     return jobs
 
 
-def _discover_instance(company: Company, tenant: str, site: str) -> tuple[str, dict]:
+def _split_identifier(identifier: str) -> tuple[str, str, str | None]:
+    """"tenant/site" or "tenant/site|wdN" -> (tenant, site, explicit_instance)."""
+    base, _, explicit_instance = identifier.partition("|")
+    tenant, site = base.split("/", 1)
+    return tenant, site, explicit_instance or None
+
+
+def _discover_instance(
+    company: Company, tenant: str, site: str, explicit_instance: str | None
+) -> tuple[str, dict]:
+    if explicit_instance is not None:
+        payload = _request_page(tenant, site, explicit_instance, 0)
+        if payload is not None and "jobPostings" in payload:
+            _instance_cache[tenant] = explicit_instance
+            return explicit_instance, payload
+        raise ScraperError(
+            company.name,
+            f"explicit Workday instance '{explicit_instance}' for tenant '{tenant}' no longer "
+            f"works -- re-confirm in browser devtools and update the identifier in "
+            f"companies.json",
+        )
+
     cached = _instance_cache.get(tenant)
     if cached is not None:
         payload = _request_page(tenant, site, cached, 0)

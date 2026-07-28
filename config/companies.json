@@ -57,7 +57,7 @@
   {
     "name": "Accenture",
     "ats": "workday",
-    "identifier": "accenture/AccentureCareers",
+    "identifier": "accenture/AccentureCareers|wd103",
     "regions": [
       "new york",
       "usa"
@@ -68,7 +68,7 @@
   {
     "name": "Accenture New Zealand",
     "ats": "workday",
-    "identifier": "accenture/AccentureCareers",
+    "identifier": "accenture/AccentureCareers|wd103",
     "regions": [
       "auckland",
       "new zealand"
@@ -575,7 +575,7 @@
   {
     "name": "Capital One",
     "ats": "workday",
-    "identifier": "capitalone/Capital_One",
+    "identifier": "capitalone/Capital_One|wd12",
     "regions": [
       "mclean",
       "usa"
@@ -1545,7 +1545,7 @@
   {
     "name": "Lego",
     "ats": "workday",
-    "identifier": "lego/LEGO_External",
+    "identifier": "lego/LEGO_External|wd103",
     "regions": [
       "billund",
       "denmark"
@@ -1764,7 +1764,7 @@
   {
     "name": "Net-A-Porter",
     "ats": "workday",
-    "identifier": "ynap/YNAP_Careers",
+    "identifier": "luxexperience/LuxExperience_Careers|wd103",
     "regions": [
       "london",
       "uk"
@@ -1786,7 +1786,7 @@
   {
     "name": "Nine Entertainment",
     "ats": "workday",
-    "identifier": "nine/Nine_External_Career_Site",
+    "identifier": "nine/Nine_External_Career_Site|wd105",
     "regions": [
       "sydney",
       "australia"
@@ -2549,7 +2549,7 @@
   {
     "name": "Swisscom",
     "ats": "workday",
-    "identifier": "swisscom/SwisscomExternalCareers",
+    "identifier": "swisscom/SwisscomExternalCareers|wd103",
     "regions": [
       "bern",
       "switzerland"
@@ -2571,7 +2571,7 @@
   {
     "name": "Syneos Health",
     "ats": "workday",
-    "identifier": "syneoshealth/Syneos_Health_External_Site",
+    "identifier": "syneoshealth/Syneos_Health_External_Site|wd12",
     "regions": [
       "europe"
     ],
@@ -2627,7 +2627,7 @@
   {
     "name": "Temenos",
     "ats": "workday",
-    "identifier": "temenos/Temenoscareers",
+    "identifier": "temenos/Temenoscareers|wd103",
     "regions": [
       "geneva",
       "switzerland"
@@ -2868,7 +2868,7 @@
   {
     "name": "Vertex Pharmaceuticals",
     "ats": "workday",
-    "identifier": "vrtx/Vertex_Careers",
+    "identifier": "vrtx/Vertex_Careers|wd501",
     "regions": [
       "boston",
       "usa"
@@ -2999,7 +2999,7 @@
   {
     "name": "Westpac",
     "ats": "workday",
-    "identifier": "westpacnz/Westpac_Careers",
+    "identifier": "westpacnz/Westpac_Careers|wd105",
     "regions": [
       "sydney",
       "australia"
@@ -3010,7 +3010,7 @@
   {
     "name": "Westpac NZ",
     "ats": "workday",
-    "identifier": "westpacnz/Westpac_Careers",
+    "identifier": "westpacnz/Westpac_Careers|wd105",
     "regions": [
       "auckland",
       "new zealand"

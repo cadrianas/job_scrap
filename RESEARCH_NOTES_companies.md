@@ -369,3 +369,64 @@ not real postings):
 - **Bausch Health**: the registry's existing `/search` identifier and a `/go/Job-Openings-in-...`
   category page (matching the pattern that worked for Canal+) both 200 with 0 real hits. No
   working page found without deeper investigation.
+
+## 2026-07-29: user-submitted batch, 24 URLs checked
+
+The user sent a list of 24 URLs and named sources (career pages, academic/NGO job boards, and a
+couple of general aggregators) to check for addition. All checked live via
+`scrapers.generic._looks_like_job_link`, same rule as always -- several URLs 200 with plausible
+job-shaped hrefs that turn out to be nav/category links, not real postings.
+
+**Added (7):**
+- University of Vienna: `jobs.univie.ac.at/search/` (51 hits at verification, 26 in the
+  dry-run -- SuccessFactors, same branded-domain-with-/search/ pattern as the Phase 3 cluster).
+- European Mathematical Society: `euromathsoc.org/jobs` (32 jobs). Pan-European pure/applied
+  math positions; not filtered to quant/data roles at source, relies on `filters.py`.
+- ISGlobal (Barcelona Institute for Global Health): `jobs.isglobal.org/` (9 jobs). Teamtailor
+  hints appeared in the raw HTML but the root listing page itself is server-rendered enough for
+  `_looks_like_job_link` to catch real postings directly -- no need to chase the Teamtailor API.
+- jobs.ac.uk - Maths Stats and CS: the user's own filtered search URL (25 jobs), server-renders
+  real job cards directly. Notable: `SPEC_scraper_academic.md` scoped a dedicated `jobsacuk`
+  RSS-feed adapter for this source (Tier A, never built) on the assumption it would need one --
+  turns out the filtered HTML search page works with the existing `generic` adapter, no new code
+  needed. (Originally named with a comma in the display name, which silently broke
+  `--companies` filtering since that flag splits on commas -- renamed before committing, see
+  `HANDOFF.md`'s conventions section, worth remembering as a naming constraint on any future
+  aggregator entry with commas in its natural name.)
+- OECD: `smartrecruiters`, id `oecd` (27 jobs, confirmed with real content, company name
+  matches). The `scrapers/json_boards.py` adapter from Phase 2 handled this with zero new code.
+- MSF (Medecins Sans Frontieres): `msf.org/jobs` (19 jobs). Notable: MSF is structurally
+  federated across operational centers, each on a different backend (`msfoca.wd103.myworkdayjobs.com`
+  for one Workday tenant, `job-boards.greenhouse.io/proyectosinternacionales` for Greenhouse,
+  `msf-azg.be` for the Belgian section's own site) -- but `msf.org/jobs` itself aggregates real
+  links from all of them into one server-rendered page, so one `generic` entry covers all of it
+  without needing per-center entries the way Deloitte/KPMG would.
+- EuroClimateJobs: `euroclimatejobs.com` (62 hits at verification, 48 in the dry-run). This is a
+  general aggregator across climate-sector employers, not one company's own page -- added as a
+  deliberate user decision extending the existing Jobindex.dk-style exception, not a default
+  policy change. Two other general aggregators in the same batch (IrishJobs.ie, a ZipRecruiter
+  Ireland search) were explicitly **not** added: broader in scope (any industry, any employer),
+  same category as Seek/Indeed which this project has consistently excluded on ToS grounds.
+
+**Not added, checked and client-rendered or otherwise dead (14):** WHO (`careers.who.int`
+redirects to a pure JS shell, 26 chars of text, 0 real hits), ClientEarth (`jobs.clientearth.org`,
+no ATS fingerprint found), Fred Hutch's biostatistics job search, MSKCC's epidemiology-biostatistics
+jobs page (4 hits, too sparse/messy to be worth an entry on its own), NCI/DCEG's careers page (all
+hits were nav/mailto links), AcademicTransfer (client-rendered, one false-positive "Find jobs"
+hit), Clinical Professionals UK's life-science search, IBEC Barcelona's postdoc page, Optimax
+Access (`/careers/` has no real vacancy content, only a blog post link -- likely zero current
+openings or listed elsewhere), the `academicpositions.com` filtered search (real-looking hits
+turned out to be category links with job *counts* embedded in the link text, e.g. "Machine
+Learning370", not real postings), BrusselsJobs's search form page (same category-link shape),
+jobbnorge.no, and Karolinska Institutet (`ki.se`) -- all client-rendered SPAs.
+
+**Notable finding: Stockholm University and KTH are both on Varbi**, the ATS
+`SPEC_scraper_academic.md` already scoped a dedicated adapter for (`scrapers/varbi.py`, listed
+alongside Uppsala as a Swedish-university-cluster candidate) but never built. Both universities'
+own Varbi search pages (`su.varbi.com`, `kth.varbi.com`) are themselves client-rendered though,
+so building that adapter would need real devtools work to find Varbi's underlying API, not
+another URL guess -- same category as the Tier 4 cluster in `HANDOFF.md`.
+
+**One link (`search.foldseek.com/search`) was not a careers page at all** -- it is a
+bioinformatics protein-structure search tool. Confirmed with the user as a mistaken paste and
+dropped, not investigated further.

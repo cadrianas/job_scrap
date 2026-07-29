@@ -329,3 +329,43 @@ project deliberately does not do.
   this machine, matching the same signature `HANDOFF.md` already recorded for the separate
   "McKinsey Australia" entry. Likely geo/network-level, not a scraper bug. Worth one retry from
   a different vantage point (e.g. the GitHub Actions runner itself) before concluding anything.
+
+## 2026-07-29: SuccessFactors cluster (ROADMAP.md Phase 3, Tier 3)
+
+The premise from `HANDOFF.md`/`ROADMAP.md`: SuccessFactors isn't uniformly unscrapable, since
+Canal+, Coloplast, Zurich Insurance, and Scotiabank already work via `generic` because their
+tenants expose a server-rendered `/search/` (or `/go/...`) page distinct from the client-rendered
+SPA landing page. Checked all 10 candidates from the cluster (9 from `ROADMAP.md` plus
+`One NZ (Vodafone NZ)`, already a disabled registry entry with a dead `/viewalljobs/` identifier)
+for the same pattern. 6 of 10 hit.
+
+**Fixed** (all confirmed with real job content via `scrapers.generic._looks_like_job_link`, not
+just a 200 or a plausible-looking href count -- several companies' *existing* URLs returned
+20-30 href matches that turned out to be nav/marketing links, e.g. "Careers in Assurance",
+not real postings):
+- Novo Nordisk: `careers.novonordisk.com/search/` (200 jobs)
+- SAP: `jobs.sap.com/search/` -- note this is a distinct branded domain from the
+  `career5.successfactors.eu/careers?company=SAP` URL already in the registry, which is the
+  shared multi-tenant SuccessFactors domain and stays an SPA shell (26 jobs)
+- Deloitte Australia: `jobs.deloitte.com.au/search/` (32 jobs)
+- Zespri: `careers.zespri.com/search/` (8 jobs)
+- AgResearch: `yourcareer.agresearch.co.nz/search/`, a newer branded domain than the
+  `career10.successfactors.com` one in the old registry entry (1 job -- genuinely small company)
+- One NZ (Vodafone NZ): `careers.one.nz/search/` (25 jobs). The registry already had this
+  company disabled with `careers.one.nz/viewalljobs/`, which 200s but returns 0 real hits (same
+  nav-link-only shape as the failures below) -- `/search/` was the fix, not a new source.
+
+**Not fixed** (checked, no working server-rendered equivalent found):
+- **Lundbeck**: still on the shared `career5.successfactors.eu` domain, same as SAP before its
+  fix. Their own branded domain (`lundbeck.com/us/careers/...`) exists and 200s but only returns
+  nav/marketing links ("Life at Lundbeck", "our culture and people"), not postings. No
+  `careers.lundbeck.com`-style dedicated domain found (doesn't resolve).
+- **EY Australia / EY New Zealand**: confirmed SuccessFactors-backed (via `careers.ey.com`), but
+  every URL tried -- the country-specific `ey.com/en_au` and `en_nz` pages, the global
+  `careers.ey.com/viewalljobs/`, and a guessed `careers.ey.com/ey/jobs/?country=Australia`
+  filter (which 404s) -- returns only nav links or an error page. This needs real devtools
+  capture of the actual search XHR, not a URL-pattern guess; matches HANDOFF's Tier 4 category
+  more than Tier 3's "cheap check."
+- **Bausch Health**: the registry's existing `/search` identifier and a `/go/Job-Openings-in-...`
+  category page (matching the pattern that worked for Canal+) both 200 with 0 real hits. No
+  working page found without deeper investigation.

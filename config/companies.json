@@ -111,14 +111,14 @@
   },
   {
     "name": "AgResearch",
-    "ats": "unknown",
-    "identifier": "https://career10.successfactors.com/career?career_company=agresearch",
+    "ats": "generic",
+    "identifier": "https://yourcareer.agresearch.co.nz/search/",
     "regions": [
       "christchurch",
       "new zealand"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "AIA New Zealand",
@@ -891,14 +891,14 @@
   },
   {
     "name": "Deloitte Australia",
-    "ats": "unknown",
-    "identifier": "https://jobs.deloitte.com.au/",
+    "ats": "generic",
+    "identifier": "https://jobs.deloitte.com.au/search/",
     "regions": [
       "sydney",
       "australia"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Deloitte Canada",
@@ -1830,13 +1830,13 @@
   },
   {
     "name": "Novo Nordisk",
-    "ats": "unknown",
-    "identifier": "https://careers.novonordisk.com/",
+    "ats": "generic",
+    "identifier": "https://careers.novonordisk.com/search/",
     "regions": [
       "denmark"
     ],
     "tier": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Nuvei",
@@ -1851,14 +1851,14 @@
   },
   {
     "name": "One NZ (Vodafone NZ)",
-    "ats": "unknown",
-    "identifier": "https://careers.one.nz/viewalljobs/",
+    "ats": "generic",
+    "identifier": "https://careers.one.nz/search/",
     "regions": [
       "auckland",
       "new zealand"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "OpenText",
@@ -2278,14 +2278,14 @@
   },
   {
     "name": "SAP",
-    "ats": "unknown",
-    "identifier": "https://career5.successfactors.eu/careers?company=SAP",
+    "ats": "generic",
+    "identifier": "https://jobs.sap.com/search/",
     "regions": [
       "walldorf",
       "germany"
     ],
     "tier": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Saxo Bank",
@@ -3077,14 +3077,14 @@
   },
   {
     "name": "Zespri",
-    "ats": "unknown",
-    "identifier": "https://careers.zespri.com/",
+    "ats": "generic",
+    "identifier": "https://careers.zespri.com/search/",
     "regions": [
       "tauranga",
       "new zealand"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Zip Co",

@@ -56,6 +56,16 @@ KNOWN_ATS_VALUES = {
     "bamboohr",
 }
 
+# Above this fraction of attempted companies failing, treat the run as
+# systemic breakage (exit code 2) rather than normal day-to-day noise --
+# see SPEC_main.md. Recalibrated 2026-07-29: real production failure rate
+# is ~1.7% once permanently-bot-walled entries are disabled rather than
+# left enabled and failing forever, so 50% caught nothing short of the
+# whole registry falling over. 15% still tolerates several times that
+# noise floor while catching the kind of broad breakage the very first
+# CI run had (44/218, 20.2%, before any fixes).
+_FAILURE_THRESHOLD = 0.15
+
 
 def _load_companies_raw() -> list[dict]:
     with paths.COMPANIES_FILE.open("r", encoding="utf-8") as f:
@@ -190,11 +200,12 @@ def main(argv: list[str] | None = None) -> int:
 
     attempted = len(results)
     failed_names = [name for name, ok in results.items() if not ok]
-    if attempted > 0 and len(failed_names) / attempted > 0.5:
+    if attempted > 0 and len(failed_names) / attempted > _FAILURE_THRESHOLD:
         logger.error(
-            "%d of %d attempted companies failed (>50%%), treating as systemic breakage",
+            "%d of %d attempted companies failed (>%.0f%%), treating as systemic breakage",
             len(failed_names),
             attempted,
+            _FAILURE_THRESHOLD * 100,
         )
         exit_code = 2
     else:

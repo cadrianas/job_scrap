@@ -1076,6 +1076,26 @@
     "enabled": true
   },
   {
+    "name": "EuroClimateJobs",
+    "ats": "generic",
+    "identifier": "https://www.euroclimatejobs.com/",
+    "regions": [
+      "europe"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
+    "name": "European Mathematical Society",
+    "ats": "generic",
+    "identifier": "https://euromathsoc.org/jobs",
+    "regions": [
+      "europe"
+    ],
+    "tier": 2,
+    "enabled": true
+  },
+  {
     "name": "Exact",
     "ats": "generic",
     "identifier": "https://www.exact.com/careers/vacancies",
@@ -1370,6 +1390,17 @@
     "enabled": true
   },
   {
+    "name": "ISGlobal (Barcelona Institute for Global Health)",
+    "ats": "generic",
+    "identifier": "https://jobs.isglobal.org/",
+    "regions": [
+      "barcelona",
+      "spain"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
     "name": "Jane Street",
     "ats": "greenhouse",
     "identifier": "janestreet",
@@ -1399,6 +1430,16 @@
     ],
     "tier": 2,
     "enabled": false
+  },
+  {
+    "name": "jobs.ac.uk - Maths Stats and CS",
+    "ats": "generic",
+    "identifier": "https://www.jobs.ac.uk/search/?academicDisciplineFacet[0]=mathematics-and-statistics&subDisciplineFacet[0]=mathematics&subDisciplineFacet[1]=statistics&academicDisciplineFacet[1]=computer-sciences&subDisciplineFacet[2]=computer-science&subDisciplineFacet[3]=information-systems&salaryBandFacet[0]=40000-49999&salaryBandFacet[1]=30000-39999&salaryBandFacet[2]=50000-59999&expired-job-redirect=true",
+    "regions": [
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
   },
   {
     "name": "Judo Bank",
@@ -1708,6 +1749,16 @@
     "enabled": true
   },
   {
+    "name": "MSF (Medecins Sans Frontieres)",
+    "ats": "generic",
+    "identifier": "https://www.msf.org/jobs",
+    "regions": [
+      "global"
+    ],
+    "tier": 3,
+    "enabled": true
+  },
+  {
     "name": "Munich Re",
     "ats": "generic",
     "identifier": "https://careers.munichre.com/en/search-jobs",
@@ -1847,6 +1898,17 @@
       "canada"
     ],
     "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "OECD",
+    "ats": "smartrecruiters",
+    "identifier": "oecd",
+    "regions": [
+      "paris",
+      "france"
+    ],
+    "tier": 3,
     "enabled": true
   },
   {
@@ -2831,6 +2893,17 @@
     ],
     "tier": 2,
     "enabled": false
+  },
+  {
+    "name": "University of Vienna",
+    "ats": "generic",
+    "identifier": "https://jobs.univie.ac.at/search/",
+    "regions": [
+      "vienna",
+      "austria"
+    ],
+    "tier": 2,
+    "enabled": true
   },
   {
     "name": "Up (Ferocia)",

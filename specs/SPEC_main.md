@@ -40,7 +40,17 @@ Orchestrator. Loads config, dispatches each company to the right scraper, dedupe
 ## Exit codes
 - 0: success (even with some company failures)
 - 1: config invalid or catastrophic failure (cannot load companies, cannot write state)
-- 2: more than 50 percent of companies failed (signals systemic breakage, makes the Actions run red so it is noticed)
+- 2: more than `_FAILURE_THRESHOLD` (15 percent, see `main.py`) of attempted companies failed
+  (signals systemic breakage, makes the Actions run red so it is noticed). Recalibrated
+  2026-07-29 from an original 50 percent: real production failure rate is roughly 1.7 percent
+  once permanently-blocked entries (bot-walled companies, see `HANDOFF.md`'s "Do not pursue"
+  list) are actually disabled rather than left enabled and failing every day, so 50 percent
+  caught nothing short of the whole registry falling over. 15 percent still tolerates several
+  times that noise floor while catching the kind of broad breakage the very first CI run had
+  (44 of 218 companies failing, 20.2 percent, before any of the fixes in this changelog).
+  Companies confirmed permanently unscrapable (bot-walled, structurally federated, etc.) must be
+  disabled in `companies.json`, not left enabled to fail forever -- leaving them enabled both
+  pollutes `scraper_health.csv` and silently erodes how much real signal this threshold carries.
 
 ## Rules
 - All paths via `config.paths`. No path literals.

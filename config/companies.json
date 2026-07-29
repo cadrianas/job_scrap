@@ -585,14 +585,14 @@
   },
   {
     "name": "Carrefour",
-    "ats": "generic",
+    "ats": "unknown",
     "identifier": "https://www.carrefour.com/en/employment",
     "regions": [
       "massy",
       "france"
     ],
     "tier": 3,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Carsales",
@@ -990,14 +990,14 @@
   },
   {
     "name": "EDF",
-    "ats": "generic",
+    "ats": "unknown",
     "identifier": "https://www.edf.fr/en/edf-join-us",
     "regions": [
       "paris",
       "france"
     ],
     "tier": 3,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Embark Studios",
@@ -1946,14 +1946,14 @@
   },
   {
     "name": "Orsted",
-    "ats": "generic",
+    "ats": "unknown",
     "identifier": "https://orsted.com/en/careers/vacancies-list",
     "regions": [
       "fredericia",
       "denmark"
     ],
     "tier": 1,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Oura",
@@ -2373,14 +2373,14 @@
   },
   {
     "name": "Schneider Electric",
-    "ats": "generic",
+    "ats": "unknown",
     "identifier": "https://careers.se.com/jobs",
     "regions": [
       "rueil-malmaison",
       "france"
     ],
     "tier": 2,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Scotiabank",
@@ -2710,25 +2710,25 @@
   },
   {
     "name": "Tesco",
-    "ats": "generic",
+    "ats": "unknown",
     "identifier": "https://www.tesco-careers.com/",
     "regions": [
       "welwyn garden city",
       "uk"
     ],
     "tier": 3,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Tesla",
-    "ats": "generic",
+    "ats": "unknown",
     "identifier": "https://www.tesla.com/careers/search/?region=3&site=DE",
     "regions": [
       "berlin",
       "germany"
     ],
     "tier": 1,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "Thales",
@@ -2853,14 +2853,14 @@
   },
   {
     "name": "Uber",
-    "ats": "generic",
+    "ats": "unknown",
     "identifier": "https://www.uber.com/global/en/careers/list/",
     "regions": [
       "amsterdam",
       "europe"
     ],
     "tier": 1,
-    "enabled": true
+    "enabled": false
   },
   {
     "name": "UBS",

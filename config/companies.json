@@ -1,7 +1,7 @@
 [
   {
     "name": "1Password",
-    "ats": "lever",
+    "ats": "ashby",
     "identifier": "1password",
     "regions": [
       "toronto",
@@ -155,7 +155,7 @@
   },
   {
     "name": "Airwallex",
-    "ats": "lever",
+    "ats": "ashby",
     "identifier": "airwallex",
     "regions": [
       "melbourne",
@@ -319,7 +319,7 @@
   },
   {
     "name": "Back Market",
-    "ats": "lever",
+    "ats": "ashby",
     "identifier": "backmarket",
     "regions": [
       "paris",
@@ -408,7 +408,7 @@
   },
   {
     "name": "Benevity",
-    "ats": "greenhouse",
+    "ats": "ashby",
     "identifier": "benevity",
     "regions": [
       "calgary",
@@ -563,7 +563,7 @@
   },
   {
     "name": "Canva",
-    "ats": "lever",
+    "ats": "smartrecruiters",
     "identifier": "canva",
     "regions": [
       "sydney",
@@ -596,14 +596,14 @@
   },
   {
     "name": "Carsales",
-    "ats": "unknown",
-    "identifier": "https://careers.carsales.com.au/carsales-careers/opportunities/",
+    "ats": "smartrecruiters",
+    "identifier": "carsales",
     "regions": [
       "melbourne",
       "australia"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "CGI",
@@ -684,7 +684,7 @@
   },
   {
     "name": "Cohere",
-    "ats": "lever",
+    "ats": "ashby",
     "identifier": "cohere",
     "regions": [
       "toronto",
@@ -913,14 +913,14 @@
   },
   {
     "name": "Deloitte New Zealand",
-    "ats": "unknown",
-    "identifier": "https://careers.smartrecruiters.com/DeloitteNZ",
+    "ats": "smartrecruiters",
+    "identifier": "DeloitteNZ",
     "regions": [
       "auckland",
       "new zealand"
     ],
     "tier": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Depop",
@@ -1154,7 +1154,7 @@
   },
   {
     "name": "FreshBooks",
-    "ats": "greenhouse",
+    "ats": "workable",
     "identifier": "freshbooks",
     "regions": [
       "toronto",
@@ -1186,19 +1186,19 @@
   },
   {
     "name": "Gentrack",
-    "ats": "unknown",
-    "identifier": "https://gentrack.com/careers/",
+    "ats": "bamboohr",
+    "identifier": "gentrack",
     "regions": [
       "auckland",
       "new zealand"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Getaround",
-    "ats": "lever",
-    "identifier": "getaround",
+    "ats": "smartrecruiters",
+    "identifier": "Getaround",
     "regions": [
       "paris",
       "france"
@@ -1230,7 +1230,7 @@
   },
   {
     "name": "Glovo",
-    "ats": "greenhouse",
+    "ats": "workable",
     "identifier": "glovo",
     "regions": [
       "barcelona",
@@ -1252,7 +1252,7 @@
   },
   {
     "name": "Halter",
-    "ats": "lever",
+    "ats": "ashby",
     "identifier": "halter",
     "regions": [
       "auckland",
@@ -1435,7 +1435,7 @@
   },
   {
     "name": "Kinaxis",
-    "ats": "greenhouse",
+    "ats": "workable",
     "identifier": "kinaxis",
     "regions": [
       "ottawa",
@@ -1490,7 +1490,7 @@
   },
   {
     "name": "KOHO",
-    "ats": "lever",
+    "ats": "ashby",
     "identifier": "koho",
     "regions": [
       "toronto",
@@ -1511,14 +1511,14 @@
   },
   {
     "name": "KPMG Australia",
-    "ats": "unknown",
-    "identifier": "https://kpmg.com/au/en/careers.html",
+    "ats": "smartrecruiters",
+    "identifier": "KPMGAustralia1",
     "regions": [
       "sydney",
       "australia"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "KPMG New Zealand",
@@ -1566,7 +1566,7 @@
   },
   {
     "name": "Lightspeed Commerce",
-    "ats": "greenhouse",
+    "ats": "ashby",
     "identifier": "lightspeedhq",
     "regions": [
       "montreal",
@@ -1577,7 +1577,7 @@
   },
   {
     "name": "Linktree",
-    "ats": "lever",
+    "ats": "workable",
     "identifier": "linktree",
     "regions": [
       "melbourne",
@@ -1588,14 +1588,14 @@
   },
   {
     "name": "Lovable",
-    "ats": "unknown",
-    "identifier": "https://lovable.dev/careers",
+    "ats": "ashby",
+    "identifier": "lovable",
     "regions": [
       "stockholm",
       "sweden"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Lundbeck",
@@ -1840,14 +1840,14 @@
   },
   {
     "name": "Nuvei",
-    "ats": "unknown",
-    "identifier": "https://apply.workable.com/nuvei/",
+    "ats": "workable",
+    "identifier": "nuvei",
     "regions": [
       "montreal",
       "canada"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "One NZ (Vodafone NZ)",
@@ -1927,14 +1927,14 @@
   },
   {
     "name": "Partly",
-    "ats": "unknown",
-    "identifier": "https://jobs.ashbyhq.com/partly.com",
+    "ats": "ashby",
+    "identifier": "partly.com",
     "regions": [
       "christchurch",
       "new zealand"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "PayPal",
@@ -1982,14 +1982,14 @@
   },
   {
     "name": "Plexure",
-    "ats": "unknown",
-    "identifier": "https://tasksoftware.com/about-us/careers",
+    "ats": "breezyhr",
+    "identifier": "plexure",
     "regions": [
       "auckland",
       "new zealand"
     ],
     "tier": 3,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Polestar",
@@ -2092,14 +2092,14 @@
   },
   {
     "name": "Ramp",
-    "ats": "unknown",
-    "identifier": "https://jobs.ashbyhq.com/ramp",
+    "ats": "ashby",
+    "identifier": "ramp",
     "regions": [
       "new york",
       "usa"
     ],
     "tier": 2,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Ramsay Health Care",
@@ -2355,14 +2355,14 @@
   },
   {
     "name": "Serato",
-    "ats": "unknown",
-    "identifier": "https://serato-limited.breezy.hr/",
+    "ats": "breezyhr",
+    "identifier": "serato-limited",
     "regions": [
       "auckland",
       "new zealand"
     ],
     "tier": 3,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Sharesies",
@@ -2559,7 +2559,7 @@
   },
   {
     "name": "Symend",
-    "ats": "greenhouse",
+    "ats": "workable",
     "identifier": "symend",
     "regions": [
       "calgary",
@@ -2725,8 +2725,8 @@
   },
   {
     "name": "Top Hat",
-    "ats": "lever",
-    "identifier": "tophat",
+    "ats": "ashby",
+    "identifier": "top-hat",
     "regions": [
       "toronto",
       "canada"
@@ -3053,7 +3053,7 @@
   },
   {
     "name": "Xero",
-    "ats": "lever",
+    "ats": "ashby",
     "identifier": "xero",
     "regions": [
       "melbourne",

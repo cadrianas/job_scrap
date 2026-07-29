@@ -15,15 +15,17 @@ import health
 import notify
 from config import paths
 from models import Company, Job, ScraperError
-from scrapers import academic, eightfold, generic, greenhouse, lever, workday
+from scrapers import academic, eightfold, generic, greenhouse, json_boards, lever, workday
 
 logger = logging.getLogger("main")
 
 # Only ATS types with a real adapter go here. Anything else (an unknown
 # ats value) is skipped, not failed -- see SPEC_main.md. All five adapters
 # from PLAN.md Phase 1-3 are now implemented, plus the Phase 3b academic
-# sources documented in SPEC_scraper_academic.md (academic.py dispatches
-# internally on company.ats, so both keys point at the same function).
+# sources documented in SPEC_scraper_academic.md and the Phase 4 vendor
+# job boards in SPEC_scraper_json_boards.md (both academic.py and
+# json_boards.py dispatch internally on company.ats, so multiple keys
+# point at the same function).
 ADAPTERS = {
     "greenhouse": greenhouse.fetch_jobs,
     "lever": lever.fetch_jobs,
@@ -32,6 +34,11 @@ ADAPTERS = {
     "generic": generic.fetch_jobs,
     "euraxess": academic.fetch_jobs,
     "jobindex": academic.fetch_jobs,
+    "ashby": json_boards.fetch_jobs,
+    "smartrecruiters": json_boards.fetch_jobs,
+    "workable": json_boards.fetch_jobs,
+    "breezyhr": json_boards.fetch_jobs,
+    "bamboohr": json_boards.fetch_jobs,
 }
 
 KNOWN_ATS_VALUES = {
@@ -42,6 +49,11 @@ KNOWN_ATS_VALUES = {
     "generic",
     "euraxess",
     "jobindex",
+    "ashby",
+    "smartrecruiters",
+    "workable",
+    "breezyhr",
+    "bamboohr",
 }
 
 

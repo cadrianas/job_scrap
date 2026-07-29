@@ -1,135 +1,143 @@
 # Handoff
 
-Working notes for picking this project up in a fresh session. Written 2026-07-27.
+Working notes for picking this project up in a fresh session. Rewritten 2026-07-29 (previous
+version, written 2026-07-27, was superseded by everything below: the whole `ROADMAP.md`
+four-phase plan it referenced has since been completed and merged, so that file has been folded
+into this one and removed rather than kept as a second, overlapping document).
 
 Read `CLAUDE.md` first (hard rules), then `PLAN.md` (phases). This file covers only what is
 true *right now* and what to do next.
 
 ## Current state
 
-`config/companies.json`: **284 entries, 218 enabled, 66 disabled.**
+The automation goal ("wake up to a digest") is live and working. Repo is
+`cadrianas/job_scrap`, **private**, on GitHub Actions with `.github/workflows/daily_scrape.yml`
+running daily at 06:00 UTC plus `workflow_dispatch` for manual runs. The last several scheduled
+runs have succeeded and pushed real state back to `main`. A run takes about 33 minutes.
+
+`config/companies.json`: **284 entries, 234 enabled, 50 disabled.**
 
 Enabled breakdown by adapter:
 
 | ats | count |
 |---|---|
-| workday | 69 |
-| generic | 72 |
-| greenhouse | 46 |
-| lever | 28 |
+| workday | 71 |
+| generic | 78 |
+| greenhouse | 40 |
+| lever | 15 |
+| ashby | 13 |
+| workable | 6 |
+| smartrecruiters | 5 |
+| breezyhr | 2 |
+| bamboohr | 1 |
 | eightfold | 1 |
 | euraxess | 1 |
 | jobindex | 1 |
 
-Everything on the `PLAN.md` file map exists and is real code (no stubs). `python main.py --validate`
-passes. The 66 disabled entries are all `ats: "unknown"` with a documented reason in
-`RESEARCH_NOTES_companies.md`.
+`data/jobs_seen.csv` is primed with real state (~29k rows) from live runs, not the placeholder
+193-row file from before the pipeline went live. Digests land in `data/digests/` and are
+committed by the workflow; `main.py --validate` passes.
 
-**The automation goal is still blocked: this directory is not a git repository.**
-`.github/workflows/daily_scrape.yml` exists and looks correct, but there is no `.git`, no remote,
-and nothing to push to. Until someone runs `git init` and creates a GitHub remote, the daily
-scrape cannot actually run. This is the single biggest open item if the goal is "wake up to a
-digest."
+The 50 disabled entries are all `ats: "unknown"` with a documented reason in
+`RESEARCH_NOTES_companies.md`, which also documents every vendor found and why each remaining
+company is not scrapable -- read that file before re-investigating something, since roughly half
+of what looks like "still broken" has already been checked and ruled out for a specific reason.
 
-## Known bugs (both real, both verified)
+## What happened, phase by phase (2026-07-27 through 2026-07-29)
 
-1. **Workday instance discovery misses high `wdN` numbers.**
-   `scrapers/workday.py` hardcodes `_CANDIDATE_INSTANCES = ["wd1", "wd3", "wd5", "wd2", "wd4"]`.
-   Accenture's tenant is actually on **wd103** (confirmed live at
-   `accenture.wd103.myworkdayjobs.com/AccentureCareers`), so both the `Accenture` and
-   `Accenture New Zealand` entries fail every run with "no working Workday instance found".
-   Fixing this needs care: naively widening the range multiplies requests per company. Consider
-   a fallback pass after the fast list fails, or caching a discovered instance per tenant in
-   `companies.json`. Update `specs/SPEC_scraper_workday.md` in the same commit (Hard Rule 2).
+**Phase 0 (PR #2):** Made the daily loop trustworthy. Fixed `main.py` reporting the pre-filter
+job count instead of the post-filter count in the digest/commit message (a run could say "24452
+new jobs" while the digest held a handful). Added a `git pull --rebase` retry to the workflow's
+push step so a human push to `main` mid-run doesn't lose that run's digest -- this had actually
+happened on the very first real run. Bumped `actions/checkout` and `actions/setup-python` to
+their current major versions.
 
-2. **Halter's Lever board is dead and the entry is silently failing.**
-   `Halter` is enabled as `lever` / `halter`, but that board now returns 404 from both the US and
-   EU Lever APIs. Halter has migrated to Ashby: `api.ashbyhq.com/posting-api/job-board/halter`
-   returns **276 live jobs**. The entry is a tier-1 NZ company currently contributing nothing.
-   It gets fixed for free once an Ashby adapter exists (see below).
+**Phase 1 (PRs #3, #4):** Fixed Workday instance discovery, which turned out to affect 12
+tenants (14 registry entries), not just Accenture as originally suspected. 9 tenants got an
+explicit `"tenant/site|wdN"` override (new identifier convention, see
+`specs/SPEC_scraper_workday.md`) after live-confirming the real instance number, including
+Vertex Pharmaceuticals at `wd501` -- well outside any reasonable guess-list range. Net-A-Porter's
+`ynap` tenant had moved entirely to `luxexperience/LuxExperience_Careers` after a 2025
+acquisition. Then triaged the other 32 of the original 44 CI failures: 4 fixed in place with
+adapters already in the codebase (Ada, Clio, Tyro Payments, Getir), 6 confirmed bot-walled,
+3 left genuinely unresolved (see "Still open" below), and 17 confirmed live on vendor platforms
+this project had no adapter for -- which fed directly into Phase 2.
 
-**Worth doing because of #2:** a full health pass over all 218 enabled entries to find other
-silently-dead boards. Halter was only caught by accident. Something like
-`python main.py --dry-run` (full run, no `--companies` filter) and then reading
-`data/logs/run_*.log` for errors and for companies returning 0 jobs. Budget several minutes
-because of the 1.5s inter-company sleep.
+**Phase 2 (PR #5):** Built `scrapers/json_boards.py`, one file covering five vendor APIs (Ashby,
+SmartRecruiters, Workable, Breezy HR, BambooHR) that dispatch internally on `company.ats`,
+following the `scrapers/academic.py` precedent rather than five near-empty files. Every vendor's
+request shape was verified live before coding -- notably, SmartRecruiters and Workable both
+return HTTP 200 with an empty result for a nonexistent slug, so a bare 200 never confirms an
+identifier is correct; real job content (or an independent check) does, and that rule is written
+into `specs/SPEC_scraper_json_boards.md` as an ongoing requirement for future entries, not just a
+one-time note. 27 companies fixed or newly enabled, well above the original ~10-company estimate.
 
-## Next work: verified and ready to build
+**Phase 3 (PR #6):** Checked the SuccessFactors cluster on the premise that it isn't uniformly
+unscrapable -- some tenants (Canal+, Coloplast, Zurich Insurance, Scotiabank, already working)
+expose a server-rendered `/search/` page distinct from the client-rendered SPA landing page.
+6 of 10 candidates had the same server-rendered equivalent and got fixed with no new adapter,
+just a corrected `generic` identifier. The other 4 (Lundbeck, EY Australia, EY New Zealand,
+Bausch Health) only turned up nav/marketing links, not real postings, at every URL guessed --
+confirmed via `scrapers.generic._looks_like_job_link` directly, not by eyeballing href counts,
+which is what caught the false positives in the first place.
 
-All endpoints below were **live-verified on 2026-07-27** (real HTTP calls, real job counts).
-They are public, unauthenticated JSON APIs and need no browser automation. This satisfies the
-"verify before coding" rule already, so it is safe to build directly against them.
+## Still open
 
-### Tier 1: five vendor JSON adapters (~10 companies, plus fixes Halter)
+**7 companies need real browser devtools work, not another URL guess.** All were checked this
+session and none can be resolved by guessing at endpoints:
+- **Vidyard**: not on Greenhouse, Lever, Ashby, SmartRecruiters, Workable, Breezy, or BambooHR.
+  Their own `/careers/` page 403s.
+- **King** (Workday tenant `activision`): `careers.king.com` shows Eightfold markers in raw
+  HTML, but the `domain` param `scrapers/eightfold.py` needs could not be guessed -- both
+  `king.com` and `careers.king.com` return `"Tenant not identified"`.
+- **Telenor** (Workday tenant `telenorgroup`): resolves but returns HTTP 422 on the real CXS
+  POST, not 404. Instances above wd150 don't resolve in DNS for this tenant at all.
+- **Lundbeck**: on the shared multi-tenant `career5.successfactors.eu` domain (the same one SAP
+  was on before its fix); their own branded domain is nav-links-only.
+- **EY Australia / EY New Zealand**: confirmed SuccessFactors-backed, but every URL tried
+  (country pages, global `viewalljobs`, a guessed country filter that 404s) returns only nav
+  links or an error page.
+- **Bausch Health**: both the registry's `/search` identifier and a `/go/` category page
+  (matching the pattern that worked for Canal+) return zero real hits.
 
-| Vendor | Endpoint | identifier convention | Unlocks (verified job counts) |
-|---|---|---|---|
-| Ashby | `https://api.ashbyhq.com/posting-api/job-board/{slug}` | board slug | Ramp `ramp` (118), Partly `partly.com` (47), Lovable `lovable` (67), **Halter `halter` (276, fixes bug #2)** |
-| SmartRecruiters | `https://api.smartrecruiters.com/v1/companies/{id}/postings` | company id | Deloitte NZ `DeloitteNZ` (128), KPMG Australia `KPMGAustralia1` (79), Carsales `carsales` (25) |
-| Workable | `https://apply.workable.com/api/v1/widget/accounts/{slug}?details=true` | account slug | Nuvei `nuvei` (58). Timely `timely` returns 0 -- genuinely no openings, not a failure |
-| Breezy HR | `https://{slug}.breezy.hr/json` | subdomain | Serato `serato-limited` (11), Plexure `plexure` (5) |
-| BambooHR | `https://{slug}.bamboohr.com/careers/list` | subdomain | Gentrack `gentrack` (16) |
+An attempt to use the in-app browser tool to capture King's real XHR call was made this session
+and the tool became unresponsive before completing. Worth retrying, or doing manually in a real
+browser and handing the captured request over.
 
-Notes:
-- SmartRecruiters paginates (`limit`/`offset`, `totalFound` in the response).
-- Plexure has rebranded to "TASK" but the Breezy slug is still `plexure`.
-- Scale AI was **not** confirmed on Ashby. Guessed slugs returned the same shell as a known-bad
-  slug, so do not add it without finding the real slug first.
+**Tier 4: case-by-case API discovery (~13 companies), not started.** Atlassian, TomTom, Unity
+Technologies, Sharesies, CGI, KBC Bank, Nordea, ASOS, Booking.com (iCIMS), Trade Me, and the
+Phenom People cluster (Just Eat Takeaway, BCG Australia, PwC Australia). Same devtools
+requirement as above. Two data points already collected: Trade Me's Cornerstone endpoint returns
+401 (auth required), and a guessed Phenom widget payload returned `{"status":"failure"}` -- not
+disproven, but needs a real captured request.
 
-**Architecture suggestion.** These five differ only in URL template and field mapping, so the
-cheapest shape is one `scrapers/json_boards.py` with a per-vendor config table dispatching on
-`company.ats`, following the `scrapers/academic.py` precedent. Each future vendor then costs
-about ten lines of config. The tradeoff: this bends `PLAN.md` design principle 2 ("each ATS
-adapter is an independent module"). Five separate files matching `greenhouse.py` is equally
-valid, just more boilerplate. Either way:
-- write the spec first (Hard Rule 2), e.g. `specs/SPEC_scraper_json_boards.md`
-- add the new `ats` values to **both** `ADAPTERS` and `KNOWN_ATS_VALUES` in `main.py`
-- add the identifier conventions to `specs/SPEC_companies_json.md`
+**GitHub Actions minutes:** at ~33 min/day, daily runs consume roughly 1,000 of the 2,000 free
+monthly minutes for a private repo (about 50%), which is not actually tight despite earlier
+concern that it might be. Deliberately deferred rather than acted on -- check real usage
+**mid-August 2026** before doing anything. If it turns out to matter, the two options already
+scoped are (a) split into a public code/workflow repo plus a private data repo pushed to via a
+PAT (solves both the minutes budget and privacy, but is a real architecture change), or (b) add
+concurrency with per-domain rate limiting to the existing single private repo (stays private,
+needs a deliberate spec decision since it touches Hard Rule 7). **Do not make the repo public**
+without re-confirming first -- that was tried once this session and reverted immediately, because
+`data/digests/*.md` and `WATCHLIST.md` reveal which companies and roles are being watched, which
+the user did not want publicly visible.
 
-### Tier 2: widen the generic adapter's href patterns (3 companies, one-line change)
-
-`scrapers/generic.py` has `_JOB_HREF_HINTS = ("/job/", "/jobs/", "/careers/", "/position/",
-"/opening/", "/vacanc")`. Adding `jobdetail`, `ajid=`, and `/vacancy` was tested and rescues
-three currently-disabled companies that already serve real job links in raw HTML:
-
-- ASB Bank (`https://careers.asbgroup.co.nz/search`) -- 10 links
-- Tower Insurance (`https://careers.tower.co.nz/search`) -- 3 links
-- Woolworths Group (`https://careers.woolworthsgroup.com.au/en_GB/apply/search-jobs`) -- 12 links
-
-Update `specs/SPEC_scraper_generic.md` in the same commit. Re-run a few existing `generic`
-companies afterwards to confirm the wider patterns do not pull in navigation junk.
-
-**JSON-LD parsing** was also evaluated as a generic enhancement. It is worth having in general,
-but it does **not** rescue Klarna as hoped: Deel's JSON-LD is a bare `ItemList` containing only
-`url` and `position`, with no titles, and the URLs are UUIDs with no slug to derive a title
-from. Klarna needs per-job fetches or a different endpoint.
-
-## Lower-confidence work
-
-**Tier 3: SuccessFactors cluster (~10 companies).** Novo Nordisk, SAP, Lundbeck, EY Australia,
-EY New Zealand, Deloitte Australia, One NZ, Zespri, AgResearch, Bausch Health. Important nuance:
-SuccessFactors is *not* uniformly unscrapable. Canal+, Coloplast, Zurich Insurance, and
-Scotiabank all run it and already work via `generic`, because their tenants expose
-server-rendered `/search` or `/go/...` pages. So the play is not a new adapter, it is checking
-whether each client-rendered tenant has an equivalent server-rendered search URL. Cheap per
-company, uncertain hit rate.
-
-**Tier 4: case-by-case API discovery (~13 companies).** Atlassian, TomTom, Unity Technologies,
-Sharesies, CGI, KBC Bank, Nordea, ASOS, Booking.com (iCIMS), Trade Me, and the Phenom People
-cluster (Just Eat Takeaway, BCG Australia, PwC Australia). These need browser devtools work of
-the kind that cracked Lovable and EURAXESS. Two data points already collected: Trade Me's
-Cornerstone endpoint returns **401 (auth required)**, and a guessed Phenom widget payload
-returned `{"status":"failure"}` -- not disproven, but it needs a real request captured from a
-browser session.
+**`main.py`'s 50%-failure threshold for exit code 2** has not been revisited since the fixes
+above. Worth checking whether it's still the right number now that the real failure rate is much
+lower than the 20% it was calibrated against.
 
 ## Do not pursue
 
-**Bot-walled (7): Bayer, Citadel, Judo Bank, Revolut, Bankinter, Datacom, H&M.** These return
-403 from Cloudflare or Akamai on a plain GET, and keep doing so with full browser-style headers.
-Getting through means TLS-fingerprint spoofing or CAPTCHA handling, which is actively defeating
-bot detection rather than reading a public source. That is a deliberate line this project should
-not cross, and Hard Rule 5 blocks the usual browser-automation workaround anyway. Also a losing
-maintenance battle.
+**Bot-walled (13): Bayer, Citadel, Judo Bank, Revolut, Bankinter, Datacom, H&M, Orsted, Tesla,
+Schneider Electric, EDF, Tesco, Uber.** These return 403 (or 406 for Uber) from Cloudflare or
+Akamai on a plain GET, and keep doing so with full browser-style headers. Carrefour is
+inconsistent -- 403 from the GitHub Actions runner in a real run, 200 from other vantage points --
+which reads as Cloudflare scoring datacenter IP ranges harder, not as the wall coming down;
+treated as still bot-walled since production is what matters. Getting through any of these means
+TLS-fingerprint spoofing or CAPTCHA handling, which is actively defeating bot detection rather
+than reading a public source. That is a deliberate line this project should not cross, and Hard
+Rule 5 blocks the usual browser-automation workaround anyway.
 
 **Structurally unresolvable (~10):**
 - Deloitte, KPMG (global): genuinely federated per-country networks, no unified board exists. The
@@ -143,36 +151,25 @@ maintenance battle.
   Nothing to fix, may start working on its own.
 - Sonic Healthcare: original URL 404s, no working replacement found.
 
-Kiwibank and McKinsey Australia were unreachable entirely (connection resets/timeouts, not a
-bot-wall signature). Possibly transient or geo-related, worth one retry later.
-
-## What happened in the previous session (2026-07-26/27)
-
-1. **Added 4 companies on request:** Embark Studios (`generic`, 18 jobs), Novartis Ireland
-   (`workday`, same tenant as existing Novartis entry, 500 jobs), plus Lovable and University of
-   Gothenburg as disabled (Ashby and ReachMee respectively, neither supported).
-2. **Added 6 academic/job-board sources on request.** Built `scrapers/academic.py` with two new
-   adapters: `euraxess` (10 jobs) and `jobindex` (20 jobs), both wired into `main.py`. Nature
-   Careers needed no new code and went in as `generic` (78 jobs). Aalborg University, Jobnet.dk,
-   and ResearchGate went in disabled, each with a specific technical blocker.
-   This required revising `specs/SPEC_scraper_academic.md`, which had blanket exclusions for
-   general job boards and for ResearchGate/Nature Careers. **That was an explicit user decision
-   to accept the ToS risk for this personal tool, not a default policy change.** Seek, Indeed,
-   and LinkedIn remain excluded.
-3. **Ran a 7-way parallel ATS research pass over 86 unknown companies, resolving 23 into working
-   entries** (4 workday, 1 greenhouse, 18 generic). Registry went 195 -> 218 enabled.
-   `WATCHLIST.md` and `RESEARCH_NOTES_companies.md` were both updated; the latter now documents
-   every vendor found and exactly why each remaining company is not scrapable.
+Kiwibank and McKinsey Australia (and, separately, McKinsey & Company's main entry) were
+unreachable entirely -- connection resets/timeouts, not a bot-wall signature. Possibly transient
+or geo-related, worth one retry later from a different vantage point (e.g. the GitHub Actions
+runner itself, not a local machine).
 
 ## Conventions and gotchas
 
 - **Always test with `--dry-run`.** `python main.py --companies "Name"` without it writes to
   `data/jobs_seen.csv`, `data/scraper_health.csv`, `data/digests/`, and `data/NEW_JOBS_COUNT`.
-  This was learned the hard way and required a manual revert.
+  This has been learned the hard way more than once and required a manual revert each time.
 - **Do not trust "this page looks scrapable."** Verify a candidate `generic` entry by running its
-  URL through `scrapers.generic._looks_like_job_link` directly. During the research pass this
-  caught two false positives where real job content existed but the href patterns did not match,
-  which would have produced silently-empty scrapes.
+  URL through `scrapers.generic._looks_like_job_link` directly, not by eyeballing an href count.
+  Several companies in the SuccessFactors cluster had 20-30 href matches on their existing URL
+  that turned out to be nav/marketing links ("Careers in Assurance"), not real postings -- the
+  function call is what caught it, a grep for job-shaped hrefs was not enough.
+- **SmartRecruiters and Workable both return HTTP 200 for a nonexistent slug.** Same trap as
+  above, one level deeper: a bare 200 (or even a company-name match, for Workable) is not proof
+  an identifier is right if the result set is empty. Confirm with real job content, or an
+  independent check like the vendor's own public careers page, before enabling.
 - Hard Rule 1: every path comes from `config/paths.py`. No exceptions, including tests.
 - Hard Rule 2: spec first. If a change contradicts a spec, update the spec in the same commit.
 - Style: no em dashes in documentation, digests, or any user-facing text.

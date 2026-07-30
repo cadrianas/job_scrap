@@ -3922,5 +3922,172 @@
     ],
     "tier": 1,
     "enabled": true
+  },
+  {
+    "name": "Red Bull",
+    "ats": "smartrecruiters",
+    "identifier": "RedBull",
+    "regions": [
+      "austria",
+      "europe",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Unilever",
+    "ats": "generic",
+    "identifier": "https://careers.unilever.com/",
+    "regions": [
+      "london",
+      "europe",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "L'Or\u00e9al",
+    "ats": "generic",
+    "identifier": "https://careers.loreal.com/",
+    "regions": [
+      "paris",
+      "france",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "UNDP (United Nations Development Programme)",
+    "ats": "generic",
+    "identifier": "https://jobs.undp.org/cj_view_jobs.cfm",
+    "regions": [
+      "new york",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "UNICEF (United Nations Children's Fund)",
+    "ats": "generic",
+    "identifier": "https://jobs.unicef.org/en-us/listing/",
+    "regions": [
+      "new york",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "UEFA (Union of European Football Associations)",
+    "ats": "generic",
+    "identifier": "https://www.uefa.com/insideuefa/careers/",
+    "regions": [
+      "nyon",
+      "switzerland",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "FIFA",
+    "ats": "generic",
+    "identifier": "https://www.fifa.com/about-fifa/commercial/careers",
+    "regions": [
+      "zurich",
+      "switzerland",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Hudl (Sports Performance Analytics)",
+    "ats": "greenhouse",
+    "identifier": "hudl",
+    "regions": [
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Ericsson",
+    "ats": "generic",
+    "identifier": "https://www.ericsson.com/en/careers",
+    "regions": [
+      "stockholm",
+      "sweden",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Nokia",
+    "ats": "generic",
+    "identifier": "https://www.nokia.com/about-us/careers/",
+    "regions": [
+      "espoo",
+      "finland",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Uppsala University",
+    "ats": "generic",
+    "identifier": "https://uu.varbi.com/what:jobs/",
+    "regions": [
+      "uppsala",
+      "sweden",
+      "nordics"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "KTH Royal Institute of Technology",
+    "ats": "generic",
+    "identifier": "https://kth.varbi.com/what:jobs/",
+    "regions": [
+      "stockholm",
+      "sweden",
+      "nordics"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Karolinska Institutet (KI)",
+    "ats": "generic",
+    "identifier": "https://ki.varbi.com/what:jobs/",
+    "regions": [
+      "stockholm",
+      "sweden",
+      "nordics"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Lund University",
+    "ats": "generic",
+    "identifier": "https://lunduniversity.varbi.com/what:jobs/",
+    "regions": [
+      "lund",
+      "sweden",
+      "nordics"
+    ],
+    "tier": 1,
+    "enabled": true
   }
 ]

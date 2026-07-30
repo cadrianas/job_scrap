@@ -14,31 +14,40 @@ from models import Company, Job
 MODE = "strict"
 
 INCLUDE = [
-    # Data science
-    "data scientist", "data science", "machine learning", "ml engineer",
+    # Data science & AI/ML
+    "data scientist", "data science", "machine learning", "ml engineer", "mlops",
     "ai scientist", "applied scientist", "research scientist",
-    "decision scientist", "decision science",
-    # Data analytics
+    "decision scientist", "decision science", "nlp", "computer vision",
+    "research engineer", "prompt engineer",
+    # Data analytics & BI
     "data analyst", "data analytics", "analytics", "analytics engineer",
-    "business intelligence", "bi analyst", "product analytics",
-    # Mathematical / quantitative modelling
+    "business intelligence", "bi analyst", "product analytics", "product analyst",
+    "insights analyst",
+    # Mathematical / quantitative / statistical modelling
     "mathematical model", "mathematical modeller", "mathematical modeling",
     "mathematical modelling", "quantitative", "quant", "quantitative modeller",
     "quantitative analyst", "quantitative researcher", "quantitative research",
     "modeller", "modeler", "bayesian", "statistician", "statistical modeller",
-    "operations research", "actuary", "actuarial", "risk modeller", "risk model",
-    # Mathematical epidemiology / public health modelling
-    "epidemiolog", "biostatistician", "infectious disease model",
-    "disease modelling", "disease modeling", "outbreak model",
-    "outbreak analytics", "transmission model", "compartmental model",
-    "public health modelling", "public health modeling",
+    "stochastic", "causal inference", "operations research", "actuary", "actuarial",
+    "risk modeller", "risk model", "risk analyst", "risk manager", "financial engineer",
+    "simulation engineer", "systems modeller", "statistical programmer",
+    # Mathematical epidemiology & public health modelling (PhD Domain)
+    "epidemiolog", "biostatistician", "infectious disease", "disease modelling",
+    "disease modeling", "outbreak model", "outbreak analytics", "transmission model",
+    "compartmental model", "public health modelling", "public health modeling",
     "computational epidemiology", "bioinformatic", "computational biology",
     "health economist", "health economics", "population health",
+    "real world evidence", "real world data", "rwe", "rwd",
+    "pharmacometrics", "qsp model", "clinical data scientist", "health data scientist",
+    # Data engineering & platform
+    "data engineer", "data architect", "data architecture", "etl engineer", "data platform",
+    # Academic instruction & teaching
+    "instructor", "lecturer", "teaching fellow", "assistant professor", "associate professor", "professor",
 ]
 
+
 EXCLUDE = [
-    "intern", "working student", "director", "vp", "head of",
-    "principal recruiter", "sales",
+    "intern", "working student", "principal recruiter", "sales",
 ]
 
 PRIORITY_REGIONS = [
@@ -62,6 +71,19 @@ def matches(title: str) -> bool:
     if any(term in lowered for term in EXCLUDE):
         return False
     return any(term in lowered for term in INCLUDE)
+
+
+def get_seniority_tier(title: str) -> str:
+    """Categorize job title into Seniority Tiers for digest grouping."""
+    lowered = title.lower()
+    exec_keywords = ["director", "head of", "vp", "vice president", "chief"]
+    senior_keywords = ["senior", "sr.", "sr ", "staff", "principal", "lead"]
+
+    if any(term in lowered for term in exec_keywords):
+        return "Executive / Director / Lead"
+    if any(term in lowered for term in senior_keywords):
+        return "Senior / Staff"
+    return "Mid / Entry / General"
 
 
 def _is_priority_region(company: Company | None) -> bool:
@@ -90,3 +112,4 @@ def apply(jobs: list[Job], companies: dict[str, Company]) -> list[Job]:
         return (match_rank, tier, region_rank, job.company.lower(), job.title.lower())
 
     return sorted(jobs, key=sort_key)
+

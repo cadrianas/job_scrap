@@ -7,7 +7,10 @@ import json
 import logging
 import sys
 import time
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date
+from urllib.parse import urlparse
 
 import dedup
 import filters
@@ -15,17 +18,10 @@ import health
 import notify
 from config import paths
 from models import Company, Job, ScraperError
-from scrapers import academic, eightfold, generic, greenhouse, json_boards, lever, workday
+from scrapers import academic, eightfold, generic, greenhouse, icims, json_boards, lever, phenom, workday
 
 logger = logging.getLogger("main")
 
-# Only ATS types with a real adapter go here. Anything else (an unknown
-# ats value) is skipped, not failed -- see SPEC_main.md. All five adapters
-# from PLAN.md Phase 1-3 are now implemented, plus the Phase 3b academic
-# sources documented in SPEC_scraper_academic.md and the Phase 4 vendor
-# job boards in SPEC_scraper_json_boards.md (both academic.py and
-# json_boards.py dispatch internally on company.ats, so multiple keys
-# point at the same function).
 ADAPTERS = {
     "greenhouse": greenhouse.fetch_jobs,
     "lever": lever.fetch_jobs,
@@ -39,6 +35,8 @@ ADAPTERS = {
     "workable": json_boards.fetch_jobs,
     "breezyhr": json_boards.fetch_jobs,
     "bamboohr": json_boards.fetch_jobs,
+    "icims": icims.fetch_jobs,
+    "phenom": phenom.fetch_jobs,
 }
 
 KNOWN_ATS_VALUES = {
@@ -54,17 +52,72 @@ KNOWN_ATS_VALUES = {
     "workable",
     "breezyhr",
     "bamboohr",
+    "icims",
+    "phenom",
 }
 
-# Above this fraction of attempted companies failing, treat the run as
-# systemic breakage (exit code 2) rather than normal day-to-day noise --
-# see SPEC_main.md. Recalibrated 2026-07-29: real production failure rate
-# is ~1.7% once permanently-bot-walled entries are disabled rather than
-# left enabled and failing forever, so 50% caught nothing short of the
-# whole registry falling over. 15% still tolerates several times that
-# noise floor while catching the kind of broad breakage the very first
-# CI run had (44/218, 20.2%, before any fixes).
 _FAILURE_THRESHOLD = 0.15
+
+_domain_locks: dict[str, threading.Lock] = {}
+_locks_guard = threading.Lock()
+
+
+def _get_domain_lock(identifier: str) -> threading.Lock:
+    domain = urlparse(identifier).netloc or identifier.split("/")[0].split("|")[0]
+    with _locks_guard:
+        if domain not in _domain_locks:
+            _domain_locks[domain] = threading.Lock()
+        return _domain_locks[domain]
+
+
+def _scrape_company(company: Company) -> tuple[str, list[Job], bool]:
+    fetch = ADAPTERS.get(company.ats)
+    if fetch is None:
+        logger.warning(
+            "%s: no adapter implemented for ats=%r, skipping", company.name, company.ats
+        )
+        return company.name, [], False
+
+    domain_lock = _get_domain_lock(company.identifier)
+    with domain_lock:
+        try:
+            jobs = fetch(company)
+        except ScraperError as exc:
+            logger.error("%s: %s", company.name, exc.message)
+            return company.name, [], False
+        except Exception as exc:  # noqa: BLE001 - a single company must never kill the run
+            logger.error("%s: unexpected error: %s", company.name, exc)
+            return company.name, [], False
+        else:
+            logger.info("%s: %d jobs", company.name, len(jobs))
+            time.sleep(paths.SLEEP_BETWEEN_COMPANIES_SECONDS)
+            return company.name, jobs, True
+
+
+def _scrape_all(companies: list[Company]) -> tuple[list[Job], dict[str, bool]]:
+    """Returns (all scraped jobs from successful companies, results map)."""
+    all_jobs: list[Job] = []
+    results: dict[str, bool] = {}
+
+    ordered = sorted(companies, key=lambda c: (c.tier, c.name))
+    if not ordered:
+        return all_jobs, results
+
+    max_workers = min(8, len(ordered))
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_company = {
+            executor.submit(_scrape_company, company): company for company in ordered
+        }
+        for future in as_completed(future_to_company):
+            company = future_to_company[future]
+            company_name, jobs, ok = future.result()
+            if ADAPTERS.get(company.ats) is not None:
+                results[company_name] = ok
+                if ok:
+                    all_jobs.extend(jobs)
+
+    return all_jobs, results
 
 
 def _load_companies_raw() -> list[dict]:
@@ -126,37 +179,6 @@ def _setup_logging() -> None:
     )
 
 
-def _scrape_all(companies: list[Company]) -> tuple[list[Job], dict[str, bool]]:
-    """Returns (all scraped jobs from successful companies, results map)."""
-    all_jobs: list[Job] = []
-    results: dict[str, bool] = {}
-
-    ordered = sorted(companies, key=lambda c: (c.tier, c.name))
-
-    for company in ordered:
-        fetch = ADAPTERS.get(company.ats)
-        if fetch is None:
-            logger.warning(
-                "%s: no adapter implemented for ats=%r, skipping", company.name, company.ats
-            )
-            continue
-
-        try:
-            jobs = fetch(company)
-        except ScraperError as exc:
-            logger.error("%s: %s", company.name, exc.message)
-            results[company.name] = False
-        except Exception as exc:  # noqa: BLE001 - a single company must never kill the run
-            logger.error("%s: unexpected error: %s", company.name, exc)
-            results[company.name] = False
-        else:
-            logger.info("%s: %d jobs", company.name, len(jobs))
-            results[company.name] = True
-            all_jobs.extend(jobs)
-
-        time.sleep(paths.SLEEP_BETWEEN_COMPANIES_SECONDS)
-
-    return all_jobs, results
 
 
 def main(argv: list[str] | None = None) -> int:

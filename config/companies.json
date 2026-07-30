@@ -397,14 +397,14 @@
   },
   {
     "name": "BCG Australia",
-    "ats": "unknown",
-    "identifier": "https://careers.bcg.com/global/en/",
+    "ats": "phenom",
+    "identifier": "careers.bcg.com",
     "regions": [
       "sydney",
       "australia"
     ],
     "tier": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Benevity",
@@ -485,14 +485,14 @@
   },
   {
     "name": "Booking.com",
-    "ats": "unknown",
-    "identifier": "https://jobs.booking.com/booking/jobs",
+    "ats": "greenhouse",
+    "identifier": "bookingcom",
     "regions": [
       "amsterdam",
       "netherlands"
     ],
     "tier": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "Boston Consulting Group",
@@ -1454,14 +1454,14 @@
   },
   {
     "name": "Just Eat Takeaway",
-    "ats": "unknown",
-    "identifier": "https://careers.justeattakeaway.com/global/en",
+    "ats": "phenom",
+    "identifier": "careers.justeattakeaway.com",
     "regions": [
       "amsterdam",
       "netherlands"
     ],
     "tier": 1,
-    "enabled": false
+    "enabled": true
   },
   {
     "name": "KBC Bank",
@@ -3190,6 +3190,737 @@
       "canada"
     ],
     "tier": 2,
+    "enabled": true
+  },
+  {
+    "name": "Jump Trading",
+    "ats": "greenhouse",
+    "identifier": "jumptrading",
+    "regions": [
+      "chicago",
+      "usa",
+      "london",
+      "europe",
+      "sydney"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Millennium Management",
+    "ats": "greenhouse",
+    "identifier": "millennium",
+    "regions": [
+      "new york",
+      "usa",
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "OpenAI",
+    "ats": "ashby",
+    "identifier": "openai",
+    "regions": [
+      "san francisco",
+      "usa",
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Mistral AI",
+    "ats": "lever",
+    "identifier": "mistral",
+    "regions": [
+      "paris",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Pfizer",
+    "ats": "workday",
+    "identifier": "pfizer/PfizerCareers|wd1",
+    "regions": [
+      "new york",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "European Centre for Disease Prevention and Control (ECDC)",
+    "ats": "generic",
+    "identifier": "https://www.ecdc.europa.eu/en/about-us/work-us/vacancies",
+    "regions": [
+      "stockholm",
+      "sweden",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Pasteur Institute",
+    "ats": "generic",
+    "identifier": "https://www.pasteur.fr/en/job-opportunities",
+    "regions": [
+      "paris",
+      "france",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Swiss TPH (Swiss Tropical and Public Health Institute)",
+    "ats": "generic",
+    "identifier": "https://www.swisstph.ch/en/about/jobs",
+    "regions": [
+      "basel",
+      "switzerland",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "10x Genomics",
+    "ats": "greenhouse",
+    "identifier": "10xgenomics",
+    "regions": [
+      "san francisco",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Airtable",
+    "ats": "greenhouse",
+    "identifier": "airtable",
+    "regions": [
+      "san francisco",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Akuna Capital",
+    "ats": "greenhouse",
+    "identifier": "akunacapital",
+    "regions": [
+      "chicago",
+      "usa",
+      "sydney"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "AQR Capital Management",
+    "ats": "greenhouse",
+    "identifier": "aqr",
+    "regions": [
+      "new york",
+      "usa",
+      "london"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "AssemblyAI",
+    "ats": "greenhouse",
+    "identifier": "assemblyai",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Cloudflare",
+    "ats": "greenhouse",
+    "identifier": "cloudflare",
+    "regions": [
+      "san francisco",
+      "usa",
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "ElevenLabs",
+    "ats": "ashby",
+    "identifier": "elevenlabs",
+    "regions": [
+      "london",
+      "europe",
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Fastly",
+    "ats": "greenhouse",
+    "identifier": "fastly",
+    "regions": [
+      "san francisco",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Flatiron Health",
+    "ats": "greenhouse",
+    "identifier": "flatironhealth",
+    "regions": [
+      "new york",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Flow Traders",
+    "ats": "greenhouse",
+    "identifier": "flowtraders",
+    "regions": [
+      "amsterdam",
+      "europe",
+      "new york"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Ginkgo Bioworks",
+    "ats": "greenhouse",
+    "identifier": "ginkgobioworks",
+    "regions": [
+      "boston",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "GitLab",
+    "ats": "greenhouse",
+    "identifier": "gitlab",
+    "regions": [
+      "europe",
+      "usa",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Harvey AI",
+    "ats": "ashby",
+    "identifier": "harvey",
+    "regions": [
+      "san francisco",
+      "usa",
+      "london"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "LangChain",
+    "ats": "ashby",
+    "identifier": "langchain",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Lightning AI",
+    "ats": "greenhouse",
+    "identifier": "lightningai",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Linear",
+    "ats": "ashby",
+    "identifier": "linear",
+    "regions": [
+      "san francisco",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "LlamaIndex",
+    "ats": "ashby",
+    "identifier": "llamaindex",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Man Group",
+    "ats": "greenhouse",
+    "identifier": "mangroup",
+    "regions": [
+      "london",
+      "europe",
+      "new york"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Modal",
+    "ats": "ashby",
+    "identifier": "modal",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "PathAI",
+    "ats": "greenhouse",
+    "identifier": "pathai",
+    "regions": [
+      "boston",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Perplexity AI",
+    "ats": "ashby",
+    "identifier": "perplexity",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Pinecone",
+    "ats": "ashby",
+    "identifier": "pinecone",
+    "regions": [
+      "new york",
+      "usa",
+      "tel aviv"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Resend",
+    "ats": "ashby",
+    "identifier": "resend",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Runway",
+    "ats": "ashby",
+    "identifier": "runway",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Stability AI",
+    "ats": "greenhouse",
+    "identifier": "stabilityai",
+    "regions": [
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Toast",
+    "ats": "greenhouse",
+    "identifier": "toast",
+    "regions": [
+      "boston",
+      "usa",
+      "dublin"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Vercel",
+    "ats": "greenhouse",
+    "identifier": "vercel",
+    "regions": [
+      "san francisco",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Vibe",
+    "ats": "ashby",
+    "identifier": "vibe",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Wolt",
+    "ats": "greenhouse",
+    "identifier": "wolt",
+    "regions": [
+      "helsinki",
+      "nordics",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "WorldQuant",
+    "ats": "greenhouse",
+    "identifier": "worldquant",
+    "regions": [
+      "new york",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "World Health Organization (WHO)",
+    "ats": "generic",
+    "identifier": "https://www.who.int/careers",
+    "regions": [
+      "geneva",
+      "switzerland",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "AcademicPositions (Math & Stats)",
+    "ats": "generic",
+    "identifier": "https://academicpositions.com/find-jobs",
+    "regions": [
+      "europe",
+      "usa",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "NCI DCEG (Division of Cancer Epidemiology & Genetics)",
+    "ats": "generic",
+    "identifier": "https://dceg.cancer.gov/about/careers/current-openings",
+    "regions": [
+      "bethesda",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "MSKCC (Epidemiology & Biostatistics)",
+    "ats": "generic",
+    "identifier": "https://www.mskcc.org/departments/epidemiology-biostatistics/jobs",
+    "regions": [
+      "new york",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Waymo (Alphabet Autonomous Driving)",
+    "ats": "greenhouse",
+    "identifier": "waymo",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Samsara (Connected Vehicles & Fleet Data)",
+    "ats": "greenhouse",
+    "identifier": "samsara",
+    "regions": [
+      "san francisco",
+      "usa",
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Lucid Motors",
+    "ats": "greenhouse",
+    "identifier": "lucidmotors",
+    "regions": [
+      "san francisco",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Motive (Vehicle AI & Fleet Analytics)",
+    "ats": "greenhouse",
+    "identifier": "motive",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Volvo Group",
+    "ats": "workday",
+    "identifier": "volvo/volvo",
+    "regions": [
+      "gothenburg",
+      "sweden",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "General Motors (GM)",
+    "ats": "generic",
+    "identifier": "https://search-careers.gm.com/",
+    "regions": [
+      "detroit",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Ford Motor Company",
+    "ats": "generic",
+    "identifier": "https://corporate.ford.com/careers.html",
+    "regions": [
+      "dearborn",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Toyota",
+    "ats": "generic",
+    "identifier": "https://www.toyota.com/usa/careers/",
+    "regions": [
+      "usa",
+      "japan"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Honda",
+    "ats": "generic",
+    "identifier": "https://honda.americanhondacarers.com/",
+    "regions": [
+      "usa",
+      "japan"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Stellantis (Peugeot, Citro\u00ebn, Fiat, Chrysler, Jeep)",
+    "ats": "generic",
+    "identifier": "https://www.stellantis.com/en/careers",
+    "regions": [
+      "europe",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Point72 Asset Management",
+    "ats": "greenhouse",
+    "identifier": "point72",
+    "regions": [
+      "new york",
+      "usa",
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Squarepoint Capital",
+    "ats": "greenhouse",
+    "identifier": "squarepointcapital",
+    "regions": [
+      "new york",
+      "usa",
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Tower Research Capital",
+    "ats": "greenhouse",
+    "identifier": "towerresearchcapital",
+    "regions": [
+      "new york",
+      "usa",
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Together AI",
+    "ats": "greenhouse",
+    "identifier": "togetherai",
+    "regions": [
+      "san francisco",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Watershed (Climate Data)",
+    "ats": "ashby",
+    "identifier": "watershed",
+    "regions": [
+      "san francisco",
+      "usa",
+      "london",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Relay Therapeutics (AI Drug Discovery)",
+    "ats": "greenhouse",
+    "identifier": "relaytherapeutics",
+    "regions": [
+      "boston",
+      "usa"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "MongoDB",
+    "ats": "greenhouse",
+    "identifier": "mongodb",
+    "regions": [
+      "new york",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Elastic",
+    "ats": "greenhouse",
+    "identifier": "elastic",
+    "regions": [
+      "europe",
+      "usa",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Twilio",
+    "ats": "greenhouse",
+    "identifier": "twilio",
+    "regions": [
+      "san francisco",
+      "usa",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Lyft",
+    "ats": "greenhouse",
+    "identifier": "lyft",
+    "regions": [
+      "san francisco",
+      "usa",
+      "canada"
+    ],
+    "tier": 1,
     "enabled": true
   }
 ]

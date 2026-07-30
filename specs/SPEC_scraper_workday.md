@@ -45,7 +45,7 @@ see "Errors" below. That failure is the signal to re-run discovery and update th
 
 ## Request details
 - Method: POST, `Content-Type: application/json`, `Accept: application/json`, standard USER_AGENT.
-- Pagination: `limit` max is 20. Loop offset += 20 until `total` (from first response) is reached or a safety cap of 500 jobs.
+- Pagination: `limit` max is 20. Loop offset += 20 until `total` (from first response) is reached or a safety cap of 2500 jobs.
 - Optional optimization (Phase 4): pass `searchText: "data"` to cut volume for giant tenants; v1 fetches everything to keep broad-then-filter intact.
 
 ## Response shape (relevant fields)

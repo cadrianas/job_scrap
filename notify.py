@@ -5,10 +5,16 @@ prints the final run summary (the one permitted `print` in the codebase).
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
+import filters
 from config.paths import DIGESTS_DIR
 from models import Company, Job
 
 _NEW_MARKER_WINDOW = timedelta(hours=48)
+_SENIORITY_ORDER = [
+    "Executive / Director / Lead",
+    "Senior / Staff",
+    "Mid / Entry / General",
+]
 
 
 def write_digest(new_jobs: list[Job], companies: dict[str, Company]) -> Path | None:
@@ -19,24 +25,29 @@ def write_digest(new_jobs: list[Job], companies: dict[str, Company]) -> Path | N
     total_new = len(new_jobs)
     lines = [f"# New jobs: {today.isoformat()} ({total_new} new)", ""]
 
-    by_tier: dict[int, dict[str, list[Job]]] = {}
+    # Group by Seniority Tier -> Company Tier -> Company -> list[Job]
+    grouped: dict[str, dict[int, dict[str, list[Job]]]] = {}
     for job in new_jobs:
+        sen_tier = filters.get_seniority_tier(job.title)
         company = companies.get(job.company)
-        tier = company.tier if company else 3
-        by_company = by_tier.setdefault(tier, {})
-        by_company.setdefault(job.company, []).append(job)
+        comp_tier = company.tier if company else 3
+        grouped.setdefault(sen_tier, {}).setdefault(comp_tier, {}).setdefault(job.company, []).append(job)
 
-    for tier in sorted(by_tier):
-        lines.append(f"## Tier {tier}")
+    for sen_tier in _SENIORITY_ORDER:
+        if sen_tier not in grouped:
+            continue
+        lines.append(f"## {sen_tier}")
         lines.append("")
-        for company_name in sorted(by_tier[tier]):
-            company = companies.get(company_name)
-            regions = ", ".join(company.regions) if company else ""
-            header = f"### {company_name} ({regions})" if regions else f"### {company_name}"
-            lines.append(header)
-            for job in by_tier[tier][company_name]:
-                lines.append(_format_line(job, today))
-            lines.append("")
+        by_comp_tier = grouped[sen_tier]
+        for comp_tier in sorted(by_comp_tier):
+            for company_name in sorted(by_comp_tier[comp_tier]):
+                company = companies.get(company_name)
+                regions = ", ".join(company.regions) if company else ""
+                header = f"### {company_name} (Tier {comp_tier}{', ' + regions if regions else ''})"
+                lines.append(header)
+                for job in by_comp_tier[comp_tier][company_name]:
+                    lines.append(_format_line(job, today))
+                lines.append("")
 
     DIGESTS_DIR.mkdir(parents=True, exist_ok=True)
     digest_path = DIGESTS_DIR / f"new_jobs_{today.isoformat()}.md"
@@ -45,7 +56,7 @@ def write_digest(new_jobs: list[Job], companies: dict[str, Company]) -> Path | N
 
 
 def _format_line(job: Job, today: date) -> str:
-    marker = "NEW " if _is_recent(job.posted_date, today) else ""
+    marker = "⚡ Posted < 48h ago - " if _is_recent(job.posted_date, today) else ""
     location = f" - {job.location}" if job.location else ""
     posted = f" - posted {job.posted_date}" if job.posted_date else ""
     return f"- {marker}[{job.title}]({job.url}){location}{posted}"
@@ -66,3 +77,4 @@ def print_summary(scraped: int, failed: list[str], total: int, new: int) -> None
     print(f"Companies failed: {len(failed)}" + (f" ({', '.join(failed)})" if failed else ""))
     print(f"Total jobs seen this run: {total}")
     print(f"New jobs: {new}")
+

@@ -5,49 +5,35 @@ Keyword and region filtering so digests surface relevant roles first. Strategy i
 
 ## Behavior
 Two modes, controlled by a constant in this module:
-- `mode = "strict"` (default): only matching jobs enter the digest. Everything still goes to `jobs_seen.csv` regardless of mode, so nothing is lost, but the digest itself only surfaces the four target role families below. This is deliberate: the digest is meant to be a short, actionable list, not a browse-everything feed.
-- `mode = "annotate"`: all new jobs appear in the digest, but matching jobs are sorted to the top and marked. Nothing is hidden. Useful for a temporary sanity check on whether the include list is too narrow (i.e. relevant roles are being excluded), but not the day-to-day mode.
+- `mode = "strict"` (default): only matching jobs enter the digest. Everything still goes to `jobs_seen.csv` regardless of mode, so nothing is lost.
+- `mode = "annotate"`: all new jobs appear in the digest, but matching jobs are sorted to the top and marked.
 
 ## Matching
-Case-insensitive substring match on title. The include list is scoped to four target role families, broadened to catch adjacent titles that use different but related vocabulary (finance/quant-trading job titles, actuarial/insurance titles, and public-health-adjacent research titles are common enough across the company registry to be worth including):
+Case-insensitive substring match on title. The include list spans core Data Science, Data Analytics, Mathematical/Statistical Modelling (including specialized Infectious Disease Modelling, Biostatistics, RWE/RWD, and Computational Epidemiology), AI/ML, and Quantitative Finance across all seniority levels:
 
-1. **Data science**: `data scientist, data science, machine learning, ML engineer, AI scientist, applied scientist, research scientist, decision scientist, decision science`
-2. **Data analytics**: `data analyst, data analytics, analytics, analytics engineer, business intelligence, BI analyst, product analytics`
-3. **Mathematical / quantitative modelling**: `mathematical model, mathematical modeller, mathematical modeling, mathematical modelling, quantitative, quant, quantitative modeller, quantitative analyst, quantitative researcher, quantitative research, modeller, modeler, bayesian, statistician, statistical modeller, operations research, actuary, actuarial, risk modeller, risk model`
-4. **Mathematical epidemiology / public health modelling**: `epidemiolog, biostatistician, infectious disease model, disease modelling, disease modeling, outbreak model, outbreak analytics, transmission model, compartmental model, public health modelling, public health modeling, computational epidemiology, bioinformatic, computational biology, health economist, health economics, population health`
-
-INCLUDE (any match across all four families qualifies, flat list for the actual constant):
-`data scientist, data science, machine learning, ML engineer, AI scientist, applied scientist, research scientist, decision scientist, decision science, data analyst, data analytics, analytics, analytics engineer, business intelligence, BI analyst, product analytics, mathematical model, mathematical modeller, mathematical modeling, mathematical modelling, quantitative, quant, quantitative modeller, quantitative analyst, quantitative researcher, quantitative research, modeller, modeler, bayesian, statistician, statistical modeller, operations research, actuary, actuarial, risk modeller, risk model, epidemiolog, biostatistician, infectious disease model, disease modelling, disease modeling, outbreak model, outbreak analytics, transmission model, compartmental model, public health modelling, public health modeling, computational epidemiology, bioinformatic, computational biology, health economist, health economics, population health`
+1. **Data science & AI/ML**: `data scientist, data science, machine learning, ml engineer, mlops, ai scientist, applied scientist, research scientist, decision scientist, decision science, nlp, computer vision, research engineer, prompt engineer`
+2. **Data analytics**: `data analyst, data analytics, analytics, analytics engineer, business intelligence, bi analyst, product analytics, product analyst, insights analyst`
+3. **Mathematical / quantitative / statistical modelling**: `mathematical model, mathematical modeller, mathematical modeling, mathematical modelling, quantitative, quant, quantitative modeller, quantitative analyst, quantitative researcher, quantitative research, modeller, modeler, bayesian, statistician, statistical modeller, stochastic, causal inference, operations research, actuary, actuarial, risk modeller, risk model, risk analyst, risk manager, financial engineer, simulation engineer, systems modeller, statistical programmer`
+4. **Mathematical epidemiology & public health modelling**: `epidemiolog, biostatistician, infectious disease, disease modelling, disease modeling, outbreak model, outbreak analytics, transmission model, compartmental model, public health modelling, public health modeling, computational epidemiology, bioinformatic, computational biology, health economist, health economics, population health, real world evidence, real world data, rwe, rwd, pharmacometrics, qsp model, clinical data scientist, health data scientist`
+5. **Data engineering & architecture**: `data engineer, data architect, data architecture, etl engineer, data platform`
+6. **Academic instruction & teaching**: `instructor, lecturer, teaching fellow, assistant professor, associate professor, professor`
 
 EXCLUDE (overrides include):
-`intern, working student, director, VP, head of, principal recruiter, sales`
+`intern, working student, principal recruiter, sales`
 
-Note: exclude list deliberately does NOT contain "senior" or "staff". The bare `analytics` and `quant`/`quantitative` terms are broad by design now, but EXCLUDE catches the main false-positive risk (e.g. "Sales Analytics Manager" is dropped by the `sales` exclude term even though it matches `analytics`).
+Note: `director`, `head of`, `vp`, `lead`, `principal`, and `senior` are explicitly NOT excluded, ensuring career progression up to leadership levels is surfaced.
+
+## Seniority Tiering
+`get_seniority_tier(title: str) -> str` classifies job titles into 3 tiers for digest grouping:
+- **Executive & Leadership**: `director`, `head of`, `vp`, `vice president`, `chief`, `lead`
+- **Senior & Staff**: `senior`, `staff`, `principal`, `lead` (if not director), `sr`
+- **Mid & Entry / General**: All other matched titles
 
 ## Region boost
-Jobs whose company has region tags intersecting `PRIORITY_REGIONS` sort above others within the same tier. All five target regions are weighted equally, no region is boosted over another:
-
-```python
-PRIORITY_REGIONS = [
-    # Europe
-    "helsinki", "nordics", "copenhagen", "stockholm", "oslo", "netherlands", "basel", "europe",
-    # Canada
-    "toronto", "vancouver", "montreal", "ottawa", "canada",
-    # USA
-    "new york", "san francisco", "seattle", "boston", "austin", "usa",
-    # Australia
-    "sydney", "melbourne", "canberra", "brisbane", "australia",
-    # New Zealand
-    "auckland", "wellington", "new zealand",
-]
-```
-
-This list is a starting point tied to where postings are expected to concentrate; add or remove cities as the company registry grows without changing the boost logic itself.
+Jobs whose company has region tags intersecting `PRIORITY_REGIONS` sort above others within the same tier. All five target regions are weighted equally.
 
 ## API
 - `apply(jobs: list[Job], companies: dict[str, Company]) -> list[Job]` : returns sorted (and possibly filtered) list.
 - `matches(title: str) -> bool` : exposed for testing.
+- `get_seniority_tier(title: str) -> str` : returns tier label for digest grouping.
 
-## Rules
-- Keyword lists live in this module as constants for now (move to JSON config only if they start changing weekly).
-- Until Phase 4, `apply` is an identity function so main.py can call it from day one.

@@ -8,16 +8,13 @@ Orchestrator. Loads config, dispatches each company to the right scraper, dedupe
 2. Load and validate `companies.json` into `list[Company]` (skip `enabled: false`). Loading/parsing lives in `main.py` itself; there is no separate config-loader module.
 3. Load seen-set from `dedup.load_seen()`.
 4. For each enabled company (sorted by tier, then name):
-   a. Dispatch to adapter via registry dict, keyed by `ats`: the five core adapters from Phase
-      1-3 (`greenhouse`, `lever`, `workday`, `eightfold`, `generic`), plus `euraxess`/`jobindex`
+   a. Dispatch to adapter via registry dict, keyed by `ats`: the core adapters (`greenhouse`, `lever`,
+      `workday`, `eightfold`, `generic`, `icims`, `phenom`), plus `euraxess`/`jobindex`
       (both routed to `academic.fetch_jobs`, see `SPEC_scraper_academic.md`) and
-      `ashby`/`smartrecruiters`/`workable`/`breezyhr`/`bamboohr` (all five routed to
-      `json_boards.fetch_jobs`, see `SPEC_scraper_json_boards.md`). A company whose `ats` is
-      `"unknown"` (or any value outside this set) is still *skipped* with a logged warning --
-      same treatment as an invalid `ats` value per `SPEC_companies_json.md`. Skipped companies
-      are not scraped, not counted as failures, and excluded from the 50%-failure calculation
-      for exit code 2 (that calculation only considers companies whose adapter was actually
-      attempted).
+      `ashby`/`smartrecruiters`/`workable`/`breezyhr`/`bamboohr` (routed to `json_boards.fetch_jobs`,
+      see `SPEC_scraper_json_boards.md`). Execution is concurrent across different domains while
+      maintaining per-domain rate limits. A company whose `ats` is `"unknown"` (or any value outside
+      this set) is still *skipped* with a logged warning.
    b. Catch `ScraperError` and any unexpected exception: log, increment failure count in health tracker, continue.
    c. Sleep `SLEEP_BETWEEN_COMPANIES_SECONDS` between companies whose adapter was actually attempted (no sleep for skipped companies).
 5. Flatten results from successful companies, run `dedup.find_new(jobs, seen)`.

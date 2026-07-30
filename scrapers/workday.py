@@ -24,7 +24,7 @@ from models import Company, Job, ScraperError
 
 _CANDIDATE_INSTANCES = ["wd1", "wd3", "wd5", "wd2", "wd4"]
 _PAGE_LIMIT = 20
-_MAX_JOBS = 500
+_MAX_JOBS = 2500
 _MAX_CONSECUTIVE_PAGE_FAILURES = 3
 
 # tenant -> wdN instance that worked last time, for this process's lifetime.

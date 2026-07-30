@@ -4089,5 +4089,190 @@
     ],
     "tier": 1,
     "enabled": true
+  },
+  {
+    "name": "Delta Air Lines",
+    "ats": "generic",
+    "identifier": "https://news.delta.com/careers",
+    "regions": [
+      "usa",
+      "global"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "United Airlines",
+    "ats": "generic",
+    "identifier": "https://careers.united.com/us/en",
+    "regions": [
+      "usa",
+      "global"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "American Airlines",
+    "ats": "generic",
+    "identifier": "https://jobs.aa.com/",
+    "regions": [
+      "usa",
+      "global"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Lufthansa Group",
+    "ats": "generic",
+    "identifier": "https://jobroutes.lufthansa.com/",
+    "regions": [
+      "germany",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Air France-KLM",
+    "ats": "generic",
+    "identifier": "https://recrutement.airfranceklm.com/",
+    "regions": [
+      "france",
+      "netherlands",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "British Airways (IAG)",
+    "ats": "generic",
+    "identifier": "https://careers.ba.com/",
+    "regions": [
+      "london",
+      "uk",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Ryanair",
+    "ats": "generic",
+    "identifier": "https://careers.ryanair.com/",
+    "regions": [
+      "dublin",
+      "ireland",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "EasyJet",
+    "ats": "generic",
+    "identifier": "https://careers.easyjet.com/",
+    "regions": [
+      "uk",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "SAS Scandinavian Airlines",
+    "ats": "generic",
+    "identifier": "https://www.sasgroup.net/careers/",
+    "regions": [
+      "sweden",
+      "denmark",
+      "nordics",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Finnair",
+    "ats": "generic",
+    "identifier": "https://company.finnair.com/en/careers",
+    "regions": [
+      "helsinki",
+      "finland",
+      "nordics",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Qantas Airways",
+    "ats": "generic",
+    "identifier": "https://www.qantas.com/au/en/about-us/careers.html",
+    "regions": [
+      "sydney",
+      "australia"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Air New Zealand",
+    "ats": "generic",
+    "identifier": "https://careers.airnewzealand.co.nz/",
+    "regions": [
+      "auckland",
+      "new zealand"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Air Canada",
+    "ats": "generic",
+    "identifier": "https://careers.aircanada.com/",
+    "regions": [
+      "montreal",
+      "canada"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Emirates Group",
+    "ats": "generic",
+    "identifier": "https://www.emiratesgroupcareers.com/",
+    "regions": [
+      "dubai",
+      "global"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Airbus (Aviation & Flight Data Analytics)",
+    "ats": "generic",
+    "identifier": "https://www.airbus.com/en/careers",
+    "regions": [
+      "toulouse",
+      "france",
+      "europe"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "Boeing (Aviation Analytics & Aerospace)",
+    "ats": "generic",
+    "identifier": "https://jobs.boeing.com/",
+    "regions": [
+      "seattle",
+      "usa",
+      "global"
+    ],
+    "tier": 1,
+    "enabled": true
   }
 ]

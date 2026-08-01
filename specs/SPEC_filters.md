@@ -23,6 +23,13 @@ EXCLUDE (overrides include):
 
 Note: `director`, `head of`, `vp`, `lead`, `principal`, and `senior` are explicitly NOT excluded, ensuring career progression up to leadership levels is surfaced.
 
+## Location Exclusions
+Jobs located in India are explicitly excluded from the digest (even if the company is headquartered in target regions like Europe, USA, etc.).
+A job is treated as located in India if `is_india_job(job)` evaluates to `True`:
+- Country / Country Codes: standalone word `\bindia\b`, or title/location prefixes such as `IN-`, `IN_`, `IN -`.
+- Indian Tech Cities / Hubs: `bangalore`, `bengaluru`, `hyderabad`, `mumbai`, `pune`, `gurgaon`, `gurugram`, `noida`, `kolkata`, `chennai`, `ahmedabad`, `delhi`.
+- Indian States & Tech Parks: `karnataka`, `telangana`, `maharashtra`, `tamil nadu`, `haryana`, `west bengal`, `gujarat`, `manyata`, `velankani`, `salarpuria`, `dlf downtown`.
+
 ## Seniority Tiering
 `get_seniority_tier(title: str) -> str` classifies job titles into 3 tiers for digest grouping:
 - **Executive & Leadership**: `director`, `head of`, `vp`, `vice president`, `chief`, `lead`
@@ -33,7 +40,9 @@ Note: `director`, `head of`, `vp`, `lead`, `principal`, and `senior` are explici
 Jobs whose company has region tags intersecting `PRIORITY_REGIONS` sort above others within the same tier. All five target regions are weighted equally.
 
 ## API
-- `apply(jobs: list[Job], companies: dict[str, Company]) -> list[Job]` : returns sorted (and possibly filtered) list.
-- `matches(title: str) -> bool` : exposed for testing.
+- `apply(jobs: list[Job], companies: dict[str, Company]) -> list[Job]` : returns sorted (and possibly filtered) list. Excludes India-located jobs.
+- `matches(title: str) -> bool` : exposed for testing title inclusion/exclusion.
+- `is_india_job(job: Job) -> bool` : returns True if job location, title, or URL indicates location in India.
 - `get_seniority_tier(title: str) -> str` : returns tier label for digest grouping.
+
 

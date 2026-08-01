@@ -5,6 +5,7 @@ jobs_seen.csv regardless of match status. This module only decides what
 a digest run surfaces, and in what order.
 """
 
+import re
 from models import Company, Job
 
 # "strict" hides non-matching jobs from the digest entirely (they're still
@@ -64,6 +65,19 @@ PRIORITY_REGIONS = [
     "auckland", "wellington", "new zealand",
 ]
 
+INDIA_KEYWORDS = [
+    "bangalore", "bengaluru", "hyderabad", "mumbai", "pune", "gurgaon", "gurugram",
+    "noida", "kolkata", "chennai", "ahmedabad", "delhi", "karnataka", "telangana",
+    "maharashtra", "tamil nadu", "haryana", "west bengal", "gujarat", "manyata",
+    "velankani", "salarpuria", "dlf downtown",
+]
+
+_INDIA_WORD_REGEX = re.compile(r"\bindia\b", re.IGNORECASE)
+_INDIA_CITY_REGEX = re.compile(
+    r"\b(?:" + "|".join(re.escape(k) for k in INDIA_KEYWORDS) + r")\b", re.IGNORECASE
+)
+_INDIA_PREFIX_REGEX = re.compile(r"^(?:in[-_ ]|\b(?:in|india)\b)", re.IGNORECASE)
+
 
 def matches(title: str) -> bool:
     """True if title matches an INCLUDE keyword and no EXCLUDE keyword."""
@@ -71,6 +85,20 @@ def matches(title: str) -> bool:
     if any(term in lowered for term in EXCLUDE):
         return False
     return any(term in lowered for term in INCLUDE)
+
+
+def is_india_job(job: Job) -> bool:
+    """Returns True if the job's location, title, or URL indicates it is located in India."""
+    if _INDIA_PREFIX_REGEX.search(job.title.strip()):
+        return True
+
+    text_to_check = f"{job.title} {job.location} {job.url}"
+    if _INDIA_WORD_REGEX.search(text_to_check):
+        return True
+    if _INDIA_CITY_REGEX.search(text_to_check):
+        return True
+
+    return False
 
 
 def get_seniority_tier(title: str) -> str:
@@ -101,6 +129,9 @@ def apply(jobs: list[Job], companies: dict[str, Company]) -> list[Job]:
     then by whether the company has a priority region, then alphabetically
     for a stable, deterministic order.
     """
+    # Exclude jobs located in India across all modes
+    jobs = [job for job in jobs if not is_india_job(job)]
+
     if MODE == "strict":
         jobs = [job for job in jobs if matches(job.title)]
 
@@ -112,4 +143,5 @@ def apply(jobs: list[Job], companies: dict[str, Company]) -> list[Job]:
         return (match_rank, tier, region_rank, job.company.lower(), job.title.lower())
 
     return sorted(jobs, key=sort_key)
+
 

@@ -29,3 +29,10 @@ dist/
 .pytest_cache/
 .mypy_cache/
 .coverage
+
+# TikTok content strategy & plan files
+TIKTOK_CONTENT_PLAN.md
+SERIES_1_DOCTORATE_TO_DATA.md
+math2data_pipeline_handoff.md
+math2data_tiktok_series/
+

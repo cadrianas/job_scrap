@@ -1482,6 +1482,26 @@
     "enabled": true
   },
   {
+    "name": "jobs.ac.uk - Epidemiology & Public Health",
+    "ats": "generic",
+    "identifier": "https://www.jobs.ac.uk/search/?keywords=epidemiology",
+    "regions": [
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "jobs.ac.uk - Computational Biology",
+    "ats": "generic",
+    "identifier": "https://www.jobs.ac.uk/search/?keywords=computational+biology",
+    "regions": [
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
     "name": "Judo Bank",
     "ats": "unknown",
     "identifier": "https://www.judo.bank/careers/",

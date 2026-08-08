@@ -18,9 +18,7 @@ with JSON body:
 
 ## Identifier convention
 companies.json stores `identifier` as `"{tenant}/{site}"`. By default the `wd{N}` instance number
-is NOT stored; the adapter discovers it by trying wd1, wd3, wd5, wd2, wd4 (in that order of
-prevalence) and caching the working one in memory for the run. A 404 or non-200 on the POST means
-wrong instance; try next.
+is NOT stored; the adapter discovers it by trying candidate instances (wd1, wd3, wd5, wd2, wd4, wd102, wd103, wd106, wd108, wd301, wd501, wd10, wd12, wd109 in order of prevalence) and caching the working one in memory for the run with thread-safe locking. A 404 or non-200 on the POST means wrong instance; try next.
 
 **Explicit instance override.** For a tenant where the fast 5-candidate guess doesn't hit,
 `identifier` may instead be written as `"{tenant}/{site}|wd{N}"` (pipe-separated, matching the

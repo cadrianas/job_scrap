@@ -1432,9 +1432,49 @@
     "enabled": false
   },
   {
-    "name": "jobs.ac.uk - Maths Stats and CS",
+    "name": "jobs.ac.uk - Maths & Stats",
     "ats": "generic",
-    "identifier": "https://www.jobs.ac.uk/search/?academicDisciplineFacet[0]=mathematics-and-statistics&subDisciplineFacet[0]=mathematics&subDisciplineFacet[1]=statistics&academicDisciplineFacet[1]=computer-sciences&subDisciplineFacet[2]=computer-science&subDisciplineFacet[3]=information-systems&salaryBandFacet[0]=40000-49999&salaryBandFacet[1]=30000-39999&salaryBandFacet[2]=50000-59999&expired-job-redirect=true",
+    "identifier": "https://www.jobs.ac.uk/search/?academicDisciplineFacet[0]=mathematics-and-statistics",
+    "regions": [
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "jobs.ac.uk - Computer Science & AI",
+    "ats": "generic",
+    "identifier": "https://www.jobs.ac.uk/search/?academicDisciplineFacet[0]=computer-sciences",
+    "regions": [
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "jobs.ac.uk - Data Science & Analytics",
+    "ats": "generic",
+    "identifier": "https://www.jobs.ac.uk/search/?keywords=data+science",
+    "regions": [
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "jobs.ac.uk - Machine Learning & AI",
+    "ats": "generic",
+    "identifier": "https://www.jobs.ac.uk/search/?keywords=machine+learning",
+    "regions": [
+      "uk"
+    ],
+    "tier": 1,
+    "enabled": true
+  },
+  {
+    "name": "jobs.ac.uk - Quantitative & Epidemiology Modelling",
+    "ats": "generic",
+    "identifier": "https://www.jobs.ac.uk/search/?keywords=modelling",
     "regions": [
       "uk"
     ],
@@ -2843,7 +2883,7 @@
   {
     "name": "Tyro Payments",
     "ats": "workday",
-    "identifier": "tyro/Tyro|wd3",
+    "identifier": "tyro/Tyro",
     "regions": [
       "sydney",
       "australia"
@@ -3246,7 +3286,7 @@
   {
     "name": "Pfizer",
     "ats": "workday",
-    "identifier": "pfizer/PfizerCareers|wd1",
+    "identifier": "pfizer/PfizerCareers",
     "regions": [
       "new york",
       "usa",
@@ -4045,7 +4085,7 @@
   {
     "name": "Uppsala University",
     "ats": "generic",
-    "identifier": "https://uu.varbi.com/what:jobs/",
+    "identifier": "https://uu.varbi.com/en/",
     "regions": [
       "uppsala",
       "sweden",
@@ -4057,7 +4097,7 @@
   {
     "name": "KTH Royal Institute of Technology",
     "ats": "generic",
-    "identifier": "https://kth.varbi.com/what:jobs/",
+    "identifier": "https://kth.varbi.com/en/",
     "regions": [
       "stockholm",
       "sweden",
@@ -4069,7 +4109,7 @@
   {
     "name": "Karolinska Institutet (KI)",
     "ats": "generic",
-    "identifier": "https://ki.varbi.com/what:jobs/",
+    "identifier": "https://ki.varbi.com/en/",
     "regions": [
       "stockholm",
       "sweden",
@@ -4081,7 +4121,7 @@
   {
     "name": "Lund University",
     "ats": "generic",
-    "identifier": "https://lunduniversity.varbi.com/what:jobs/",
+    "identifier": "https://lu.varbi.com/en/",
     "regions": [
       "lund",
       "sweden",

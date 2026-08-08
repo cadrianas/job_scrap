@@ -62,8 +62,11 @@ _domain_locks: dict[str, threading.Lock] = {}
 _locks_guard = threading.Lock()
 
 
-def _get_domain_lock(identifier: str) -> threading.Lock:
-    domain = urlparse(identifier).netloc or identifier.split("/")[0].split("|")[0]
+def _get_domain_lock(company: Company) -> threading.Lock:
+    if company.ats == "workday":
+        domain = "myworkdayjobs.com"
+    else:
+        domain = urlparse(company.identifier).netloc or company.identifier.split("/")[0].split("|")[0]
     with _locks_guard:
         if domain not in _domain_locks:
             _domain_locks[domain] = threading.Lock()
@@ -78,7 +81,7 @@ def _scrape_company(company: Company) -> tuple[str, list[Job], bool]:
         )
         return company.name, [], False
 
-    domain_lock = _get_domain_lock(company.identifier)
+    domain_lock = _get_domain_lock(company)
     with domain_lock:
         try:
             jobs = fetch(company)

@@ -385,14 +385,7 @@ job-shaped hrefs that turn out to be nav/category links, not real postings.
 - ISGlobal (Barcelona Institute for Global Health): `jobs.isglobal.org/` (9 jobs). Teamtailor
   hints appeared in the raw HTML but the root listing page itself is server-rendered enough for
   `_looks_like_job_link` to catch real postings directly -- no need to chase the Teamtailor API.
-- jobs.ac.uk - Maths Stats and CS: the user's own filtered search URL (25 jobs), server-renders
-  real job cards directly. Notable: `SPEC_scraper_academic.md` scoped a dedicated `jobsacuk`
-  RSS-feed adapter for this source (Tier A, never built) on the assumption it would need one --
-  turns out the filtered HTML search page works with the existing `generic` adapter, no new code
-  needed. (Originally named with a comma in the display name, which silently broke
-  `--companies` filtering since that flag splits on commas -- renamed before committing, see
-  `HANDOFF.md`'s conventions section, worth remembering as a naming constraint on any future
-  aggregator entry with commas in its natural name.)
+- jobs.ac.uk (UK Universities): Expanded 2026-08-08 from a single narrow search URL (which was restricted by salary band facets) into 5 broad discipline and keyword search streams (Maths & Stats, Computer Science & AI, Data Science & Analytics, Machine Learning & AI, and Quantitative & Epidemiology Modelling). All UK universities (including University of Warwick, Oxford, Cambridge, Imperial, etc.) publish academic vacancies through `jobs.ac.uk`. Direct portal URLs on platforms like Tal.net / Oleeo (`warwick-careers.tal.net`) return Kasada/Cloudflare bot challenges ("Quick Check Needed"), making `jobs.ac.uk` the authoritative, scrapable aggregator for UK higher education roles.
 - OECD: `smartrecruiters`, id `oecd` (27 jobs, confirmed with real content, company name
   matches). The `scrapers/json_boards.py` adapter from Phase 2 handled this with zero new code.
 - MSF (Medecins Sans Frontieres): `msf.org/jobs` (19 jobs). Notable: MSF is structurally

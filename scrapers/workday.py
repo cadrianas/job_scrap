@@ -17,18 +17,35 @@ import re
 import time
 from datetime import date, timedelta
 
+import threading
 import requests
 
 from config.paths import MAX_RETRIES, REQUEST_TIMEOUT_SECONDS, USER_AGENT
 from models import Company, Job, ScraperError
 
-_CANDIDATE_INSTANCES = ["wd1", "wd3", "wd5", "wd2", "wd4"]
+_CANDIDATE_INSTANCES = [
+    "wd1",
+    "wd3",
+    "wd5",
+    "wd2",
+    "wd4",
+    "wd102",
+    "wd103",
+    "wd106",
+    "wd108",
+    "wd301",
+    "wd501",
+    "wd10",
+    "wd12",
+    "wd109",
+]
 _PAGE_LIMIT = 20
 _MAX_JOBS = 2500
 _MAX_CONSECUTIVE_PAGE_FAILURES = 3
 
 # tenant -> wdN instance that worked last time, for this process's lifetime.
 _instance_cache: dict[str, str] = {}
+_cache_lock = threading.Lock()
 
 
 def fetch_jobs(company: Company) -> list[Job]:
@@ -93,7 +110,8 @@ def _discover_instance(
     if explicit_instance is not None:
         payload = _request_page(tenant, site, explicit_instance, 0)
         if payload is not None and "jobPostings" in payload:
-            _instance_cache[tenant] = explicit_instance
+            with _cache_lock:
+                _instance_cache[tenant] = explicit_instance
             return explicit_instance, payload
         raise ScraperError(
             company.name,
@@ -102,7 +120,8 @@ def _discover_instance(
             f"companies.json",
         )
 
-    cached = _instance_cache.get(tenant)
+    with _cache_lock:
+        cached = _instance_cache.get(tenant)
     if cached is not None:
         payload = _request_page(tenant, site, cached, 0)
         if payload is not None and "jobPostings" in payload:
@@ -111,7 +130,8 @@ def _discover_instance(
     for instance in _CANDIDATE_INSTANCES:
         payload = _request_page(tenant, site, instance, 0)
         if payload is not None and "jobPostings" in payload:
-            _instance_cache[tenant] = instance
+            with _cache_lock:
+                _instance_cache[tenant] = instance
             return instance, payload
 
     raise ScraperError(

@@ -1,344 +1,344 @@
 company,consecutive_failures,last_status,last_run
-10x Genomics,2,failed,2026-08-16
-1Password,0,ok,2026-08-16
-ABB,0,ok,2026-08-16
-AIA New Zealand,0,ok,2026-08-16
-ANZ,0,ok,2026-08-16
-ANZ New Zealand,0,ok,2026-08-16
-AQR Capital Management,0,ok,2026-08-16
-ASML,0,ok,2026-08-16
-AbCellera,0,ok,2026-08-16
-AcademicPositions (Math & Stats),0,ok,2026-08-16
-Acast,0,ok,2026-08-16
-Accenture,0,ok,2026-08-16
-Accenture New Zealand,0,ok,2026-08-16
-Ada,0,ok,2026-08-16
-Adyen,0,ok,2026-08-16
-Affirm,0,ok,2026-08-16
-AgResearch,0,ok,2026-08-16
-Air Canada,0,ok,2026-08-16
-Air France-KLM,15,failed,2026-08-16
-Air New Zealand,0,ok,2026-08-16
-Airbnb,0,ok,2026-08-16
-Airbus,0,ok,2026-08-16
-Airbus (Aviation & Flight Data Analytics),0,ok,2026-08-16
-Airtable,0,ok,2026-08-16
-Airwallex,0,ok,2026-08-16
-Akuna Capital,0,ok,2026-08-16
-Allianz,0,ok,2026-08-16
-American Airlines,15,failed,2026-08-16
-Amgen,0,ok,2026-08-16
-Anthropic,0,ok,2026-08-16
-ApplyBoard,0,ok,2026-08-16
-Arianespace,0,ok,2026-08-16
-AssemblyAI,0,ok,2026-08-16
-Atlas Copco,0,ok,2026-08-16
-Audi,0,ok,2026-08-16
-BBVA,0,ok,2026-08-16
-BCG Australia,15,failed,2026-08-16
-BMO,0,ok,2026-08-16
-BMW Group,0,ok,2026-08-16
-BNP Paribas,0,ok,2026-08-16
-BNZ (Bank of New Zealand),0,ok,2026-08-16
-BP,0,ok,2026-08-16
-BT Group,0,ok,2026-08-16
-Back Market,0,ok,2026-08-16
-Bain & Company,0,ok,2026-08-16
-Benevity,0,ok,2026-08-16
-Blablacar,0,ok,2026-08-16
-Block (Afterpay),0,ok,2026-08-16
-Boeing (Aviation Analytics & Aerospace),0,ok,2026-08-16
-Booking.com,15,failed,2026-08-16
-Boston Consulting Group,0,ok,2026-08-16
-Brex,0,ok,2026-08-16
-British Airways (IAG),0,ok,2026-08-16
-CIBC,0,ok,2026-08-16
-CSL,0,ok,2026-08-16
-Cabify,0,ok,2026-08-16
-Canal+,0,ok,2026-08-16
-Canva,0,ok,2026-08-16
-Capital One,0,ok,2026-08-16
+10x Genomics,3,failed,2026-08-17
+1Password,0,ok,2026-08-17
+ABB,0,ok,2026-08-17
+AIA New Zealand,0,ok,2026-08-17
+ANZ,0,ok,2026-08-17
+ANZ New Zealand,0,ok,2026-08-17
+AQR Capital Management,0,ok,2026-08-17
+ASML,0,ok,2026-08-17
+AbCellera,0,ok,2026-08-17
+AcademicPositions (Math & Stats),0,ok,2026-08-17
+Acast,0,ok,2026-08-17
+Accenture,0,ok,2026-08-17
+Accenture New Zealand,0,ok,2026-08-17
+Ada,0,ok,2026-08-17
+Adyen,0,ok,2026-08-17
+Affirm,0,ok,2026-08-17
+AgResearch,0,ok,2026-08-17
+Air Canada,0,ok,2026-08-17
+Air France-KLM,16,failed,2026-08-17
+Air New Zealand,0,ok,2026-08-17
+Airbnb,0,ok,2026-08-17
+Airbus,0,ok,2026-08-17
+Airbus (Aviation & Flight Data Analytics),0,ok,2026-08-17
+Airtable,0,ok,2026-08-17
+Airwallex,0,ok,2026-08-17
+Akuna Capital,0,ok,2026-08-17
+Allianz,0,ok,2026-08-17
+American Airlines,16,failed,2026-08-17
+Amgen,0,ok,2026-08-17
+Anthropic,0,ok,2026-08-17
+ApplyBoard,0,ok,2026-08-17
+Arianespace,0,ok,2026-08-17
+AssemblyAI,0,ok,2026-08-17
+Atlas Copco,0,ok,2026-08-17
+Audi,0,ok,2026-08-17
+BBVA,0,ok,2026-08-17
+BCG Australia,16,failed,2026-08-17
+BMO,0,ok,2026-08-17
+BMW Group,0,ok,2026-08-17
+BNP Paribas,0,ok,2026-08-17
+BNZ (Bank of New Zealand),0,ok,2026-08-17
+BP,0,ok,2026-08-17
+BT Group,0,ok,2026-08-17
+Back Market,0,ok,2026-08-17
+Bain & Company,0,ok,2026-08-17
+Benevity,0,ok,2026-08-17
+Blablacar,0,ok,2026-08-17
+Block (Afterpay),0,ok,2026-08-17
+Boeing (Aviation Analytics & Aerospace),0,ok,2026-08-17
+Booking.com,16,failed,2026-08-17
+Boston Consulting Group,0,ok,2026-08-17
+Brex,0,ok,2026-08-17
+British Airways (IAG),0,ok,2026-08-17
+CIBC,0,ok,2026-08-17
+CSL,0,ok,2026-08-17
+Cabify,0,ok,2026-08-17
+Canal+,0,ok,2026-08-17
+Canva,0,ok,2026-08-17
+Capital One,0,ok,2026-08-17
 Carrefour,4,failed,2026-07-29
-Carsales,0,ok,2026-08-16
-Check24,0,ok,2026-08-16
-Chime,0,ok,2026-08-16
-Clio,0,ok,2026-08-16
-Cloudflare,0,ok,2026-08-16
-Cochlear,0,ok,2026-08-16
-Cohere,0,ok,2026-08-16
-Coinbase,0,ok,2026-08-16
-Coloplast,0,ok,2026-08-16
-Commonwealth Bank,0,ok,2026-08-16
-Coveo,0,ok,2026-08-16
-Culture Amp,0,ok,2026-08-16
-D. E. Shaw Group,0,ok,2026-08-16
-D2L,0,ok,2026-08-16
-DB Schenker (merged into DSV),0,ok,2026-08-16
-DHL,0,ok,2026-08-16
-Danske Bank,0,ok,2026-08-16
-Darktrace,0,ok,2026-08-16
-Databricks,0,ok,2026-08-16
-Datadog,0,ok,2026-08-16
-Delivery Hero,0,ok,2026-08-16
-Deloitte Australia,0,ok,2026-08-16
-Deloitte Canada,0,ok,2026-08-16
-Deloitte New Zealand,0,ok,2026-08-16
-Delta Air Lines,15,failed,2026-08-16
-Depop,0,ok,2026-08-16
-Deputy,0,ok,2026-08-16
-Deutsche Bank,0,ok,2026-08-16
-Deutsche Telekom,0,ok,2026-08-16
-DoorDash,0,ok,2026-08-16
+Carsales,0,ok,2026-08-17
+Check24,0,ok,2026-08-17
+Chime,0,ok,2026-08-17
+Clio,0,ok,2026-08-17
+Cloudflare,0,ok,2026-08-17
+Cochlear,0,ok,2026-08-17
+Cohere,0,ok,2026-08-17
+Coinbase,0,ok,2026-08-17
+Coloplast,0,ok,2026-08-17
+Commonwealth Bank,0,ok,2026-08-17
+Coveo,0,ok,2026-08-17
+Culture Amp,0,ok,2026-08-17
+D. E. Shaw Group,0,ok,2026-08-17
+D2L,0,ok,2026-08-17
+DB Schenker (merged into DSV),0,ok,2026-08-17
+DHL,0,ok,2026-08-17
+Danske Bank,0,ok,2026-08-17
+Darktrace,0,ok,2026-08-17
+Databricks,0,ok,2026-08-17
+Datadog,0,ok,2026-08-17
+Delivery Hero,0,ok,2026-08-17
+Deloitte Australia,0,ok,2026-08-17
+Deloitte Canada,0,ok,2026-08-17
+Deloitte New Zealand,0,ok,2026-08-17
+Delta Air Lines,16,failed,2026-08-17
+Depop,0,ok,2026-08-17
+Deputy,0,ok,2026-08-17
+Deutsche Bank,0,ok,2026-08-17
+Deutsche Telekom,0,ok,2026-08-17
+DoorDash,0,ok,2026-08-17
 EDF,4,failed,2026-07-29
-EQ Bank (Equitable Bank),0,ok,2026-08-16
-EROAD,0,ok,2026-08-16
-ESA,0,ok,2026-08-16
-EURAXESS - Data Science,0,ok,2026-08-16
-EasyJet,0,ok,2026-08-16
-Elastic,0,ok,2026-08-16
-ElevenLabs,0,ok,2026-08-16
-Embark Studios,0,ok,2026-08-16
-Emirates Group,0,ok,2026-08-16
-Employment Hero,0,ok,2026-08-16
-Envato,0,ok,2026-08-16
-Ericsson,0,ok,2026-08-16
-EuroClimateJobs,0,ok,2026-08-16
-European Centre for Disease Prevention and Control (ECDC),0,ok,2026-08-16
-European Mathematical Society,0,ok,2026-08-16
-Exact,0,ok,2026-08-16
-FIFA,15,failed,2026-08-16
-Farfetch,0,ok,2026-08-16
-Fastly,0,ok,2026-08-16
-Figma,0,ok,2026-08-16
-Finnair,0,ok,2026-08-16
-Fisher & Paykel Healthcare,0,ok,2026-08-16
-Flatiron Health,0,ok,2026-08-16
-Flow Traders,0,ok,2026-08-16
-Ford Motor Company,0,ok,2026-08-16
-FreshBooks,0,ok,2026-08-16
-Genentech,0,ok,2026-08-16
-General Motors (GM),0,ok,2026-08-16
-Genmab,0,ok,2026-08-16
-Gentrack,0,ok,2026-08-16
-Getaround,0,ok,2026-08-16
-Getir,0,ok,2026-08-16
-Gilead Sciences,0,ok,2026-08-16
-Ginkgo Bioworks,0,ok,2026-08-16
-GitLab,0,ok,2026-08-16
-Glovo,0,ok,2026-08-16
-Halter,0,ok,2026-08-16
-Harvey AI,0,ok,2026-08-16
-Honda,15,failed,2026-08-16
-Hootsuite,0,ok,2026-08-16
-Hudl (Sports Performance Analytics),0,ok,2026-08-16
-Hudson River Trading,0,ok,2026-08-16
-ING,0,ok,2026-08-16
-IQVIA,0,ok,2026-08-16
-ISGlobal (Barcelona Institute for Global Health),0,ok,2026-08-16
-Iberdrola,0,ok,2026-08-16
-Illumina,0,ok,2026-08-16
-Intercom,0,ok,2026-08-16
-Jane Street,0,ok,2026-08-16
-Jobindex - Data Science,0,ok,2026-08-16
-Jump Trading,0,ok,2026-08-16
-Just Eat Takeaway,15,failed,2026-08-16
-KOHO,0,ok,2026-08-16
-KPMG Australia,0,ok,2026-08-16
-KPMG New Zealand,0,ok,2026-08-16
-KTH Royal Institute of Technology,0,ok,2026-08-16
-Karolinska Institutet (KI),0,ok,2026-08-16
-Kinaxis,0,ok,2026-08-16
-King,20,failed,2026-08-16
-L'Oréal,15,failed,2026-08-16
-LIC (Livestock Improvement Corporation),0,ok,2026-08-16
-LangChain,0,ok,2026-08-16
-League,0,ok,2026-08-16
-Lego,0,ok,2026-08-16
-Lightning AI,0,ok,2026-08-16
-Lightspeed Commerce,0,ok,2026-08-16
-Linear,0,ok,2026-08-16
-Linktree,0,ok,2026-08-16
-LlamaIndex,0,ok,2026-08-16
-Lovable,0,ok,2026-08-16
-Lucid Motors,0,ok,2026-08-16
-Lufthansa Group,15,failed,2026-08-16
-Lund University,0,ok,2026-08-16
-Lyft,0,ok,2026-08-16
-MSF (Medecins Sans Frontieres),0,ok,2026-08-16
-MSKCC (Epidemiology & Biostatistics),0,ok,2026-08-16
-MYOB (NZ),0,ok,2026-08-16
-Macquarie Group,0,ok,2026-08-16
-Maersk,0,ok,2026-08-16
-Magna International,0,ok,2026-08-16
-Man Group,0,ok,2026-08-16
-Manulife,0,ok,2026-08-16
-McKinsey & Company,20,failed,2026-08-16
-MediaMarkt,0,ok,2026-08-16
-Mercedes-Benz Group,0,ok,2026-08-16
-Millennium Management,15,failed,2026-08-16
-Mistral AI,0,ok,2026-08-16
-Modal,0,ok,2026-08-16
-Moderna,0,ok,2026-08-16
-MongoDB,0,ok,2026-08-16
-Motive (Vehicle AI & Fleet Analytics),0,ok,2026-08-16
-Munich Re,0,ok,2026-08-16
-NAB,0,ok,2026-08-16
-NCI DCEG (Division of Cancer Epidemiology & Genetics),0,ok,2026-08-16
-Nature Careers - Data Science,0,ok,2026-08-16
-Net-A-Porter,0,ok,2026-08-16
-Netflix,0,ok,2026-08-16
-Nine Entertainment,0,ok,2026-08-16
-Nokia,15,failed,2026-08-16
-Novartis,0,ok,2026-08-16
-Novartis Ireland,0,ok,2026-08-16
-Novo Nordisk,0,ok,2026-08-16
-Nuvei,0,ok,2026-08-16
-OECD,0,ok,2026-08-16
-One NZ (Vodafone NZ),0,ok,2026-08-16
-OpenAI,0,ok,2026-08-16
-OpenText,0,ok,2026-08-16
-Orange,0,ok,2026-08-16
+EQ Bank (Equitable Bank),0,ok,2026-08-17
+EROAD,0,ok,2026-08-17
+ESA,0,ok,2026-08-17
+EURAXESS - Data Science,0,ok,2026-08-17
+EasyJet,0,ok,2026-08-17
+Elastic,0,ok,2026-08-17
+ElevenLabs,0,ok,2026-08-17
+Embark Studios,0,ok,2026-08-17
+Emirates Group,0,ok,2026-08-17
+Employment Hero,0,ok,2026-08-17
+Envato,0,ok,2026-08-17
+Ericsson,0,ok,2026-08-17
+EuroClimateJobs,0,ok,2026-08-17
+European Centre for Disease Prevention and Control (ECDC),0,ok,2026-08-17
+European Mathematical Society,0,ok,2026-08-17
+Exact,0,ok,2026-08-17
+FIFA,16,failed,2026-08-17
+Farfetch,0,ok,2026-08-17
+Fastly,0,ok,2026-08-17
+Figma,0,ok,2026-08-17
+Finnair,0,ok,2026-08-17
+Fisher & Paykel Healthcare,0,ok,2026-08-17
+Flatiron Health,0,ok,2026-08-17
+Flow Traders,0,ok,2026-08-17
+Ford Motor Company,0,ok,2026-08-17
+FreshBooks,0,ok,2026-08-17
+Genentech,0,ok,2026-08-17
+General Motors (GM),0,ok,2026-08-17
+Genmab,0,ok,2026-08-17
+Gentrack,0,ok,2026-08-17
+Getaround,0,ok,2026-08-17
+Getir,0,ok,2026-08-17
+Gilead Sciences,0,ok,2026-08-17
+Ginkgo Bioworks,0,ok,2026-08-17
+GitLab,0,ok,2026-08-17
+Glovo,0,ok,2026-08-17
+Halter,0,ok,2026-08-17
+Harvey AI,0,ok,2026-08-17
+Honda,16,failed,2026-08-17
+Hootsuite,0,ok,2026-08-17
+Hudl (Sports Performance Analytics),0,ok,2026-08-17
+Hudson River Trading,0,ok,2026-08-17
+ING,0,ok,2026-08-17
+IQVIA,0,ok,2026-08-17
+ISGlobal (Barcelona Institute for Global Health),0,ok,2026-08-17
+Iberdrola,0,ok,2026-08-17
+Illumina,0,ok,2026-08-17
+Intercom,0,ok,2026-08-17
+Jane Street,0,ok,2026-08-17
+Jobindex - Data Science,0,ok,2026-08-17
+Jump Trading,0,ok,2026-08-17
+Just Eat Takeaway,16,failed,2026-08-17
+KOHO,0,ok,2026-08-17
+KPMG Australia,0,ok,2026-08-17
+KPMG New Zealand,0,ok,2026-08-17
+KTH Royal Institute of Technology,0,ok,2026-08-17
+Karolinska Institutet (KI),0,ok,2026-08-17
+Kinaxis,0,ok,2026-08-17
+King,21,failed,2026-08-17
+L'Oréal,16,failed,2026-08-17
+LIC (Livestock Improvement Corporation),0,ok,2026-08-17
+LangChain,0,ok,2026-08-17
+League,0,ok,2026-08-17
+Lego,0,ok,2026-08-17
+Lightning AI,0,ok,2026-08-17
+Lightspeed Commerce,0,ok,2026-08-17
+Linear,0,ok,2026-08-17
+Linktree,0,ok,2026-08-17
+LlamaIndex,0,ok,2026-08-17
+Lovable,0,ok,2026-08-17
+Lucid Motors,0,ok,2026-08-17
+Lufthansa Group,16,failed,2026-08-17
+Lund University,0,ok,2026-08-17
+Lyft,0,ok,2026-08-17
+MSF (Medecins Sans Frontieres),0,ok,2026-08-17
+MSKCC (Epidemiology & Biostatistics),0,ok,2026-08-17
+MYOB (NZ),0,ok,2026-08-17
+Macquarie Group,0,ok,2026-08-17
+Maersk,0,ok,2026-08-17
+Magna International,0,ok,2026-08-17
+Man Group,0,ok,2026-08-17
+Manulife,0,ok,2026-08-17
+McKinsey & Company,21,failed,2026-08-17
+MediaMarkt,0,ok,2026-08-17
+Mercedes-Benz Group,0,ok,2026-08-17
+Millennium Management,16,failed,2026-08-17
+Mistral AI,0,ok,2026-08-17
+Modal,0,ok,2026-08-17
+Moderna,0,ok,2026-08-17
+MongoDB,0,ok,2026-08-17
+Motive (Vehicle AI & Fleet Analytics),0,ok,2026-08-17
+Munich Re,0,ok,2026-08-17
+NAB,0,ok,2026-08-17
+NCI DCEG (Division of Cancer Epidemiology & Genetics),0,ok,2026-08-17
+Nature Careers - Data Science,0,ok,2026-08-17
+Net-A-Porter,0,ok,2026-08-17
+Netflix,0,ok,2026-08-17
+Nine Entertainment,0,ok,2026-08-17
+Nokia,16,failed,2026-08-17
+Novartis,0,ok,2026-08-17
+Novartis Ireland,0,ok,2026-08-17
+Novo Nordisk,0,ok,2026-08-17
+Nuvei,0,ok,2026-08-17
+OECD,0,ok,2026-08-17
+One NZ (Vodafone NZ),0,ok,2026-08-17
+OpenAI,0,ok,2026-08-17
+OpenText,0,ok,2026-08-17
+Orange,0,ok,2026-08-17
 Orsted,4,failed,2026-07-29
-Oura,0,ok,2026-08-16
-Palantir Technologies,0,ok,2026-08-16
-Parexel,0,ok,2026-08-16
-Partly,0,ok,2026-08-16
-Pasteur Institute,15,failed,2026-08-16
-PathAI,0,ok,2026-08-16
-PayPal,0,ok,2026-08-16
-Perplexity AI,0,ok,2026-08-16
-Pfizer,0,ok,2026-08-16
-Philips,0,ok,2026-08-16
-Pinecone,0,ok,2026-08-16
-Pinterest,0,ok,2026-08-16
-Plaid,0,ok,2026-08-16
-Plexure,0,ok,2026-08-16
-Point72 Asset Management,0,ok,2026-08-16
-Polestar,0,ok,2026-08-16
-Porsche,0,ok,2026-08-16
-PostNord,0,ok,2026-08-16
-Prospa,0,ok,2026-08-16
-Pushpay,0,ok,2026-08-16
-PwC New Zealand,0,ok,2026-08-16
-QBE Insurance,0,ok,2026-08-16
-Qantas Airways,15,failed,2026-08-16
-Qt Company,0,ok,2026-08-16
-RBC,0,ok,2026-08-16
-REA Group,0,ok,2026-08-16
-RWE,0,ok,2026-08-16
-Ramp,0,ok,2026-08-16
-Ramsay Health Care,0,ok,2026-08-16
-Red Bull,0,ok,2026-08-16
-Regeneron Pharmaceuticals,0,ok,2026-08-16
-Relay Therapeutics (AI Drug Discovery),0,ok,2026-08-16
-ResMed,0,ok,2026-08-16
-Resend,0,ok,2026-08-16
-Robinhood,0,ok,2026-08-16
-Roche,0,ok,2026-08-16
-Rocket Internet,0,ok,2026-08-16
-Rocket Lab,0,ok,2026-08-16
-Runway,0,ok,2026-08-16
-Ryanair,0,ok,2026-08-16
-SAP,0,ok,2026-08-16
-SAS Scandinavian Airlines,15,failed,2026-08-16
-SEB,0,ok,2026-08-16
-SIX,0,ok,2026-08-16
-SKF,0,ok,2026-08-16
-SNCF,0,ok,2026-08-16
-SafetyCulture,0,ok,2026-08-16
-Sainsbury's,0,ok,2026-08-16
-Samsara (Connected Vehicles & Fleet Data),0,ok,2026-08-16
-Sandvik,0,ok,2026-08-16
-Santander,0,ok,2026-08-16
-Saxo Bank,0,ok,2026-08-16
+Oura,0,ok,2026-08-17
+Palantir Technologies,0,ok,2026-08-17
+Parexel,0,ok,2026-08-17
+Partly,0,ok,2026-08-17
+Pasteur Institute,16,failed,2026-08-17
+PathAI,0,ok,2026-08-17
+PayPal,0,ok,2026-08-17
+Perplexity AI,0,ok,2026-08-17
+Pfizer,0,ok,2026-08-17
+Philips,0,ok,2026-08-17
+Pinecone,0,ok,2026-08-17
+Pinterest,0,ok,2026-08-17
+Plaid,0,ok,2026-08-17
+Plexure,0,ok,2026-08-17
+Point72 Asset Management,0,ok,2026-08-17
+Polestar,0,ok,2026-08-17
+Porsche,0,ok,2026-08-17
+PostNord,0,ok,2026-08-17
+Prospa,0,ok,2026-08-17
+Pushpay,0,ok,2026-08-17
+PwC New Zealand,0,ok,2026-08-17
+QBE Insurance,0,ok,2026-08-17
+Qantas Airways,16,failed,2026-08-17
+Qt Company,0,ok,2026-08-17
+RBC,0,ok,2026-08-17
+REA Group,0,ok,2026-08-17
+RWE,0,ok,2026-08-17
+Ramp,0,ok,2026-08-17
+Ramsay Health Care,0,ok,2026-08-17
+Red Bull,0,ok,2026-08-17
+Regeneron Pharmaceuticals,0,ok,2026-08-17
+Relay Therapeutics (AI Drug Discovery),0,ok,2026-08-17
+ResMed,0,ok,2026-08-17
+Resend,0,ok,2026-08-17
+Robinhood,0,ok,2026-08-17
+Roche,0,ok,2026-08-17
+Rocket Internet,0,ok,2026-08-17
+Rocket Lab,0,ok,2026-08-17
+Runway,0,ok,2026-08-17
+Ryanair,0,ok,2026-08-17
+SAP,0,ok,2026-08-17
+SAS Scandinavian Airlines,16,failed,2026-08-17
+SEB,0,ok,2026-08-17
+SIX,0,ok,2026-08-17
+SKF,0,ok,2026-08-17
+SNCF,0,ok,2026-08-17
+SafetyCulture,0,ok,2026-08-17
+Sainsbury's,0,ok,2026-08-17
+Samsara (Connected Vehicles & Fleet Data),0,ok,2026-08-17
+Sandvik,0,ok,2026-08-17
+Santander,0,ok,2026-08-17
+Saxo Bank,0,ok,2026-08-17
 Schneider Electric,4,failed,2026-07-29
-Scotiabank,0,ok,2026-08-16
-Serato,0,ok,2026-08-16
-Shell,0,ok,2026-08-16
-Shopify,0,ok,2026-08-16
-Siemens,0,ok,2026-08-16
-Sky,0,ok,2026-08-16
-SoFi,0,ok,2026-08-16
-SoundCloud,0,ok,2026-08-16
-Spark New Zealand,0,ok,2026-08-16
-Spotify,0,ok,2026-08-16
-Squarepoint Capital,0,ok,2026-08-16
-Stability AI,0,ok,2026-08-16
-"Stellantis (Peugeot, Citroën, Fiat, Chrysler, Jeep)",15,failed,2026-08-16
-Stripe,0,ok,2026-08-16
-Sun Life,0,ok,2026-08-16
-Swiss Re,0,ok,2026-08-16
-Swiss TPH (Swiss Tropical and Public Health Institute),15,failed,2026-08-16
-Swisscom,0,ok,2026-08-16
-Symend,0,ok,2026-08-16
-Syneos Health,0,ok,2026-08-16
-TD Bank,0,ok,2026-08-16
-Telenor,20,failed,2026-08-16
-Telia,0,ok,2026-08-16
-Telstra,0,ok,2026-08-16
-Temenos,0,ok,2026-08-16
-Tempus,0,ok,2026-08-16
+Scotiabank,0,ok,2026-08-17
+Serato,0,ok,2026-08-17
+Shell,0,ok,2026-08-17
+Shopify,0,ok,2026-08-17
+Siemens,0,ok,2026-08-17
+Sky,0,ok,2026-08-17
+SoFi,0,ok,2026-08-17
+SoundCloud,0,ok,2026-08-17
+Spark New Zealand,0,ok,2026-08-17
+Spotify,0,ok,2026-08-17
+Squarepoint Capital,0,ok,2026-08-17
+Stability AI,0,ok,2026-08-17
+"Stellantis (Peugeot, Citroën, Fiat, Chrysler, Jeep)",16,failed,2026-08-17
+Stripe,0,ok,2026-08-17
+Sun Life,0,ok,2026-08-17
+Swiss Re,0,ok,2026-08-17
+Swiss TPH (Swiss Tropical and Public Health Institute),16,failed,2026-08-17
+Swisscom,0,ok,2026-08-17
+Symend,0,ok,2026-08-17
+Syneos Health,0,ok,2026-08-17
+TD Bank,0,ok,2026-08-17
+Telenor,21,failed,2026-08-17
+Telia,0,ok,2026-08-17
+Telstra,0,ok,2026-08-17
+Temenos,0,ok,2026-08-17
+Tempus,0,ok,2026-08-17
 Tesco,4,failed,2026-07-29
 Tesla,4,failed,2026-07-29
-Thales,0,ok,2026-08-16
-Thinkific,0,ok,2026-08-16
-Toast,0,ok,2026-08-16
-Together AI,0,ok,2026-08-16
-Too Good To Go,0,ok,2026-08-16
-Top Hat,0,ok,2026-08-16
-TotalEnergies,0,ok,2026-08-16
-Tower Research Capital,0,ok,2026-08-16
-Toyota,15,failed,2026-08-16
-Twilio,0,ok,2026-08-16
-Two Sigma,0,ok,2026-08-16
-Tyro Payments,0,ok,2026-08-16
-UBS,0,ok,2026-08-16
-UEFA (Union of European Football Associations),0,ok,2026-08-16
-UNDP (United Nations Development Programme),0,ok,2026-08-16
-UNICEF (United Nations Children's Fund),0,ok,2026-08-16
+Thales,0,ok,2026-08-17
+Thinkific,0,ok,2026-08-17
+Toast,0,ok,2026-08-17
+Together AI,0,ok,2026-08-17
+Too Good To Go,0,ok,2026-08-17
+Top Hat,0,ok,2026-08-17
+TotalEnergies,0,ok,2026-08-17
+Tower Research Capital,0,ok,2026-08-17
+Toyota,16,failed,2026-08-17
+Twilio,0,ok,2026-08-17
+Two Sigma,0,ok,2026-08-17
+Tyro Payments,0,ok,2026-08-17
+UBS,0,ok,2026-08-17
+UEFA (Union of European Football Associations),0,ok,2026-08-17
+UNDP (United Nations Development Programme),0,ok,2026-08-17
+UNICEF (United Nations Children's Fund),0,ok,2026-08-17
 Uber,4,failed,2026-07-29
-Unilever,0,ok,2026-08-16
-United Airlines,0,ok,2026-08-16
-University of Vienna,0,ok,2026-08-16
-Up (Ferocia),0,ok,2026-08-16
-Uppsala University,0,ok,2026-08-16
-Vattenfall,0,ok,2026-08-16
-Vend (Lightspeed NZ),0,ok,2026-08-16
-Vercel,0,ok,2026-08-16
-Vertex Pharmaceuticals,0,ok,2026-08-16
-Vibe,0,ok,2026-08-16
-Vidyard,20,failed,2026-08-16
-Vinted,0,ok,2026-08-16
-Visa,0,ok,2026-08-16
-Vodafone,0,ok,2026-08-16
-Volkswagen Group,0,ok,2026-08-16
-Volvo Cars,0,ok,2026-08-16
-Volvo Group,15,failed,2026-08-16
-Volvo Group (incl. Volvo Trucks),0,ok,2026-08-16
-Watershed (Climate Data),0,ok,2026-08-16
-Wattpad (WEBTOON Entertainment),0,ok,2026-08-16
-Wave (Wave HQ),0,ok,2026-08-16
-Waymo,0,ok,2026-08-16
-Waymo (Alphabet Autonomous Driving),0,ok,2026-08-16
-Wealthsimple,0,ok,2026-08-16
-Westpac,0,ok,2026-08-16
-Westpac NZ,0,ok,2026-08-16
-Wise,0,ok,2026-08-16
-Wolt,0,ok,2026-08-16
-World Health Organization (WHO),0,ok,2026-08-16
-WorldQuant,0,ok,2026-08-16
-Xero,0,ok,2026-08-16
-Zalando,0,ok,2026-08-16
-Zespri,0,ok,2026-08-16
-Zip Co,0,ok,2026-08-16
-Zurich Insurance,0,ok,2026-08-16
-Zymeworks,0,ok,2026-08-16
-jobs.ac.uk - Computational Biology,0,ok,2026-08-16
-jobs.ac.uk - Computer Science & AI,0,ok,2026-08-16
-jobs.ac.uk - Data Science & Analytics,0,ok,2026-08-16
-jobs.ac.uk - Epidemiology & Public Health,0,ok,2026-08-16
-jobs.ac.uk - Machine Learning & AI,0,ok,2026-08-16
-jobs.ac.uk - Maths & Stats,0,ok,2026-08-16
+Unilever,0,ok,2026-08-17
+United Airlines,0,ok,2026-08-17
+University of Vienna,0,ok,2026-08-17
+Up (Ferocia),0,ok,2026-08-17
+Uppsala University,0,ok,2026-08-17
+Vattenfall,0,ok,2026-08-17
+Vend (Lightspeed NZ),0,ok,2026-08-17
+Vercel,0,ok,2026-08-17
+Vertex Pharmaceuticals,0,ok,2026-08-17
+Vibe,0,ok,2026-08-17
+Vidyard,21,failed,2026-08-17
+Vinted,0,ok,2026-08-17
+Visa,0,ok,2026-08-17
+Vodafone,0,ok,2026-08-17
+Volkswagen Group,0,ok,2026-08-17
+Volvo Cars,0,ok,2026-08-17
+Volvo Group,16,failed,2026-08-17
+Volvo Group (incl. Volvo Trucks),0,ok,2026-08-17
+Watershed (Climate Data),0,ok,2026-08-17
+Wattpad (WEBTOON Entertainment),0,ok,2026-08-17
+Wave (Wave HQ),0,ok,2026-08-17
+Waymo,0,ok,2026-08-17
+Waymo (Alphabet Autonomous Driving),0,ok,2026-08-17
+Wealthsimple,0,ok,2026-08-17
+Westpac,0,ok,2026-08-17
+Westpac NZ,0,ok,2026-08-17
+Wise,0,ok,2026-08-17
+Wolt,0,ok,2026-08-17
+World Health Organization (WHO),0,ok,2026-08-17
+WorldQuant,0,ok,2026-08-17
+Xero,0,ok,2026-08-17
+Zalando,0,ok,2026-08-17
+Zespri,0,ok,2026-08-17
+Zip Co,0,ok,2026-08-17
+Zurich Insurance,0,ok,2026-08-17
+Zymeworks,0,ok,2026-08-17
+jobs.ac.uk - Computational Biology,0,ok,2026-08-17
+jobs.ac.uk - Computer Science & AI,0,ok,2026-08-17
+jobs.ac.uk - Data Science & Analytics,0,ok,2026-08-17
+jobs.ac.uk - Epidemiology & Public Health,0,ok,2026-08-17
+jobs.ac.uk - Machine Learning & AI,0,ok,2026-08-17
+jobs.ac.uk - Maths & Stats,0,ok,2026-08-17
 jobs.ac.uk - Maths Stats and CS,0,ok,2026-08-07
-jobs.ac.uk - Quantitative & Epidemiology Modelling,0,ok,2026-08-16
-n26,0,ok,2026-08-16
+jobs.ac.uk - Quantitative & Epidemiology Modelling,0,ok,2026-08-17
+n26,0,ok,2026-08-17
